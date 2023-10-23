@@ -20,6 +20,7 @@ This repository, **Simple Python Functions Collection**, serves as a practical e
 
 The book associated with this repository is currently under development, and a draft of Chapter 1 is available at **[Draft of Chapter 1](https://normando1945.github.io/Cap1_draft_DE_Carlos_Celi.html)**. As the book progresses, this repository will be updated to include new functions corresponding to the topics and additional examples presented in subsequent chapters.
 
+
 ## :ledger: How to Use This Repository
 
 Users are free to explore, download, and use any of the functions presented in this repository for their own Python projects. Readers of the book are also encouraged to use these functions as practical exercises to reinforce the concepts learned in each chapter.
