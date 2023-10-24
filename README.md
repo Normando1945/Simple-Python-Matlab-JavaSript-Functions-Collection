@@ -16,9 +16,9 @@
 
 ## :open_book: Description
 
-This repository, **Simple Python Functions Collection**, serves as a practical extension and a compilation of complementary resources for my upcoming **book**. Here, you will find a variety of Python functions that are simple yet fundamental, each illustrating the concepts and techniques discussed in the book's chapters. These functions are designed to be easily understood and utilized as building blocks in more complex programs, or as didactic tools for teaching and learning Python, addressing both simple and complex problems in the intricate **World of Structural Dynamics**.
+This repository, **Simple Python Functions Collection**, serves as a practical extension and a compilation of complementary resources for my upcoming **[book](https://fragrant-knight-4af.notion.site/My-Personal-Page-for-Academic-Use-5c5f007b3f3f4c76a604960d9dbffca7)** and as a supplement to the concepts and exercises developed in the classroom. Here, you will find a variety of Python functions that are simple yet fundamental, each illustrating the concepts and techniques discussed in the book's chapters and other disciplines in the field of Structural Engineering. These functions are designed to be easily understood and utilized as building blocks in more complex programs, or as didactic tools for teaching and learning Python, addressing both simple and complex problems in the intricate **World of Structural Engineering**.
 
-The book associated with this repository is currently under development, and a draft of Chapter 1 is available at **[Draft of Chapter 1](https://normando1945.github.io/Cap1_draft_DE_Carlos_Celi.html)**. As the book progresses, this repository will be updated to include new functions corresponding to the topics and additional examples presented in subsequent chapters.
+The book associated with this repository is currently under development, and a draft of Chapter 1 is available at **[Draft of Chapter 1](https://normando1945.github.io/Cap1_draft_DE_Carlos_Celi.html)**. As the book progresses, This repository will be updated to include new functions corresponding to the topics and additional examples presented in subsequent chapters, as well as exercises developed in the classroom.
 
 
 ## :ledger: How to Use This Repository
@@ -29,9 +29,11 @@ Users are free to explore, download, and use any of the functions presented in t
 
 Below is a table of the Python functions available in this repository:
 
-| #  | Function Name | Description | Field of Application | 
-| -- | --------------------- | ----------- | ----------- |
-| 1  | [SHM Animation](https://github.com/Normando1945/Simple-Python-Functions-Collection/tree/main/fun_SHM_animation) | A function to create animations for Simple Harmonic Motion (SHM). | Structural Dynamics   |
+| #  | Function Name | Description | Field of Application |  Author | 
+| -- | --------------------- | ----------- | ----------- | ----------- |
+| 1  | [SHM Animation](https://github.com/Normando1945/Simple-Python-Functions-Collection/tree/main/fun_SHM_animation) | A function to create animations for Simple Harmonic Motion (SHM). | Structural Dynamics   | [MSc. Ing. Carlos Celi]((https://fragrant-knight-4af.notion.site/My-Personal-Page-for-Academic-Use-5c5f007b3f3f4c76a604960d9dbffca7) |
+| 2  | [fun_BNewmark](https://github.com/Normando1945/Simple-Python-Functions-Collection/tree/main/fun_BNewmark) | A function that calculates the displacement, velocity, and acceleration response of a structure subjected to ground motion using the Newmark method. | Structural Dynamics | [MSc. Ing. Carlos Celi](https://fragrant-knight-4af.notion.site/My-Personal-Page-for-Academic-Use-5c5f007b3f3f4c76a604960d9dbffca7) |
+
 
 
 ## :muscle: Contributions
