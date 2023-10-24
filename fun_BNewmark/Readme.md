@@ -17,10 +17,6 @@
 
 This Python function generates an animated visualization of a Simple Harmonic Motion (SHM) system using Matplotlib. It's designed to represent the motion of a particle or object in SHM, typically found in physics.
 
-
-![SHM_animation](https://github.com/Normando1945/Simple-Python-Functions-Collection/assets/62081230/68e71aca-3849-4e5f-a76e-28bd85f75189)
-
-
 #### Parameters:
 - `R` (float): The amplitude of the motion, indicating the maximum distance from the equilibrium position.
 - `phi` (float): The phase of the motion, determining where in its cycle the oscillation begins.
