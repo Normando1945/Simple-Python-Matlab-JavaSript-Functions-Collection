@@ -17,7 +17,10 @@
 
 This Python function calculates the displacement, velocity, and acceleration response of a structure subjected to ground motion using the Newmark method.
 
-![fun_BNewmark](https://github.com/Normando1945/Simple-Python-Functions-Collection/assets/62081230/069ba2db-724a-453b-af7c-9e103dbb2743)
+<p align="center">
+    <img src="https://github.com/Normando1945/Simple-Python-Functions-Collection/assets/62081230/069ba2db-724a-453b-af7c-9e103dbb2743" alt="fun_BNewmark" width="50%">
+</p>
+
 
 
 #### Parameters:
