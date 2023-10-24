@@ -38,4 +38,4 @@ Below is a table of the Python functions available in this repository:
 
 ## :muscle: Contributions
 
-While this repository is primarily for educational use and serves as a supplement to my book, contributions, suggestions for improvement, or new functions that align with the subjects discussed in the book are welcome. Please refer to the contribution guidelines before submitting any proposed changes.
+While this repository is primarily for educational use and serves as a supplement to my book and as a supplement to the concepts and exercises developed in the classroom, contributions, suggestions for improvement, or new functions that align with the subjects discussed in the book are welcome. Please refer to the contribution guidelines before submitting any proposed changes.
