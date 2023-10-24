@@ -25,6 +25,15 @@ The book associated with this repository is currently under development, and a d
 
 Users are free to explore, download, and use any of the functions presented in this repository for their own Python projects. Readers of the book are also encouraged to use these functions as practical exercises to reinforce the concepts learned in each chapter.
 
+## :scroll: List of Functions
+
+Below is a table of the Python functions available in this repository:
+
+| #  | Function Name | Description | Field of Application | 
+| -- | --------------------- | ----------- | ----------- |
+| 1  | [SHM Animation](https://github.com/Normando1945/Simple-Python-Functions-Collection/tree/main/fun_SHM_animation) | A function to create animations for Simple Harmonic Motion (SHM). | Structural Dynamics   |
+
+
 ## :muscle: Contributions
 
 While this repository is primarily for educational use and serves as a supplement to my book, contributions, suggestions for improvement, or new functions that align with the subjects discussed in the book are welcome. Please refer to the contribution guidelines before submitting any proposed changes.
