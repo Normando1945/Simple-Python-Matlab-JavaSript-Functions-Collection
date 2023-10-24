@@ -31,7 +31,7 @@ Below is a table of the Python functions available in this repository:
 
 | #  | Function Name | Description | Field of Application |  Author | 
 | -- | --------------------- | ----------- | ----------- | ----------- |
-| 1  | [SHM Animation](https://github.com/Normando1945/Simple-Python-Functions-Collection/tree/main/fun_SHM_animation) | A function to create animations for Simple Harmonic Motion (SHM). | Structural Dynamics   | [MSc. Ing. Carlos Celi]((https://fragrant-knight-4af.notion.site/My-Personal-Page-for-Academic-Use-5c5f007b3f3f4c76a604960d9dbffca7) |
+| 1  | [fun_SHM_animation](https://github.com/Normando1945/Simple-Python-Functions-Collection/tree/main/fun_SHM_animation) | A function to create animations for Simple Harmonic Motion (SHM). | Structural Dynamics   | [MSc. Ing. Carlos Celi](https://fragrant-knight-4af.notion.site/My-Personal-Page-for-Academic-Use-5c5f007b3f3f4c76a604960d9dbffca7) |
 | 2  | [fun_BNewmark](https://github.com/Normando1945/Simple-Python-Functions-Collection/tree/main/fun_BNewmark) | A function that calculates the displacement, velocity, and acceleration response of a structure subjected to ground motion using the Newmark method. | Structural Dynamics | [MSc. Ing. Carlos Celi](https://fragrant-knight-4af.notion.site/My-Personal-Page-for-Academic-Use-5c5f007b3f3f4c76a604960d9dbffca7) |
 
 
