@@ -41,6 +41,12 @@ This Python function generates an animated visualization of a Simple Harmonic Mo
 - **Subplot 3**: Plots the displacement of the particle over time, providing a direct view of how the SHM progresses over the period `T`.
 
 #### Usage:
-Ideal for educational purposes, especially for providing students with a visual understanding of SHM concepts in physics.
+This function is ideal for educational purposes, especially for providing students with a visual understanding of SHM concepts in physics. Below is an example of recommended parameters for a typical use case:
 
-**Note**: The animation's default configuration aims for optimal visibility and comprehension, but users can adjust parameters and settings to suit specific requirements or scenarios.
+- `R` =         0.5 or 1.0: Depending on the desired amplitude, you may choose a value of 0.5 for a standard representation or any value for a motion with a higher amplitude.
+- `phi` =       0: This starts the motion at the equilibrium position, which is common for basic demonstrations of **SHM**.
+- `w` =         1.0 * np.pi: This value sets a standard angular frequency, corresponding to one complete oscillation every **2π** units of time.
+- `T` =         (2 * np.pi) / w: By setting the time period like this, the animation will display exactly one complete cycle, given the angular frequency **w**.
+
+**Note**: The animation's default configuration aims for optimal visibility and comprehension, but users can adjust parameters and settings to suit specific requirements or scenarios. For instance, altering the value of `R` can show students how changes in amplitude affect the motion, while different values of `phi` can demonstrate the effects of phase shifts.
+
