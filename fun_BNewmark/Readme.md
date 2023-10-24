@@ -64,6 +64,7 @@ This function is ideal for engineers and researchers studying the effects of sei
 - `zi` = Damping ratio, e.g., 0.05 for 5% damping.
 
 **Note**: The visualization's default configuration is designed for optimal visibility and understanding, but users can adjust parameters and settings to suit specific requirements or scenarios.
+Attached in this same repository is a file (.AT2) that contains a seismic record organized in 2 columns. The first column has the time of the record and the second column has the corresponding acceleration in a fraction of gravity.
 
 
 
