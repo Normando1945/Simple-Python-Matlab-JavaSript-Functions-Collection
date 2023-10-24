@@ -13,36 +13,54 @@
 [![Google Scholar](https://img.shields.io/badge/-Google%20Scholar-4285F4?style=social&logo=google)](https://scholar.google.com.ec/citations?hl=es&user=yR4Gz7kAAAAJ)
 <a href="Carlos Celi:normando1945@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-normando1945@gmail.com-blue?style=flat&logo=gmail"></a>
 
-### Function: SHM_animation(R, phi, w, T)
+### Function: fun_B_Newmark_2023(TG, SG, M, T, xo, xvo, zi)
 
-This Python function generates an animated visualization of a Simple Harmonic Motion (SHM) system using Matplotlib. It's designed to represent the motion of a particle or object in SHM, typically found in physics.
+This Python function calculates the displacement, velocity, and acceleration response of a structure subjected to ground motion using the Newmark method.
+
+![fun_BNewmark](https://github.com/Normando1945/Simple-Python-Functions-Collection/assets/62081230/069ba2db-724a-453b-af7c-9e103dbb2743)
+
 
 #### Parameters:
-- `R` (float): The amplitude of the motion, indicating the maximum distance from the equilibrium position.
-- `phi` (float): The phase of the motion, determining where in its cycle the oscillation begins.
-- `w` (float): The angular frequency of the motion, defining how many oscillations occur per unit of time.
-- `T` (float): The time period over which the animation is displayed, indicating how long one complete cycle of the motion lasts.
+- `TG` (list): Time vector of the motion history.
+- `SG` (list of lists): Acceleration time history of the ground motion.
+- `M` (float): Mass of the structure.
+- `T` (float): Period of the structure.
+- `xo` (float): Initial displacement response.
+- `xvo` (float): Initial velocity response.
+- `zi` (float): Damping ratio of the structure.
+
+#### Returns:
+- `Xn1` (list): Displacement response.
+- `Xvn1` (list): Velocity response.
+- `Xan1` (list): Acceleration response.
+- `At` (list): Total acceleration response.
+- `ti` (list): Time vector.
+- `Sgg` (list): Acceleration time history of the ground motion.
+- `dt` (float): Time step size.
 
 #### Functionality:
-1. **Initialization**: Sets up the Matplotlib figure and axes, preparing three subplots. The first two are for visualizing the circular motion in SHM, and the third is for plotting the displacement over time.
-
-2. **Animation Preparation**: Configures various elements of the animation, including the circle representing the path of the SHM, the line showing the current position, and the dot indicating the particle or object in motion.
-
-3. **Updating Function**: Updates the position of the particle or object for each frame of the animation, recalculating its position based on the SHM equations and redrawing the relevant elements of the plot.
-
-4. **Execution**: Uses `FuncAnimation` from Matplotlib to create the animation by repeatedly calling the updating function for each time step.
+1. **Initialization**: Sets up the time vector, calculates stiffness, and initializes arrays for displacement, velocity, and acceleration. Initial conditions are set based on input parameters.
+2. **Calculation Loop**: Iterates over each time step, updating the values of displacement, acceleration, and velocity using the Newmark method equations.
+3. **Conversion and Plotting**: Converts arrays to lists and uses Matplotlib to plot the seismic record, displacement, velocity, and acceleration in separate subplots.
 
 #### Visualization:
-- **Subplot 1 & 2**: Show the particle's motion along a circular path, emphasizing the SHM's characteristics. The parameters `w` and `T` are doubled in the second subplot, demonstrating the effect of changing these values.
-- **Subplot 3**: Plots the displacement of the particle over time, providing a direct view of how the SHM progresses over the period `T`.
+- **Figure 1 - Seismic Record**: Plots the seismic record over time.
+- **Figure 2 - Displacement**: Shows the displacement response over time.
+- **Figure 3 - Velocity**: Illustrates the velocity response over time.
+- **Figure 4 - Acceleration**: Compares the seismic record, acceleration response, and total acceleration response over time.
 
 #### Usage:
-This function is ideal for educational purposes, especially for providing students with a visual understanding of SHM concepts in physics. Below is an example of recommended parameters for a typical use case:
+This function is ideal for engineers and researchers studying the effects of seismic activity on structures. It can be used for educational purposes or practical applications in structural engineering and seismology. Below is an example of recommended parameters for a typical use case:
 
-- `R` =         0.5 or 1.0: Depending on the desired amplitude, you may choose a value of 0.5 for a standard representation or any value for a motion with a higher amplitude.
-- `phi` =       0: This starts the motion at the equilibrium position, which is common for basic demonstrations of **SHM**.
-- `w` =         1.0 * np.pi: This value sets a standard angular frequency, corresponding to one complete oscillation every **2π** units of time.
-- `T` =         (2 * np.pi) / w: By setting the time period like this, the animation will display exactly one complete cycle, given the angular frequency **w**.
+- `TG` = List of time intervals.
+- `SG` = Nested list containing acceleration data.
+- `M` = Value representing the mass of the structure, e.g., 1000 (for a structure with a mass of 1000 kg).
+- `T` = Value for the period of the structure, e.g., 0.5.
+- `xo` = Initial displacement, typically 0 for structures at rest.
+- `xvo` = Initial velocity, typically 0 for structures at rest.
+- `zi` = Damping ratio, e.g., 0.05 for 5% damping.
 
-**Note**: The animation's default configuration aims for optimal visibility and comprehension, but users can adjust parameters and settings to suit specific requirements or scenarios. For instance, altering the value of `R` can show students how changes in amplitude affect the motion, while different values of `phi` can demonstrate the effects of phase shifts.
+**Note**: The visualization's default configuration is designed for optimal visibility and understanding, but users can adjust parameters and settings to suit specific requirements or scenarios.
+
+
 
