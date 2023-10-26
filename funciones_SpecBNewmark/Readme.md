@@ -18,7 +18,7 @@
 This Python function calculates the spectral response including acceleration, velocity, and displacement of a structure subjected to ground motion using a modified Newmark method.
 
 <p align="center">
-    <img src="https://github.com/Normando1945/Simple-Python-Functions-Collection/assets/62081230/fun_Spec_B_Newmark_2023_image.png" alt="fun_Spec_B_Newmark_2023" width="50%">
+    <img src="https://github.com/Normando1945/Simple-Python-Functions-Collection/assets/62081230/a5d747fd-45e4-447e-ab21-71fa71f71224" alt="fun_Spec_B_Newmark_2023" width="50%">
 </p>
 
 #### Parameters:
@@ -37,10 +37,10 @@ This Python function calculates the spectral response including acceleration, ve
 - `Sa` (list): Max response acceleration.
 - `Sd` (list): Max response displacement.
 - `Sv` (list): Max response velocity.
-- `fig2` (matplotlib.figure.Figure): Figure object for seismic record plot.
-- `fig1` (matplotlib.figure.Figure): Figure object for response spectra plot.
-- `ax2` (matplotlib.axes.Axes): Axes object for seismic record plot.
-- `ax1` (matplotlib.axes.Axes): Axes object for response spectra plot.
+- `fig1` (matplotlib.figure.Figure): Figure object for seismic record plot.
+- `fig2` (matplotlib.figure.Figure): Figure object for acceleration response spectra plot.
+- `ax1` (matplotlib.axes.Axes): Axes object for seismic record plot.
+- `ax2` (matplotlib.axes.Axes): Axes object for acceleration response spectra plot.
 - `line` (matplotlib.lines.Line2D): Line2D object for spectra plot.
 - `linepos` (matplotlib.lines.Line2D): Line2D object for draggable line.
 - `textbox` (matplotlib.text.Text): Text object for displaying values.
@@ -65,7 +65,7 @@ This function is useful for engineers, researchers, and students involved in the
 - `xvo` = Initial velocity, typically 0.
 - `TG` = Time vector from seismic record.
 - `SG` = Acceleration data from seismic record.
-- `record` = Identifier for the seismic record, e.g., "Northridge Earthquake".
+- `record` = Identifier for the seismic record, e.g., "ChiChi_Long Earthquake".
 
 **Note**: The function includes interactive features for enhanced visualization. Users can explore the response spectra by moving the cursor along the curve. The seismic record and spectral plots provide valuable insights into the structural response under seismic loading.
 
