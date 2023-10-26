@@ -68,6 +68,6 @@ This function is useful for engineers, researchers, and students involved in the
 - `SG` = Acceleration data from seismic record.
 - `record` = Identifier for the seismic record, e.g., "ChiChi_Long Earthquake".
 
-**Note**: The function includes interactive features for enhanced visualization. Users can explore the response spectra by moving the cursor along the curve. The seismic record and spectral plots provide valuable insights into the structural response under seismic loading.
+**Note**: The function includes interactive features for enhanced visualization. Users can explore the response spectra by moving the cursor along the curve. The seismic record and spectral plots provide valuable insights into the structural response under seismic loading. Attached in this same repository is a file (.AT2) that contains a seismic record organized in 2 columns. The first column has the time of the record and the second column has the corresponding acceleration in a fraction of gravity.
 
 
