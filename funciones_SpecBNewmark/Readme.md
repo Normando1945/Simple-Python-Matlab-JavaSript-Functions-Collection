@@ -46,6 +46,10 @@ This Python function calculates the spectral response including acceleration, ve
 - `linepos` (matplotlib.lines.Line2D): Line2D object for draggable line.
 - `textbox` (matplotlib.text.Text): Text object for displaying values.
 - `point` (matplotlib.lines.Line2D): Line2D object for marker point.
+- `folder_path` (str): Path to the created results folder, named as `Results_XXXX` where `XXXX` is the record value.
+- `file_path1` (str): Path to the saved `.AT2` file containing the seismic record data within the results folder.
+- `file_path2` (str): Path to the saved `.AT2` file containing the acceleration response spectra within the results folder.
+
 
 #### Functionality:
 1. **Initialization**: Sets up parameters, initializes arrays for response calculation, and calculates stiffness.
