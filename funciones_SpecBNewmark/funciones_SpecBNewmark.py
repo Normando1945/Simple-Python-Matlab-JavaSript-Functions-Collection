@@ -125,7 +125,7 @@ def fun_Spec_B_Newmark_2023(To, Tf, dT, zi, xo, xvo, TG, SG, record):
         rec = np.column_stack((TG,SG))
         
         current_directory = os.getcwd()
-        folder_name = 'Results_' + record
+        folder_name = 'Results_SPEC_' + record
         folder_path = os.path.join(current_directory, folder_name)
 
         if not os.path.exists(folder_path):
@@ -136,6 +136,12 @@ def fun_Spec_B_Newmark_2023(To, Tf, dT, zi, xo, xvo, TG, SG, record):
 
         np.savetxt(file_path1, rec, delimiter='\t', fmt='%.6f')
         np.savetxt(file_path2, SpecE, delimiter='\t', fmt='%.6f')
+        
+        fig_path1 = os.path.join(folder_name, 'fig1_rec_' + record + '.png')
+        fig_path2 = os.path.join(folder_name, 'fig2_SPECe_ORD_' + record + '.png')
+        fig2.savefig(fig_path1)
+        fig1.savefig(fig_path2)
+        
         print('\x1b[1;34m  Folder Path =', folder_path)
         
    
