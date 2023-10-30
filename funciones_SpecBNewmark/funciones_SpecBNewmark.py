@@ -10,21 +10,21 @@ import os
 
 def fun_Spec_B_Newmark_2023(To, Tf, dT, zi, xo, xvo, TG, SG, record):
         
-        Sa = []                                                                 # Initialize array of max response acceleration 
-        Sv =[]                                                                  # Initialize array of max response velocity 
-        Sd = []                                                                 # Initialize array of max response displacement
-        Period = []                                                             # Initialize array of Structural's Periods
+        Sa = []                                                                 
+        Sv =[]                                                                  
+        Sd = []                                                                
+        Period = []                                                             
         for T in np.arange(To, Tf, dT):    
-                M = 1                                                           # Unit mass
-                ti = TG                                                         # Change of variable
-                dt = ti[1] - ti[0]                                              # Interval of time
-                K = (2 * np.pi / T) ** 2 * M                                    # Calculate the stiffness
-                xn1 = np.zeros((len(SG), 1))                                    # Initialize array of response displacement 
-                xvn1 = np.zeros((len(SG), 1))                                   # Initialize array of response velocity 
-                xan1 = np.zeros((len(SG), 1))                                   # Initialize array of response acceleration
-                at = np.zeros((len(SG), 1))                                     # Initialize array of response displacement 
-                xn1[0, 0] = xo                                                  # Set initial conditions of response displacement
-                xvn1[0, 0] = xvo                                                # Set initial conditions of response velocity
+                M = 1                                                           
+                ti = TG                                                         
+                dt = ti[1] - ti[0]                                            
+                K = (2 * np.pi / T) ** 2 * M                                    
+                xn1 = np.zeros((len(SG), 1))                                    
+                xvn1 = np.zeros((len(SG), 1))                                   
+                xan1 = np.zeros((len(SG), 1))                                  
+                at = np.zeros((len(SG), 1))                                    
+                xn1[0, 0] = xo                                                 
+                xvn1[0, 0] = xvo                                              
                 w = 2*np.pi/T                                    
                 xan1[0, 0] = ((-SG[0] * M) - 2 * zi * w* xvo - (w) ** 2 * xo) * 1 / M
                 # Calculate response B- Nwemark
@@ -42,7 +42,6 @@ def fun_Spec_B_Newmark_2023(To, Tf, dT, zi, xo, xvo, TG, SG, record):
         Sv = list(Sv)
         Sd = list(Sd)
         Period =  list(Period)
-        #Resul = pd.DataFrame({ 'Period (T) [s]': Period.flatten(),'Max Acceleration Response (Sa) [g]': Sa.flatten(),'Max Velocity Response (Sv) [A]': Sv.flatten(), 'Max Displacement Resmponse (Sd) [A]': Sd.flatten()})
         SPEC_e = 1
         
  
@@ -74,26 +73,25 @@ def fun_Spec_B_Newmark_2023(To, Tf, dT, zi, xo, xvo, TG, SG, record):
         plt.show()
         
         
-        fig1, ax1 = plt.subplots(figsize=(16/1.5, 9/1.5))                                                                       # Create a figure and an axes object
+        fig1, ax1 = plt.subplots(figsize=(16/1.5, 9/1.5))                                                                       
 
-        line, = ax1.plot(Period, Sa, color=(0, 0, 1), marker='+', markersize=0, markerfacecolor='w',                            # Plot the Acceleration Response Spectra
+        line, = ax1.plot(Period, Sa, color=(0, 0, 1), marker='+', markersize=0, markerfacecolor='w',                            
         markeredgewidth=0, linewidth=1.0, alpha=0.5,label= f'Sa_e')
-        ax1.fill_between(Period, Sa, color=(0, 0, 1), alpha=0.3, hatch='///', edgecolor='k', facecolor='w')                     # Add a fill between the curve and the x-axis with a diagonal line patter
+        ax1.fill_between(Period, Sa, color=(0, 0, 1), alpha=0.3, hatch='///', edgecolor='k', facecolor='w')                    
 
-        ax1.set_xlim([Period[0], (max(Period))])                                                                                        # Set the x-axis limits from 0 to the maximum value in Period
+        ax1.set_xlim([Period[0], (max(Period))])                                                                                        
         Sa_clean = np.nanmax([value for value in Sa if np.isfinite(value)])
-        ax1.set_ylim([0, Sa_clean*1.05])                                                                                        # Set the x-axis limits from 0 to the maximum value in Period
-        plt.title(f'Acceleration Response Spectra  ({record})', fontsize=10, color=(0, 0, 1))                                   # Set the title of the plot to 'Acceleration Response Spectra'
-        plt.xlabel('Period (T) [s]', rotation=0, fontsize=10, color=(0, 0, 0))                                                  # Set the x-axis label to 'Period (T) [s]'
-        plt.ylabel('Max Response Acceleration (Sa) [g]', rotation=90, fontsize=10, color=(0, 0, 0))                             # Set the y-axis label to 'Max Response Acceleration (Sa) [g]'
-        legend = plt.legend(fontsize=10)                                                                                        # Add a legend to the plot with a font size of 10
-        legend.get_frame().set_edgecolor('none')                                                                                # Remove the frame from the legend
-        ax1.grid(which='both', axis='x', alpha=0.5)                                                                             # Add gridlines to both the x and y axis
+        ax1.set_ylim([0, Sa_clean*1.05])                                                                                        
+        plt.title(f'Acceleration Response Spectra  ({record})', fontsize=10, color=(0, 0, 1))                                  
+        plt.xlabel('Period (T) [s]', rotation=0, fontsize=10, color=(0, 0, 0))                                                  
+        plt.ylabel('Max Response Acceleration (Sa) [g]', rotation=90, fontsize=10, color=(0, 0, 0))                            
+        legend = plt.legend(fontsize=10)                                                                                        
+        legend.get_frame().set_edgecolor('none')                                                                                
+        ax1.grid(which='both', axis='x', alpha=0.5)                                                                             
 
-        # Add a draggable vertical line and a text box to display Sa at the current position
-        linepos = ax1.axvline(x=Period[0], color=(1, 0, 0), linestyle='--',linewidth=0.9, alpha=0.7) # Create a vertical line at the first period value
+        linepos = ax1.axvline(x=Period[0], color=(1, 0, 0), linestyle='--',linewidth=0.9, alpha=0.7) 
         textbox = ax1.text(0.75, 0.5, '', transform=ax1.transAxes, fontsize=10, color='black', ha='left', va='top', bbox=dict(boxstyle='round,pad=0.5', fc='white', alpha=0.5))
-        point, = ax1.plot([], [], color=(0, 0, 0), marker='o', markersize=6, markerfacecolor='w',                               # Plot the Acceleration Response Spectra
+        point, = ax1.plot([], [], color=(0, 0, 0), marker='o', markersize=6, markerfacecolor='w',                            
         markeredgewidth=1, linewidth=1.0, alpha=1)
 
         def update_annotation(pos):
