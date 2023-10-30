@@ -49,6 +49,8 @@ This Python function calculates the spectral response including acceleration, ve
 - `folder_path` (str): Path to the created results folder, named as `Results_XXXX` where `XXXX` is the record value.
 - `file_path1` (str): Path to the saved `.AT2` file containing the seismic record data within the results folder.
 - `file_path2` (str): Path to the saved `.AT2` file containing the acceleration response spectra within the results folder.
+- `fig_path1` (fig): Path to the saved `.PNG` file containing the figure of the seismic record data within the results folder.
+- `fig_path2` (fig): Path to the saved `.PNG` file containing the figure of acceleration response spectra within the results folder.
 
 
 #### Functionality:
