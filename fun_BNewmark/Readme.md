@@ -14,7 +14,7 @@
 [![Google Scholar](https://img.shields.io/badge/-Google%20Scholar-4285F4?style=social&logo=google)](https://scholar.google.com.ec/citations?hl=es&user=yR4Gz7kAAAAJ)
 <a href="Carlos Celi:normando1945@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-normando1945@gmail.com-blue?style=flat&logo=gmail"></a>>
 
-### Function: fun_B_Newmark_2023(TG, SG, M, T, xo, xvo, zi)
+### Function: fun_B_Newmark_2023(TG, SG, M, T, xo, xvo, zi, record)
 
 This Python function calculates the displacement, velocity, and acceleration response of a structure subjected to ground motion using the Newmark method.
 
@@ -32,6 +32,7 @@ This Python function calculates the displacement, velocity, and acceleration res
 - `xo` (float): Initial displacement response.
 - `xvo` (float): Initial velocity response.
 - `zi` (float): Damping ratio of the structure.
+- `record` (string): Name or identifier for the seismic record.
 
 #### Returns:
 - `Xn1` (list): Displacement response.
@@ -41,6 +42,10 @@ This Python function calculates the displacement, velocity, and acceleration res
 - `ti` (list): Time vector.
 - `Sgg` (list): Acceleration time history of the ground motion.
 - `dt` (float): Time step size.
+- `folder_path` (str): Path to the created results folder, named as `Results_XXXX` where `XXXX` is the record value.
+- `file_path1` (str): Path to the saved `.AT2` file containing the seismic record data within the results folder.
+- `file_path2` (str): Path to the saved `.AT2` file containing the total acceleration response within the results folder.
+- `fig_path1` (fig): Path to the saved `.PNG` file containing the figure of the seismic record, displacement response, velocity response & acceleration response data within the results folder.
 
 #### Functionality:
 1. **Initialization**: Sets up the time vector, calculates stiffness, and initializes arrays for displacement, velocity, and acceleration. Initial conditions are set based on input parameters.
@@ -48,10 +53,10 @@ This Python function calculates the displacement, velocity, and acceleration res
 3. **Conversion and Plotting**: Converts arrays to lists and uses Matplotlib to plot the seismic record, displacement, velocity, and acceleration in separate subplots.
 
 #### Visualization:
-- **Figure 1 - Seismic Record**: Plots the seismic record over time.
-- **Figure 2 - Displacement**: Shows the displacement response over time.
-- **Figure 3 - Velocity**: Illustrates the velocity response over time.
-- **Figure 4 - Acceleration**: Compares the seismic record, acceleration response, and total acceleration response over time.
+- **Sub Figure 1 - Seismic Record**: Plots the seismic record over time.
+- **Sub Figure 2 - Displacement**: Shows the displacement response over time.
+- **Sub Figure 3 - Velocity**: Illustrates the velocity response over time.
+- **Sub Figure 4 - Acceleration**: Compares the seismic record, acceleration response, and total acceleration response over time.
 
 #### Usage:
 This function is ideal for engineers and researchers studying the effects of seismic activity on structures. It can be used for educational purposes or practical applications in structural engineering and seismology. Below is an example of recommended parameters for a typical use case:
@@ -63,6 +68,7 @@ This function is ideal for engineers and researchers studying the effects of sei
 - `xo` = Initial displacement, typically 0 for structures at rest.
 - `xvo` = Initial velocity, typically 0 for structures at rest.
 - `zi` = Damping ratio, e.g., 0.05 for 5% damping.
+- `record` = Identifier for the seismic record, e.g., "ChiChi_Long Earthquake".
 
 **Note**: The visualization's default configuration is designed for optimal visibility and understanding, but users can adjust parameters and settings to suit specific requirements or scenarios.
 Attached in this same repository is a file (.AT2) that contains a seismic record organized in 2 columns. The first column has the time of the record and the second column has the corresponding acceleration in a fraction of gravity.
