@@ -14,7 +14,7 @@
 [![Google Scholar](https://img.shields.io/badge/-Google%20Scholar-4285F4?style=social&logo=google)](https://scholar.google.com.ec/citations?hl=es&user=yR4Gz7kAAAAJ)
 <a href="Carlos Celi:normando1945@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-normando1945@gmail.com-blue?style=flat&logo=gmail"></a>
 
-### Function: fun_Spec_B_Newmark_2023(To, Tf, dT, zi, xo, xvo, TG, SG, record)
+### Function: fun_Nec(n, z, I, fads, r, R, fip, fie, TR)
 
 The `fun_Nec` function performs spectral calculations using the NEC-SE-DS-2015 Ecuadorian Code. It computes the Elastic and Inelastic Acceleration Response Spectra for a range of structural periods and visualizes the results. Moreover, the function saves the results and figures in a folder specific to the return period (`TR`) used.
 
