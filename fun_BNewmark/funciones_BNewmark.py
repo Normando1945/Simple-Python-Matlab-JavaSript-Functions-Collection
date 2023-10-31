@@ -2,8 +2,9 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
+import os
 
-def fun_B_Newmark_2023(TG, SG, M, T, xo, xvo, zi):
+def fun_B_Newmark_2023(TG, SG, M, T, xo, xvo, zi, record):
     ti  = TG        
     dt = ti[1] - ti[0]
     K = (2 * np.pi / T) ** 2 * M
@@ -36,7 +37,7 @@ def fun_B_Newmark_2023(TG, SG, M, T, xo, xvo, zi):
     ax1.plot(ti, Sgg, color=(0, 0, 0), marker='+', markersize=0, markerfacecolor='w',
             markeredgewidth=0, linewidth=0.5, alpha=1.0, label='Seismic Record')
     ax1.set_xlim([0, (max(ti))])
-    ax1.set_title('Seismic Record', fontsize=7, color=(0, 0, 1))
+    ax1.set_title(f'Seismic Record ({record})', fontsize=7, color=(0, 0, 1))
     ax1.set_xlabel('Time [s]', rotation=0, fontsize=7, color=(0, 0, 0))
     ax1.set_ylabel('Amplitude [g]', rotation=90, fontsize=7, color=(0, 0, 0))
     legend = ax1.legend(fontsize=7)
@@ -46,7 +47,7 @@ def fun_B_Newmark_2023(TG, SG, M, T, xo, xvo, zi):
     ax2.plot(ti, xn1, color=(0, 0, 1), marker='+', markersize=0, markerfacecolor='w',
             markeredgewidth=0, linewidth=1, alpha=0.5, label='Displacement')
     ax2.set_xlim([0, (max(ti))])
-    ax2.set_title('Displacement', fontsize=7, color=(0, 0, 1))
+    ax2.set_title(f'Displacement ({record})', fontsize=7, color=(0, 0, 1))
     ax2.set_xlabel('Time [s]', rotation=0, fontsize=7, color=(0, 0, 0))
     ax2.set_ylabel('Amplitude [X]', rotation=90, fontsize=7, color=(0, 0, 0))
     legend = ax2.legend(fontsize=7)
@@ -56,7 +57,7 @@ def fun_B_Newmark_2023(TG, SG, M, T, xo, xvo, zi):
     ax3.plot(ti, xvn1, color=(1, 0, 0), marker='+', markersize=0, markerfacecolor='w',
             markeredgewidth=0, linewidth=1, alpha=0.5, label='Velocity')
     ax3.set_xlim([0, (max(ti))])
-    ax3.set_title('Velocity', fontsize=7, color=(0, 0, 1))
+    ax3.set_title(f'Velocity ({record})', fontsize=7, color=(0, 0, 1))
     ax3.set_xlabel('Time [s]', rotation=0, fontsize=7, color=(0, 0, 0))
     ax3.set_ylabel('Amplitude [V]', rotation=90, fontsize=7, color=(0, 0, 0))
     legend = ax3.legend(fontsize=7)
@@ -70,7 +71,7 @@ def fun_B_Newmark_2023(TG, SG, M, T, xo, xvo, zi):
     ax4.plot(ti, At, color=(1, 0, 0), marker='+', linestyle = '--', markersize=0, markerfacecolor='w',               
             markeredgewidth=0, linewidth=0.5, alpha=0.5,label= f'Total Acceleration Response [B-Newmark]')
     ax4.set_xlim([0, (max(ti))])                                                                                     
-    ax4.set_title('Acceleration', fontsize=7, color=(0, 0, 1))                                                         
+    ax4.set_title(f'Acceleration ({record})', fontsize=7, color=(0, 0, 1))                                                         
     ax4.set_xlabel('Time [s]', rotation=0, fontsize=7, color=(0, 0, 0))                                                
     ax4.set_ylabel('Acceleration [g]', rotation=90, fontsize=7, color=(0, 0, 0))                                          
     ax4.grid(which='both', axis='x', alpha=0.5)   
@@ -78,6 +79,27 @@ def fun_B_Newmark_2023(TG, SG, M, T, xo, xvo, zi):
     legend1 = ax4.legend(fontsize=7, loc='lower center', ncol=3)
     legend1.get_frame().set_edgecolor('none')                                                                      
 
-    plt.tight_layout()  
+    plt.tight_layout() 
+    
+    rec = np.column_stack((TG,SG))
+    acc = np.column_stack((ti,At))
+        
+    current_directory = os.getcwd()
+    folder_name = 'Results_TH_' + record
+    folder_path = os.path.join(current_directory, folder_name)
 
-    return Xn1, Xvn1, Xan1, At, ti, Sgg, dt, fig1
+    if not os.path.exists(folder_path):
+           os.makedirs(folder_path)
+
+    file_path1 = os.path.join(folder_path, 'rec_' + record + '.AT2')
+    file_path2 = os.path.join(folder_path, 'rec_' + record + '_AT_Response_' + '.AT2')
+
+    np.savetxt(file_path1, rec, delimiter='\t', fmt='%.6f')
+    np.savetxt(file_path2, acc, delimiter='\t', fmt='%.6f')
+        
+    fig_path1 = os.path.join(folder_name, 'fig1_TH_results_' + record + '.png')
+    fig1.savefig(fig_path1)
+        
+    print('\x1b[1;34m  Folder Path =', folder_path)  
+      
+    return Xn1, Xvn1, Xan1, At, ti, Sgg, dt, fig1, folder_path
