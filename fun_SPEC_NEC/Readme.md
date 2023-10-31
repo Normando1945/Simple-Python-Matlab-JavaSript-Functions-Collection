@@ -20,8 +20,10 @@ The `fun_Nec` function performs spectral calculations using the NEC-SE-DS-2015 E
 
 
 <p align="center">
-    <img src="https://github.com/Normando1945/Simple-Python-Functions-Collection/assets/62081230/a5d747fd-45e4-447e-ab21-71fa71f71224" alt="fun_Spec_B_Newmark_2023" width="50%">
+    <img src="https://github.com/Normando1945/Simple-Python-Functions-Collection/assets/62081230/37734b39-2ef5-4b71-a765-438173b8cf8f" alt="fun_Spec_B_Newmark_2023" width="50%">
 </p>
+
+
 
 #### Parameters:
 - `n` (float): Ratio between expected accelerations, Sa(T=0.1s) and the PGA for the selected return period.
