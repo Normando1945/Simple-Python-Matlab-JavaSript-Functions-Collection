@@ -53,8 +53,10 @@ def fun_Spec_B_Newmark_2023(To, Tf, dT, zi, xo, xvo, TG, SG, record):
         maxTime = ti[mindi]
         maxAccel = Sgg[mindi]
         fs  = 1 # scale factor for plot's
+        
+        
+        
         fig2, ax2 = plt.subplots(figsize=(16/1.5, 9/1.5))
-        # Figure 2 - Seismic Record
         ax2.plot(ti, Sgg, color=(0, 0, 1), marker='+', markersize=0, markerfacecolor='w',
                 markeredgewidth=0, linewidth=0.5, alpha=0.5, label='Seismic Record')
         ax2.plot(maxTime, maxAccel, color=(0, 0, 0), marker='o', markersize=4, markerfacecolor='b',
@@ -73,12 +75,32 @@ def fun_Spec_B_Newmark_2023(To, Tf, dT, zi, xo, xvo, TG, SG, record):
         plt.show()
         
         
-        fig1, ax1 = plt.subplots(figsize=(16/1.5, 9/1.5))                                                                       
+        
+        
+        fig3, ax3 = plt.subplots(figsize=(16/1.5, 9/1.5))                                                                       
+        ax3.plot(Period, Sa, color=(0, 0, 1), marker='+', markersize=0, markerfacecolor='w',                            
+        markeredgewidth=0, linewidth=1.0, alpha=0.5,label= f'Sa_e')
+        ax3.set_xscale('log')
+        ax3.fill_between(Period, Sa, color=(0, 0, 1), alpha=0.3, hatch='///', edgecolor='k', facecolor='w')                    
+        ax3.set_xlim([Period[0], (max(Period))])                                                                                        
+        Sa_clean = np.nanmax([value for value in Sa if np.isfinite(value)])
+        ax3.set_ylim([0, Sa_clean*1.05])                                                                                        
+        ax3.set_title(f'SemiLog Plot: Acceleration Response Spectra  ({record})', fontsize=10, color=(0, 0, 1))                                  
+        ax3.set_xlabel('Period (T) [s]', rotation=0, fontsize=10, color=(0, 0, 0))                                                  
+        ax3.set_ylabel('Max Response Acceleration (Sa) [g]', rotation=90, fontsize=10, color=(0, 0, 0))                            
+        legend = plt.legend(fontsize=10)                                                                                        
+        legend.get_frame().set_edgecolor('none')                                                                                
+        ax3.grid(which='both', axis='x', alpha=0.5)                                                                             
 
+        plt.show()
+        
+        
+        
+        
+        fig1, ax1 = plt.subplots(figsize=(16/1.5, 9/1.5))                                                                       
         line, = ax1.plot(Period, Sa, color=(0, 0, 1), marker='+', markersize=0, markerfacecolor='w',                            
         markeredgewidth=0, linewidth=1.0, alpha=0.5,label= f'Sa_e')
         ax1.fill_between(Period, Sa, color=(0, 0, 1), alpha=0.3, hatch='///', edgecolor='k', facecolor='w')                    
-
         ax1.set_xlim([Period[0], (max(Period))])                                                                                        
         Sa_clean = np.nanmax([value for value in Sa if np.isfinite(value)])
         ax1.set_ylim([0, Sa_clean*1.05])                                                                                        
@@ -116,9 +138,11 @@ def fun_Spec_B_Newmark_2023(To, Tf, dT, zi, xo, xvo, TG, SG, record):
         fig1.canvas.mpl_connect('button_press_event', on_click)
         fig1.canvas.mpl_connect('motion_notify_event', on_motion)
         
-          
         plt.show()
         
+        
+        
+       
         SpecE = np.column_stack((Period, Sa))
         rec = np.column_stack((TG,SG))
         
@@ -137,10 +161,13 @@ def fun_Spec_B_Newmark_2023(To, Tf, dT, zi, xo, xvo, TG, SG, record):
         
         fig_path1 = os.path.join(folder_name, 'fig1_rec_' + record + '.png')
         fig_path2 = os.path.join(folder_name, 'fig2_SPECe_ORD_' + record + '.png')
+        fig_path3 = os.path.join(folder_name, 'fig3_SPECe_ORD_LOG_LOG' + record + '.png')
         fig2.savefig(fig_path1)
         fig1.savefig(fig_path2)
+        fig3.savefig(fig_path3)
         
+        print('\x1b[1;34m  Directory of the function =', current_directory)
         print('\x1b[1;34m  Folder Path =', folder_path)
         
    
-        return Period, Sa, Sd, Sv, fig2, fig1, ax2, ax1, line, linepos, textbox, point, folder_path
+        return Period, Sa, Sd, Sv, fig2, fig3, fig1, ax2, ax3, ax1, line, linepos, textbox, point, current_directory, folder_path
