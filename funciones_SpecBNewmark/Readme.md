@@ -40,8 +40,10 @@ This Python function calculates the spectral response including acceleration, ve
 - `Sv` (list): Max response velocity.
 - `fig1` (matplotlib.figure.Figure): Figure object for seismic record plot.
 - `fig2` (matplotlib.figure.Figure): Figure object for acceleration response spectra plot.
+- `fig3` (matplotlib.figure.Figure): Figure object for acceleration response spectra plot, using SemiLog Plot.
 - `ax1` (matplotlib.axes.Axes): Axes object for seismic record plot.
 - `ax2` (matplotlib.axes.Axes): Axes object for acceleration response spectra plot.
+- `ax3` (matplotlib.axes.Axes): Axes object for acceleration response spectra plot, using SemiLog Plot.
 - `line` (matplotlib.lines.Line2D): Line2D object for spectra plot.
 - `linepos` (matplotlib.lines.Line2D): Line2D object for draggable line.
 - `textbox` (matplotlib.text.Text): Text object for displaying values.
@@ -51,6 +53,7 @@ This Python function calculates the spectral response including acceleration, ve
 - `file_path2` (str): Path to the saved `.AT2` file containing the acceleration response spectra within the results folder.
 - `fig_path1` (fig): Path to the saved `.PNG` file containing the figure of the seismic record data within the results folder.
 - `fig_path2` (fig): Path to the saved `.PNG` file containing the figure of acceleration response spectra within the results folder.
+- `fig_path3` (fig): Path to the saved `.PNG` file containing the figure of acceleration response spectra within the results folder, using SemiLog Plot.
 
 
 #### Functionality:
@@ -61,6 +64,7 @@ This Python function calculates the spectral response including acceleration, ve
 #### Visualization:
 - **Figure 1 - Seismic Record**: Plots the seismic record over time with highlights on the peak ground acceleration (PGA).
 - **Figure 2 - Acceleration Response Spectra**: Displays the acceleration response spectra over a range of periods with interactive draggable line and marker.
+- **Figure 2 - Acceleration Response Spectra**: Displays the acceleration response spectra over a range of period, in SemilogX format.
 
 #### Usage:
 This function is useful for engineers, researchers, and students involved in the study of seismic effects on structures. It's particularly beneficial for spectral analysis and understanding the dynamic response over a range of structural periods. Recommended parameters for a typical use case might include:
@@ -74,6 +78,6 @@ This function is useful for engineers, researchers, and students involved in the
 - `SG` = Acceleration data from seismic record.
 - `record` = Identifier for the seismic record, e.g., "ChiChi_Long Earthquake".
 
-**Note**: The function includes interactive features for enhanced visualization. Users can explore the response spectra by moving the cursor along the curve. The seismic record and spectral plots provide valuable insights into the structural response under seismic loading. Attached in this same repository is a file (.AT2) that contains a seismic record organized in 2 columns. The first column has the time of the record and the second column has the corresponding acceleration in a fraction of gravity.
+**Note**: The function includes interactive features for enhanced visualization. Users can explore the response spectra by moving the cursor along the curve in the figure 2. The seismic record and spectral plots provide valuable insights into the structural response under seismic loading. Attached in this same repository is a file (.AT2) that contains a seismic record organized in 2 columns. The first column has the time of the record and the second column has the corresponding acceleration in a fraction of gravity.
 
 
