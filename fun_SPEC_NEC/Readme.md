@@ -34,13 +34,13 @@ The `fun_Nec` function performs spectral calculations using the NEC-SE-DS-2015 E
 - `R` (float): Seismic resistance reduction factor.
 - `fip` (float): Penalty for plan irregularity.
 - `fie` (float): Penalty for elevation irregularity.
-- `TR` (str): Return period, used in naming the results folder.
+- `TR` (str): Seismic Return Period, used in naming the results folder.
 
 
 ### Returns:
 - `Resul` (DataFrame): Contains columns 'Period [s]', 'Sae [g]', and 'Sai [g]' representing the period, elastic response acceleration, and inelastic response acceleration respectively.
 - `fig1` (matplotlib.figure.Figure): Figure object displaying the Elastic and Inelastic Acceleration Response Spectra (UHS).
-- `folder_path` (str): Path to the created results folder named `Results_NEC_UHS_TR_XXXX` where `XXXX` is the target return period value.
+- `folder_path` (str): Path to the created results folder named `Results_NEC_UHS_TR_XXXX` where `XXXX` is the seismic return period value.
 
 
 
