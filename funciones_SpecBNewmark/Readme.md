@@ -19,8 +19,9 @@
 This Python function calculates the spectral response including acceleration, velocity, and displacement of a structure subjected to ground motion using a modified Newmark method.
 
 <p align="center">
-    <img src="https://github.com/Normando1945/Simple-Python-Functions-Collection/assets/62081230/a5d747fd-45e4-447e-ab21-71fa71f71224" alt="fun_Spec_B_Newmark_2023" width="50%">
+    <img src="https://github.com/Normando1945/Simple-Python-Functions-Collection/assets/62081230/42a1af8a-5b11-4649-8da8-749c79a72691" alt="fun_Spec_B_Newmark_2023" width="50%">
 </p>
+
 
 #### Parameters:
 - `To` (float): Initial period of the structure.
