@@ -38,7 +38,7 @@ Below is a table of the Python functions available in this repository:
 
 ## :ledger: For Your Consideration
 
-Acknowledging the significance for the readers to practically apply the mathematical concepts taught in classes, this book aims to bridge the gap with an introduction to basic Python programming. To facilitate this, essential instructions for navigating the VSCode environment and Python engine are thoughtfully included. While readers are encouraged to execute the various codes provided throughout the book and those hosted in the **[GitHub](https://github.com/Normando1945)** repository in their preferred environment, it is important to note that these instructions are reflective of the technological standards and installation processes as of late 2023. Thus, due to the pace of technological advancement, these guidelines may evolve over time
+Acknowledging the significance for the readers to practically apply the mathematical concepts taught in classes, this book aims to bridge the gap with an introduction to basic Python programming. To facilitate this, essential instructions for navigating the VSCode environment and Python engine are thoughtfully included. While readers are encouraged to execute the various codes provided throughout the book and those hosted in this **GitHub** repository in their preferred environment, it is important to note that these instructions are reflective of the technological standards and installation processes as of late 2023. Thus, due to the pace of technological advancement, these guidelines may evolve over time
 
 **Installing Visual Studio Code and Python for Civil Engineering Students**
 
