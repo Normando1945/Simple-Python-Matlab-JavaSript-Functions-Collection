@@ -36,7 +36,7 @@ Below is a table of the Python functions available in this repository:
 | 4  | **[fun_Nec](https://github.com/Normando1945/Simple-Python-Functions-Collection/tree/main/fun_SPEC_NEC)** | The `fun_Nec` function performs spectral calculations using the NEC-SE-DS-2015 Ecuadorian Code. | Earthquake Engineering | [MSc. Ing. Carlos Celi](https://fragrant-knight-4af.notion.site/My-Personal-Page-for-Academic-Use-5c5f007b3f3f4c76a604960d9dbffca7) |
 
 
-## :ledger: For Your Consideration
+## :bookmark: For Your Consideration
 
 Acknowledging the significance for the readers to practically apply the mathematical concepts taught in classes, the book **"[Structural Engineering: Dynamics, Seismic Solution, and AI Integration](https://fragrant-knight-4af.notion.site/My-Personal-Page-for-Academic-Use-5c5f007b3f3f4c76a604960d9dbffca7)"** aims to bridge the gap with an introduction to basic Python programming. To facilitate this, essential instructions for navigating the VSCode environment and Python engine are thoughtfully included. While readers are encouraged to execute the various codes provided throughout the book and those hosted in this **GitHub** repository in their preferred environment, it is important to note that these instructions are reflective of the technological standards and installation processes as of late 2023. Thus, due to the pace of technological advancement, these guidelines may evolve over time
 
