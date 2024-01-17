@@ -36,6 +36,70 @@ Below is a table of the Python functions available in this repository:
 | 4  | **[fun_Nec](https://github.com/Normando1945/Simple-Python-Functions-Collection/tree/main/fun_SPEC_NEC)** | The `fun_Nec` function performs spectral calculations using the NEC-SE-DS-2015 Ecuadorian Code. | Earthquake Engineering | [MSc. Ing. Carlos Celi](https://fragrant-knight-4af.notion.site/My-Personal-Page-for-Academic-Use-5c5f007b3f3f4c76a604960d9dbffca7) |
 
 
+## :ledger: For Your Consideration
+
+Acknowledging the significance for the readers to practically apply the mathematical concepts taught in classes, this book aims to bridge the gap with an introduction to basic Python programming. To facilitate this, essential instructions for navigating the VSCode environment and Python engine are thoughtfully included. While readers are encouraged to execute the various codes provided throughout the book and those hosted in the **[GitHub](https://github.com/Normando1945)** repository in their preferred environment, it is important to note that these instructions are reflective of the technological standards and installation processes as of late 2023. Thus, due to the pace of technological advancement, these guidelines may evolve over time
+
+**Installing Visual Studio Code and Python for Civil Engineering Students**
+
+This guide will help you install Visual Studio Code (**VSCode**) and set up Python for your coding needs in civil engineering.
+
+   **Step 1:** Install Visual Studio Code
+
+**Download and Install**
+   1. Visit the **[Visual Studio Code official website](https://code.visualstudio.com/)**.
+   2. Click the download button for Windows.
+   3. Run the downloaded `.exe` file to start the installation process.
+   4. Follow the installation prompts:
+      - Accept the license agreement.
+      - Choose the installation location.
+      - Select additional tasks (important: ensure 'Add to PATH' is checked).
+      - Complete the installation.
+
+**Step 2: Install Python**
+
+**Download and Install**
+   1. Go to the **[official Python website](https://www.python.org/)**.
+   2. Download the latest version of Python for Windows from the 'Downloads' section.
+   3. Run the downloaded Python installer:
+      - Check 'Add Python X.X to PATH' at the bottom of the installer.
+      - Click 'Install Now'.
+
+**Step 3: Set Up Python in VSCode**
+
+**Install Python Extension**
+   1. Open Visual Studio Code.
+   2. Click on the 'Extensions' icon in the sidebar (or press `Ctrl+Shift+X`).
+   3. Search for 'Python' and find the official Python extension by Microsoft.
+   4. Click 'Install'.
+
+**Verify Python Installation**
+   1. Create a new file with a `.py` extension, e.g., `test.py`.
+   2. Write some Python code, such as `print("Hello, World!")`.
+   3. Right-click in the file and select 'Run Python File in Terminal'.
+
+**Step 4: Install and Use Jupyter Notebooks (Optional)**
+
+**Install Jupyter Extension**
+   1. In VSCode, go to the Extensions view (`Ctrl+Shift+X`).
+   2. Search for 'Jupyter'.
+   3. Find the Jupyter extension by Microsoft and click 'Install'.
+
+**Using Jupyter Notebooks**
+   1. To create a new notebook, press `Ctrl+Shift+P` to open the command palette.
+   2. Type 'Jupyter: Create New Blank Notebook' and select it.
+   3. A new notebook will open where you can write and execute Python code in cells.
+   4. To run a cell, type your Python code and press `Shift+Enter`.
+
+**Select Python Kernel for Jupyter Notebooks**
+   1. With the Jupyter Notebook open, look at the top-right corner of the VSCode window.
+   2. You will see the Python version currently selected. If it is not the version you want to use, click on it.
+   3. A list of available Python interpreters will appear. Select the one that corresponds to the Python version you installed and want to use for your notebooks.
+
+
+**Step 5: Start Coding**
+
+You're all set! You can now begin writing Python code in Visual Studio Code. Create new `.py` or `ipynb` files and explore Python's capabilities.
 
 ## :muscle: Contributions
 
