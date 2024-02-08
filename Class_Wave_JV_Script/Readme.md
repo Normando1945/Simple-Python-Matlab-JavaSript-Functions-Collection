@@ -18,8 +18,9 @@
 
 This JavaScript creates an animated visualization representing the superposition of multiple **SHM Response**, which can be used to illustrate concepts such as interference patterns or individual frecuencies of a seismic record.
 
-![SHM_animation_p5js_2](https://github.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/assets/62081230/ce57cfe4-0fd7-4b4e-945c-c7dea3eeb838)
-
+<p align="center">
+    <img src="https://github.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/assets/62081230/ce57cfe4-0fd7-4b4e-945c-c7dea3eeb838" alt="fun_BNewmark" width="50%">
+</p>
 
 #### Parameters:
 - `R` (number): The maximum amplitude of the sine waves.
