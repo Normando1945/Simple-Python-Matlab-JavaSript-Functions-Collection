@@ -14,40 +14,33 @@
 [![Google Scholar](https://img.shields.io/badge/-Google%20Scholar-4285F4?style=social&logo=google)](https://scholar.google.com.ec/citations?hl=es&user=yR4Gz7kAAAAJ)
 <a href="Carlos Celi:normando1945@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-normando1945@gmail.com-blue?style=flat&logo=gmail"></a>
 
-### Function: SHM_animation(R, phi, w, T)
+### Script: SHM_Response_Superposition_Animation
 
-This Python function generates an animated visualization of a Simple Harmonic Motion (SHM) system using Matplotlib. It's designed to represent the motion of a particle or object in SHM, typically found in physics.
-
-
-![SHM_animation](https://github.com/Normando1945/Simple-Python-Functions-Collection/assets/62081230/68e71aca-3849-4e5f-a76e-28bd85f75189)
-
+This JavaScript creates an animated visualization representing the superposition of multiple **SHM Response**, which can be used to illustrate concepts such as interference patterns or individual frecuencies of a seismic record.
 
 #### Parameters:
-- `R` (float): The amplitude of the motion, indicating the maximum distance from the equilibrium position.
-- `phi` (float): The phase of the motion, determining where in its cycle the oscillation begins.
-- `w` (float): The angular frequency of the motion, defining how many oscillations occur per unit of time.
-- `T` (float): The time period over which the animation is displayed, indicating how long one complete cycle of the motion lasts.
+- `R` (number): The maximum amplitude of the sine waves.
+- `T` (number): The maximum period of the sine waves.
+- `phi` (number): The initial phase of the sine waves.
+- `number_waves` (number): The starting number of sine waves to be superimposed.
+- `max_number_waves` (number): The maximum number of sine waves that can be superimposed.
+- `inv_frames` (number): The speed of the animation.
+- `number_of_pi` (number): The multiplier for the initial phase to vary the phase of sine waves.
+- `ranCB` (number), `ranCS` (number): The initial and final color ranges for the RGB color model.
 
 #### Functionality:
-1. **Initialization**: Sets up the Matplotlib figure and axes, preparing three subplots. The first two are for visualizing the circular motion in SHM, and the third is for plotting the displacement over time.
-
-2. **Animation Preparation**: Configures various elements of the animation, including the circle representing the path of the SHM, the line showing the current position, and the dot indicating the particle or object in motion.
-
-3. **Updating Function**: Updates the position of the particle or object for each frame of the animation, recalculating its position based on the SHM equations and redrawing the relevant elements of the plot.
-
-4. **Execution**: Uses `FuncAnimation` from Matplotlib to create the animation by repeatedly calling the updating function for each time step.
+1. **Initialization**: Sets up the p5.js canvas and initializes the slider control for selecting the number of waves.
+2. **Wave Calculation**: A `Wave_Class` object calculates individual sine wave responses and updates their phase.
+3. **Animation Loop**: In the `draw` function, the superposition of waves is calculated and visualized. The color and placement of each point are determined by the superposition result.
 
 #### Visualization:
-- **Subplot 1 & 2**: Show the particle's motion along a circular path, emphasizing the SHM's characteristics. The parameters `w` and `T` are doubled in the second subplot, demonstrating the effect of changing these values.
-- **Subplot 3**: Plots the displacement of the particle over time, providing a direct view of how the SHM progresses over the period `T`.
+- The animation displays a series of points moving in a pattern that represents the superposition of different sine waves.
+- A line represents the zero amplitude level for reference.
+- Each wave's individual response is plotted, along with the cumulative response of all waves.
 
 #### Usage:
-This function is ideal for educational purposes, especially for providing students with a visual understanding of SHM concepts in physics. Below is an example of recommended parameters for a typical use case:
+This script can be useful for educational demonstrations in physics and engineering, particularly in areas that deal with Simple Harmonic Motion (SHM) and superposition.
 
-- `R` =         0.5 or 1.0: Depending on the desired amplitude, you may choose a value of 0.5 for a standard representation or any value for a motion with a higher amplitude.
-- `phi` =       0: This starts the motion at the equilibrium position, which is common for basic demonstrations of **SHM**.
-- `w` =         1.0 * np.pi: This value sets a standard angular frequency, corresponding to one complete oscillation every **2π** units of time.
-- `T` =         (2 * np.pi) / w: By setting the time period like this, the animation will display exactly one complete cycle, given the angular frequency **w**.
+**Note**: The parameters can be adjusted to visualize different numbers and configurations of **SHM Response**. The speed and complexity of the animation can be customized using the slider and the `inv_frames` parameter.
 
-**Note**: The animation's default configuration aims for optimal visibility and comprehension, but users can adjust parameters and settings to suit specific requirements or scenarios. For instance, altering the value of `R` can show students how changes in amplitude affect the motion, while different values of `phi` can demonstrate the effects of phase shifts.
 
