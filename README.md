@@ -24,7 +24,7 @@ The book associated with this repository is currently under development, and a d
 
 Users are free to explore, download, and use any of the functions presented in this repository for their own Python projects. Readers of the book are also encouraged to use these functions as practical exercises to reinforce the concepts learned in each chapter.
 
-## :scroll: List of Functions
+## :scroll: List of Functions / Scripts
 
 Below is a table of the Python functions available in this repository:
 
