@@ -105,7 +105,6 @@ st.pyplot(fig1)
 
 st.markdown("##### **Response Spectra [Elastic and Inelastic]**")
 st.write(Resul)
-
 def display_footer():
     footer = """
     <style>
@@ -134,13 +133,15 @@ def display_footer():
     }
     </style>
     <div class="footer">
-        <img class="logo" src="https://github.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/blob/main/fun_SPEC_NEC/logo_TorreFuerte.png" alt="APE Logo">
+        <img class="logo" src="https://raw.githubusercontent.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/main/fun_SPEC_NEC/logo_TorreFuerte.png" alt="APE Logo">
         <div class="separator"></div>
         <div>
             <p>Developed by Nicolás Mora Bowen | <a href="https://www.ape-ec.com" target="_blank">APE</a> | <a href="https://www.nmorabowen.com" target="_blank">Nicolás Mora Bowen</a> | <a href="https://github.com/nmorabowen" target="_blank">GitHub</a></p>
-            <p>© Version 1.0.1  - July, 2024</p>
+            <p>© Version 1.0.1 - July, 2024</p>
         </div>
     </div>
     """
     st.markdown(footer, unsafe_allow_html=True)
+
+display_footer()
   
