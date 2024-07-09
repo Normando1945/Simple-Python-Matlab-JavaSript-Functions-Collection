@@ -24,14 +24,14 @@ st.markdown('You can find me on : [![Web Page](https://img.shields.io/badge/Web%
 
 st.markdown(
     '''
-    #### :open_book: Description
+    ##### :open_book: Description
     
     This simple app performs spectral calculations using the NEC-SE-DS-2015 Ecuadorian Code. It computes the Elastic and Inelastic Acceleration Response Spectra for a range of structural periods and visualizes the results.
     
     '''
     )
 
-st.markdown('#### :ledger: **More Information**')
+st.markdown('##### :ledger: **More Information**')
 with st.expander("**Click to read more**"):
     j1, j2 = st.columns([1, 2])
     with j1:
@@ -59,7 +59,7 @@ with st.expander("**Click to read more**"):
             ''', unsafe_allow_html=True
         )
 
-st.markdown('#### :scroll: **Parameters**')
+st.markdown('##### :scroll: **Parameters**')
 
 
 n = st.number_input('**n**: Ratio between spectral ordinates **Sa(T = 0.1 s)** and **PGA**:', value=2.48, step=0.1)
