@@ -45,7 +45,7 @@ with col2:
         
 with col3:
     fs = st.number_input('**fs**: Soil non-linearity amplification factor:', value=1.11, step=0.1)
-    R = st.number_input('**R**: Seismic response reduction factor:', value=6.0, step=0.1)
+    R = st.number_input('**R**: Seismic response reduction factor:', value=6.0, step=0.5)
 
 with col4:
     I = st.number_input('**I**: Importance coefficient [for different structures]:', value=1.0, step=0.1)
