@@ -1,4 +1,3 @@
-import requests
 import streamlit as st
 import numpy as np
 import pandas as pd
@@ -34,10 +33,10 @@ coll1.markdown(
     """
 )
 
-if profile_views is not None:
-    coll2.metric(label='GitHub Followers', value=profile_views)
-else:
-    coll2.metric(label='GitHub Followers', value="N/A")
+# if profile_views is not None:
+#     coll2.metric(label='GitHub Followers', value=profile_views)
+# else:
+#     coll2.metric(label='GitHub Followers', value="N/A")
     
     
 
