@@ -1,14 +1,6 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-# import matplotlib.animation as animation
-# import mpld3
-# from mpld3 import plugins
-from IPython.display import HTML
-# import os
-
-
-# def fun_Nec(n, z, I, fads, r, R, fip, fie, TR):
 
 # Define input parameters
 # Ratio entre ordenadas espectrales Sa(T = 0.1 s) y el PGA para el periodo de retorno seleccionado
@@ -71,29 +63,7 @@ plt.ylabel('Max Response Acceleration (Sa) [g]', rotation=90, fontsize=10, color
 legend = plt.legend(fontsize=10)                                                                               
 legend.get_frame().set_edgecolor('none')                                                                       
 ax1.grid(which='both', axis='x', alpha=0.5)                                                                      
-plt.show()
-    
-    
-    # UHS_E = np.column_stack((Tie,Sae))
-    # UHS_I = np.column_stack((Tie,Sai))
-        
-    # current_directory = os.getcwd()
-    # folder_name = 'Results_NEC_UHS_TR_' + TR
-    # folder_path = os.path.join(current_directory, folder_name)
-
-    # if not os.path.exists(folder_path):
-    #        os.makedirs(folder_path)
-
-    # file_path1 = os.path.join(folder_path, 'NEC_UHS_E_' + '.AT2')
-    # file_path2 = os.path.join(folder_path, 'NEC_UHS_I_' + '.AT2')
-
-    # np.savetxt(file_path1, UHS_E, delimiter='\t', fmt='%.6f')
-    # np.savetxt(file_path2, UHS_I, delimiter='\t', fmt='%.6f')
-        
-    # fig_path1 = os.path.join(folder_name, 'fig1_UHS_E_I_TR_' + TR + '.png')
-    # fig1.savefig(fig_path1)
-        
-    # print('\x1b[1;34m  Folder Path =', folder_path) 
+plt.show()   
 
     
     # return Resul, fig1, folder_path
