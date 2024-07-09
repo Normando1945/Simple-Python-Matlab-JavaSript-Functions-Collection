@@ -124,7 +124,7 @@ def display_footer():
         justify-content: center;
     }
     .footer .logo {
-        height: 1px; /* Increased size */
+        height: 100px; /* Increased size */
         margin-right: 5px;
     }
     .footer .separator {
