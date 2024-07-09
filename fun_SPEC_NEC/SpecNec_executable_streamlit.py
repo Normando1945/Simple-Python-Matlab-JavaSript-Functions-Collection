@@ -105,4 +105,15 @@ st.pyplot(fig1)
 
 st.markdown("##### **Response Spectra [Elastic and Inelastic]**")
 st.write(Resul)
+
+"""
+Description:
+    This file contains the Response Spectra [Elastic and Inelastic]
+
+Date:
+    2024-07-07
+"""
+
+__author__ = "Carlos Celi"
+__version__ = "1.0.0"
   
