@@ -1,22 +1,58 @@
+import streamlit as st
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Define input parameters
-# Ratio entre ordenadas espectrales Sa(T = 0.1 s) y el PGA para el periodo de retorno seleccionado
-n = 2.48
-# Aceleración máxima esperada en el estrato competente para el evento sísmico de diseño, expresada como fracción de la aceleración de la gravedad
-z = 0.4
-I = 1                                   # Coeficiente de Importancia
-# fa, fd, fs =  Coeficiente de amplificación de suelo. Amplifica las ordenadas del espectro elástico de respuesta considerando los efectos de sitio
-fads = [1.2, 1.11, 1.11]
-r = 1                                   # Amplificación según ubicación geografica
-R = 6                                   # Factor de Reducción de respuesta sísmica
-# Coeficiente de castigo por irregularidad en planta
-fip = 1
-# Coeficiente de castigo por irregularidad en elevación
-fie = 1
 
+# Load and display the image
+image_path = 'logo_TorreFuerte.png'
+st.image(image_path, use_column_width=True)
+
+
+
+# Título de la aplicación
+st.markdown("<h4 style='text-align: center;'>Simple App: Seismic Response Spectrum [Normative Ecuadorian Spectrum]</h4>", unsafe_allow_html=True)
+
+
+st.markdown(
+    """
+    * Author:                 [Msc. Ing. Carlos Andrés Celi Sánchez](https://fragrant-knight-4af.notion.site/Main-Page-5c5f007b3f3f4c76a604960d9dbffca7?pvs=4)
+    * Course:                 Structural Dynamics
+    """
+)
+
+st.markdown('* You can find me on : [![Web Page](https://img.shields.io/badge/Web%20Page-caceli.net-blue)](https://fragrant-knight-4af.notion.site/Main-Page-5c5f007b3f3f4c76a604960d9dbffca7?pvs=4)[![GitHub Carlos Celi](https://img.shields.io/github/followers/Normando1945?label=follow&style=social)](https://github.com/Normando1945)[![ResearchGate](https://img.shields.io/badge/-ResearchGate-00CCBB?style=social&logo=researchgate)](https://www.researchgate.net/profile/Carlos-Celi)[![Google Scholar](https://img.shields.io/badge/-Google%20Scholar-4285F4?style=social&logo=google)](https://scholar.google.com.ec/citations?hl=es&user=yR4Gz7kAAAAJ)')
+
+st.markdown('This simple app performs spectral calculations using the NEC-SE-DS-2015 Ecuadorian Code. It computes the Elastic and Inelastic Acceleration Response Spectra for a range of structural periods and visualizes the results.')
+
+st.markdown("#### **Parameters**")
+
+
+n = st.number_input('**n**: Ratio between spectral ordinates **Sa(T = 0.1 s)** and **PGA**:', value=2.48, step=0.1)
+z = st.number_input('**z**: Maximum expected acceleration (fraction of gravitational acceleration):', value=0.4, step=0.1)
+
+# Create a grid layout with a maximum of 5 columns
+col1, col2, col3, col4 = st.columns(4)
+
+# User input for parameters with descriptions
+with col1:
+    fa = st.number_input('**fa**: Short period amplification factor:', value=1.2, step=0.1)
+    fip = st.number_input('**Φp**: Penalty coefficient for plan irregularity:', value=1.0, step=0.1)
+    
+with col2:
+    fd = st.number_input('**fd**: Velocity amplification factor:', value=1.11, step=0.1)
+    fie = st.number_input('**Φe**: Penalty coefficient for elevation irregularity:', value=1.0, step=0.1)
+        
+with col3:
+    fs = st.number_input('**fs**: Soil non-linearity amplification factor:', value=1.11, step=0.1)
+    R = st.number_input('**R**: Seismic response reduction factor:', value=6.0, step=0.1)
+
+with col4:
+    I = st.number_input('**I**: Importance coefficient [for different structures]:', value=1.0, step=0.1)
+    r = st.number_input('**r**: Geographic zone factor [for Ecuador]:', value=1.0, step=0.1)
+
+
+fads = [fa, fd, fs]
 To = 0.10 * fads[2] * fads[1] / fads[0]
 Tc = 0.55 * fads[2] * fads[1] / fads[0]
 
@@ -63,7 +99,10 @@ plt.ylabel('Max Response Acceleration (Sa) [g]', rotation=90, fontsize=10, color
 legend = plt.legend(fontsize=10)                                                                               
 legend.get_frame().set_edgecolor('none')                                                                       
 ax1.grid(which='both', axis='x', alpha=0.5)                                                                      
-plt.show()   
 
-    
-    # return Resul, fig1, folder_path
+st.pyplot(fig1)
+
+
+st.markdown("##### **Response Spectra [Elastic and Inelastic]**")
+st.write(Resul)
+  
