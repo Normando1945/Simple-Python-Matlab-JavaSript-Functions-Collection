@@ -124,12 +124,12 @@ def display_footer():
     }
     .footer .logo {
         height: 60px; /* Increased size */
-        margin-right: 20px;
+        margin-right: 5px;
     }
     .footer .separator {
         border-left: 2px solid #eaeaea;
-        height: 120px;
-        margin-right: 20px;
+        height: 50px;
+        margin-right: 5px;
     }
     </style>
     <div class="footer">
