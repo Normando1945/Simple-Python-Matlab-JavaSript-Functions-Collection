@@ -124,12 +124,12 @@ def display_footer():
         justify-content: center;
     }
     .footer .logo {
-        height: 35px; /* Reduced size */
+        height: 30px; /* Reduced size */
         margin-right: 10px;
     }
     .footer .separator {
         border-left: 2px solid #eaeaea;
-        height: 60px; /* Reduced size */
+        height: 30px; /* Reduced size */
         margin-right: 10px;
     }
     </style>
@@ -145,4 +145,5 @@ def display_footer():
     st.markdown(footer, unsafe_allow_html=True)
 
 display_footer()
+
   
