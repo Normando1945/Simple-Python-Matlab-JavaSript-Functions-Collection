@@ -1,4 +1,3 @@
-requests
 streamlit
 numpy
 pandas
