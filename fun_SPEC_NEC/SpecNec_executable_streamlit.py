@@ -117,20 +117,20 @@ def display_footer():
         background-color: white;
         color: black;
         text-align: center;
-        padding: 10px;
+        padding: 5px;
         border-top: 1px solid #eaeaea;
         display: flex;
         align-items: center;
         justify-content: center;
     }
     .footer .logo {
-        height: 70px; /* Increased size */
-        margin-right: 5px;
+        height: 35px; /* Reduced size */
+        margin-right: 10px;
     }
     .footer .separator {
         border-left: 2px solid #eaeaea;
-        height: 1px;
-        margin-right: 5px;
+        height: 60px; /* Reduced size */
+        margin-right: 10px;
     }
     </style>
     <div class="footer">
