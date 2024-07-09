@@ -105,7 +105,6 @@ st.pyplot(fig1)
 
 st.markdown("##### **Response Spectra [Elastic and Inelastic]**")
 st.write(Resul)
-
 def display_footer():
     footer = """
     <style>
@@ -117,20 +116,20 @@ def display_footer():
         background-color: white;
         color: black;
         text-align: center;
-        padding: 5px;
+        padding: 10px;
         border-top: 1px solid #eaeaea;
         display: flex;
         align-items: center;
         justify-content: center;
     }
     .footer .logo {
-        height: 30px; /* Reduced size */
-        margin-right: 10px;
+        height: 60px; /* Increased size */
+        margin-right: 5px;
     }
     .footer .separator {
         border-left: 2px solid #eaeaea;
-        height: 30px; /* Reduced size */
-        margin-right: 10px;
+        height: 50px;
+        margin-right: 5px;
     }
     </style>
     <div class="footer">
