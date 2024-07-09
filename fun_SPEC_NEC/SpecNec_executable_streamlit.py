@@ -140,8 +140,7 @@ st.pyplot(fig1)
 
 st.markdown('##### 📊 **Response Spectra [Elastic and Inelastic]**')
 
-h1,h2,h3 = st.columns([1,3,1])
-h2 = st.write(Resul)
+st.write(Resul)
 
 def display_footer():
     footer = """
