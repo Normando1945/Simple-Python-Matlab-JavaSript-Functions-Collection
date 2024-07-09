@@ -12,33 +12,13 @@ st.image(image_path, use_column_width=True)
 st.markdown("<h4 style='text-align: center;'>Simple App: Seismic Response Spectrum [Normative Ecuadorian Spectrum]</h4>", unsafe_allow_html=True)
 
 
-# def get_github_profile_views(username):
-#     url = f"https://api.github.com/users/{username}"
-#     response = requests.get(url)
-#     if response.status_code == 200:
-#         data = response.json()
-#         return data['followers']  # Example of available data
-#     else:
-#         return None
-
-# username = "Normando1945"
-# profile_views = get_github_profile_views(username)
-
-# coll1, coll2 = st.columns([4, 1])
-
-coll1.markdown(
+st.markdown(
     """
     * Author: [Msc. Ing. Carlos Andrés Celi Sánchez](https://fragrant-knight-4af.notion.site/Main-Page-5c5f007b3f3f4c76a604960d9dbffca7?pvs=4)
     * Course: Structural Dynamics
     """
 )
 
-# if profile_views is not None:
-#     coll2.metric(label='GitHub Followers', value=profile_views)
-# else:
-#     coll2.metric(label='GitHub Followers', value="N/A")
-    
-    
 
 st.markdown('You can find me on : [![Web Page](https://img.shields.io/badge/Web%20Page-caceli.net-blue)](https://fragrant-knight-4af.notion.site/Main-Page-5c5f007b3f3f4c76a604960d9dbffca7?pvs=4)[![GitHub Carlos Celi](https://img.shields.io/github/followers/Normando1945?label=follow&style=social)](https://github.com/Normando1945)[![ResearchGate](https://img.shields.io/badge/-ResearchGate-00CCBB?style=social&logo=researchgate)](https://www.researchgate.net/profile/Carlos-Celi)[![Google Scholar](https://img.shields.io/badge/-Google%20Scholar-4285F4?style=social&logo=google)](https://scholar.google.com.ec/citations?hl=es&user=yR4Gz7kAAAAJ)')
 
