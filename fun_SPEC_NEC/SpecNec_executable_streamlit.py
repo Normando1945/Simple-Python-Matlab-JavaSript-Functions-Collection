@@ -4,9 +4,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-# # Load and display the image
-# image_path = 'logo_TorreFuerte.png'
-# st.image(image_path, use_column_width=True)
+# Load and display the image
+image_path = 'https://raw.githubusercontent.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/main/fun_SPEC_NEC/logo_TorreFuerte.png'
+st.image(image_path, use_column_width=True)
 
 
 
