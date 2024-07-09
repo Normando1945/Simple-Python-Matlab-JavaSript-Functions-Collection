@@ -124,12 +124,12 @@ def display_footer():
         justify-content: center;
     }
     .footer .logo {
-        height: 100px; /* Increased size */
+        height: 60px; /* Increased size */
         margin-right: 5px;
     }
     .footer .separator {
         border-left: 2px solid #eaeaea;
-        height: 50px;
+        height: 1px;
         margin-right: 5px;
     }
     </style>
