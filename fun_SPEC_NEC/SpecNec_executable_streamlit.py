@@ -137,7 +137,7 @@ ax1.grid(which='both', axis='x', alpha=0.5)
 st.pyplot(fig1)
 
 
-st.markdown("##### **Response Spectra [Elastic and Inelastic]**")
+st.markdown('##### 📊 **Response Spectra [Elastic and Inelastic*')
 st.write(Resul)
 
 def display_footer():
