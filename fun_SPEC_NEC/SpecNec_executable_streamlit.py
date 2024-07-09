@@ -12,19 +12,19 @@ st.image(image_path, use_column_width=True)
 st.markdown("<h4 style='text-align: center;'>Simple App: Seismic Response Spectrum [Normative Ecuadorian Spectrum]</h4>", unsafe_allow_html=True)
 
 
-def get_github_profile_views(username):
-    url = f"https://api.github.com/users/{username}"
-    response = requests.get(url)
-    if response.status_code == 200:
-        data = response.json()
-        return data['followers']  # Example of available data
-    else:
-        return None
+# def get_github_profile_views(username):
+#     url = f"https://api.github.com/users/{username}"
+#     response = requests.get(url)
+#     if response.status_code == 200:
+#         data = response.json()
+#         return data['followers']  # Example of available data
+#     else:
+#         return None
 
-username = "Normando1945"
-profile_views = get_github_profile_views(username)
+# username = "Normando1945"
+# profile_views = get_github_profile_views(username)
 
-coll1, coll2 = st.columns([4, 1])
+# coll1, coll2 = st.columns([4, 1])
 
 coll1.markdown(
     """
