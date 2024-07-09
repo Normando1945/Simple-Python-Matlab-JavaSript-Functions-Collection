@@ -136,7 +136,7 @@ def display_footer():
         <img class="logo" src="https://raw.githubusercontent.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/main/fun_SPEC_NEC/logo_TorreFuerte.png" alt="APE Logo">
         <div class="separator"></div>
         <div>
-            <p>Developed by Nicolás Mora Bowen | <a href="https://www.ape-ec.com" target="_blank">APE</a> | <a href="https://www.caceli.net" target="_blank">Carlos Celi</a> | <a href="https://github.com/Normando1945" target="_blank">GitHub</a></p>
+            <p>Developed by Carlos Celi | <a href="https://www.ape-ec.com" target="_blank">APE</a> | <a href="https://www.caceli.net" target="_blank">Carlos Celi</a> | <a href="https://github.com/Normando1945" target="_blank">GitHub</a></p>
             <p>© Version 1.0.1 - July, 2024</p>
         </div>
     </div>
