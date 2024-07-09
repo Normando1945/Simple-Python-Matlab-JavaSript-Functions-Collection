@@ -6,8 +6,12 @@ from IPython.display import HTML
 from IPython.display import display
 
 
+R = 0.5
+phi = 0
+wn = 1.0 * np.pi
+T = (2*np.pi)/wn
 
-def SHM_animation(R, phi, w, T):
+# def SHM_animation(R, phi, w, T):
     
     matplotlib.rcParams['animation.embed_limit'] = 50  # Establece el límite en 50 MB
 
@@ -163,15 +167,15 @@ def SHM_animation(R, phi, w, T):
     
     ani = FuncAnimation(fig, update, frames=np.linspace(0, 3*T, 180), init_func=init, blit=True, interval=75)
 
-    return ani
+    # return ani
 
-# Parámetros
-from fun_SHM_animation import SHM_animation
-R = 0.5
-phi = 0
-wn = 1.0 * np.pi
-T = (2*np.pi)/wn
+# # Parámetros
+# from fun_SHM_animation import SHM_animation
+# R = 0.5
+# phi = 0
+# wn = 1.0 * np.pi
+# T = (2*np.pi)/wn
 
-# Function
-ani = SHM_animation(R, phi, wn, T)
-display(HTML(ani.to_jshtml()))
+# # Function
+# ani = SHM_animation(R, phi, wn, T)
+# display(HTML(ani.to_jshtml()))
