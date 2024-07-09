@@ -106,14 +106,41 @@ st.pyplot(fig1)
 st.markdown("##### **Response Spectra [Elastic and Inelastic]**")
 st.write(Resul)
 
-"""
-Description:
-    This file contains the Response Spectra [Elastic and Inelastic]
-
-Date:
-    2024-07-07
-"""
-
-__author__ = "Carlos Celi"
-__version__ = "1.0.0"
+def display_footer():
+    footer = """
+    <style>
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: white;
+        color: black;
+        text-align: center;
+        padding: 10px;
+        border-top: 1px solid #eaeaea;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer .logo {
+        height: 60px; /* Increased size */
+        margin-right: 20px;
+    }
+    .footer .separator {
+        border-left: 2px solid #eaeaea;
+        height: 120px;
+        margin-right: 20px;
+    }
+    </style>
+    <div class="footer">
+        <img class="logo" src="https://raw.githubusercontent.com/nmorabowen/constitutiveRelationshipsApp/main/APE_LOGO.png" alt="APE Logo">
+        <div class="separator"></div>
+        <div>
+            <p>Developed by Nicolás Mora Bowen | <a href="https://www.ape-ec.com" target="_blank">APE</a> | <a href="https://www.nmorabowen.com" target="_blank">Nicolás Mora Bowen</a> | <a href="https://github.com/nmorabowen" target="_blank">GitHub</a></p>
+            <p>© Version 1.0.1  - July, 2024</p>
+        </div>
+    </div>
+    """
+    st.markdown(footer, unsafe_allow_html=True)
   
