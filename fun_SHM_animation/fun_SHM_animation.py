@@ -1,8 +1,8 @@
 import numpy as np
+import matplotlib
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 from IPython.display import HTML
-import matplotlib
 from IPython.display import display
 
 
