@@ -1,5 +1,5 @@
 import numpy as np
-# import pandas as pd
+import pandas as pd
 import matplotlib.pyplot as plt
 # import matplotlib.animation as animation
 # import mpld3
@@ -47,7 +47,7 @@ for T in np.arange(0, 4, 0.005):
             Sai.append([I * n * z * fads[0] * (Tc / T) ** r / (R * fip * fie)])
             Tie.append([T])
 
-# Resul = pd.DataFrame({ 'Period [s]': Tie,'Sae [g]': Sae,'Sai [g]': Sai})
+Resul = pd.DataFrame({ 'Period [s]': Tie,'Sae [g]': Sae,'Sai [g]': Sai})
     
 Tie = np.array(Tie)
 Sae = np.array(Sae)
