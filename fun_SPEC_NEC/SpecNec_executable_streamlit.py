@@ -60,6 +60,7 @@ with st.expander("**Click to read more**"):
         )
 
 st.markdown('##### :scroll: **Parameters**')
+st.markdown('You can read the documentation at [**Function: fun_Nec(n, z, I, fads, r, R, fip, fie, TR)**](https://github.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/tree/main/fun_SPEC_NEC)')
 
 
 n = st.number_input('**n**: Ratio between spectral ordinates **Sa(T = 0.1 s)** and **PGA**:', value=2.48, step=0.1)
