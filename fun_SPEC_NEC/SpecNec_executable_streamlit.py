@@ -22,8 +22,16 @@ st.markdown(
 
 st.markdown('You can find me on : [![Web Page](https://img.shields.io/badge/Web%20Page-caceli.net-blue)](https://fragrant-knight-4af.notion.site/Main-Page-5c5f007b3f3f4c76a604960d9dbffca7?pvs=4)[![GitHub Carlos Celi](https://img.shields.io/github/followers/Normando1945?label=follow&style=social)](https://github.com/Normando1945)[![ResearchGate](https://img.shields.io/badge/-ResearchGate-00CCBB?style=social&logo=researchgate)](https://www.researchgate.net/profile/Carlos-Celi)[![Google Scholar](https://img.shields.io/badge/-Google%20Scholar-4285F4?style=social&logo=google)](https://scholar.google.com.ec/citations?hl=es&user=yR4Gz7kAAAAJ)')
 
-st.markdown('This simple app performs spectral calculations using the NEC-SE-DS-2015 Ecuadorian Code. It computes the Elastic and Inelastic Acceleration Response Spectra for a range of structural periods and visualizes the results.')
+st.markdown(
+    '''
+    #### :open_book: Description
+    
+    This simple app performs spectral calculations using the NEC-SE-DS-2015 Ecuadorian Code. It computes the Elastic and Inelastic Acceleration Response Spectra for a range of structural periods and visualizes the results.
+    
+    '''
+    )
 
+st.markdown('#### :ledger: **More Information**')
 with st.expander("**Click to read more**"):
     j1, j2 = st.columns([1, 2])
     with j1:
@@ -51,7 +59,7 @@ with st.expander("**Click to read more**"):
             ''', unsafe_allow_html=True
         )
 
-st.markdown("#### **Parameters**")
+st.markdown('#### :scroll: **Parameters**')
 
 
 n = st.number_input('**n**: Ratio between spectral ordinates **Sa(T = 0.1 s)** and **PGA**:', value=2.48, step=0.1)
