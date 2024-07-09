@@ -113,7 +113,7 @@ def display_footer():
         position: fixed;
         left: 0;
         bottom: 0;
-        width: 50%;
+        width: 100%;
         background-color: white;
         color: black;
         text-align: center;
@@ -124,7 +124,7 @@ def display_footer():
         justify-content: center;
     }
     .footer .logo {
-        height: 60px; /* Increased size */
+        height: 1px; /* Increased size */
         margin-right: 5px;
     }
     .footer .separator {
