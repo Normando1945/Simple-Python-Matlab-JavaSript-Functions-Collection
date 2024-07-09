@@ -105,43 +105,44 @@ st.pyplot(fig1)
 
 st.markdown("##### **Response Spectra [Elastic and Inelastic]**")
 st.write(Resul)
-def display_footer():
-    footer = """
-    <style>
-    .footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        background-color: white;
-        color: black;
-        text-align: center;
-        padding: 10px;
-        border-top: 1px solid #eaeaea;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .footer .logo {
-        height: 60px; /* Increased size */
-        margin-right: 5px;
-    }
-    .footer .separator {
-        border-left: 2px solid #eaeaea;
-        height: 50px;
-        margin-right: 5px;
-    }
-    </style>
-    <div class="footer">
-        <img class="logo" src="https://raw.githubusercontent.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/main/fun_SPEC_NEC/logo_TorreFuerte.png" alt="APE Logo">
-        <div class="separator"></div>
-        <div>
-            <p>Developed by Carlos Celi | <a href="https://www.http://torrefuerte.ec" target="_blank">TORREFUERTE</a> | <a href="https://www.caceli.net" target="_blank">Carlos Celi</a> | <a href="https://github.com/Normando1945" target="_blank">GitHub</a></p>
-            <p>© Version 1.0.1 - July, 2024</p>
-        </div>
-    </div>
-    """
-    st.markdown(footer, unsafe_allow_html=True)
 
-display_footer()
+# def display_footer():
+#     footer = """
+#     <style>
+#     .footer {
+#         position: fixed;
+#         left: 0;
+#         bottom: 0;
+#         width: 100%;
+#         background-color: white;
+#         color: black;
+#         text-align: center;
+#         padding: 10px;
+#         border-top: 1px solid #eaeaea;
+#         display: flex;
+#         align-items: center;
+#         justify-content: center;
+#     }
+#     .footer .logo {
+#         height: 60px; /* Increased size */
+#         margin-right: 5px;
+#     }
+#     .footer .separator {
+#         border-left: 2px solid #eaeaea;
+#         height: 50px;
+#         margin-right: 5px;
+#     }
+#     </style>
+#     <div class="footer">
+#         <img class="logo" src="https://raw.githubusercontent.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/main/fun_SPEC_NEC/logo_TorreFuerte.png" alt="TorreFuerte Logo">
+#         <div class="separator"></div>
+#         <div>
+#             <p>Developed by Carlos Celi | <a href="https://www.http://torrefuerte.ec" target="_blank">TORREFUERTE</a> | <a href="https://www.caceli.net" target="_blank">Carlos Celi</a> | <a href="https://github.com/Normando1945" target="_blank">GitHub</a></p>
+#             <p>© Version 1.0.1 - July, 2024</p>
+#         </div>
+#     </div>
+#     """
+#     st.markdown(footer, unsafe_allow_html=True)
+
+# display_footer()
   
