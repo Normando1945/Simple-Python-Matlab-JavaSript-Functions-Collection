@@ -5,7 +5,7 @@ import matplotlib.animation as animation
 import mpld3
 from mpld3 import plugins
 from IPython.display import HTML
-import os
+# import os
 
 
 # def fun_Nec(n, z, I, fads, r, R, fip, fie, TR):
