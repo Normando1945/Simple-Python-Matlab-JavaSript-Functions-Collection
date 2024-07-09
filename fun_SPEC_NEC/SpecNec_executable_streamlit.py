@@ -1,3 +1,4 @@
+import requests
 import streamlit as st
 import numpy as np
 import pandas as pd
@@ -8,22 +9,68 @@ import matplotlib.pyplot as plt
 image_path = 'https://raw.githubusercontent.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/main/fun_SPEC_NEC/logo_TorreFuerte.png'
 st.image(image_path, use_column_width=True)
 
-
-
 # Título de la aplicación
 st.markdown("<h4 style='text-align: center;'>Simple App: Seismic Response Spectrum [Normative Ecuadorian Spectrum]</h4>", unsafe_allow_html=True)
 
 
-st.markdown(
+def get_github_profile_views(username):
+    url = f"https://api.github.com/users/{username}"
+    response = requests.get(url)
+    if response.status_code == 200:
+        data = response.json()
+        return data['followers']  # Example of available data
+    else:
+        return None
+
+username = "Normando1945"
+profile_views = get_github_profile_views(username)
+
+coll1, coll2 = st.columns([4, 1])
+
+coll1.markdown(
     """
-    * Author:                 [Msc. Ing. Carlos Andrés Celi Sánchez](https://fragrant-knight-4af.notion.site/Main-Page-5c5f007b3f3f4c76a604960d9dbffca7?pvs=4)
-    * Course:                 Structural Dynamics
+    * Author: [Msc. Ing. Carlos Andrés Celi Sánchez](https://fragrant-knight-4af.notion.site/Main-Page-5c5f007b3f3f4c76a604960d9dbffca7?pvs=4)
+    * Course: Structural Dynamics
     """
 )
 
-st.markdown('* You can find me on : [![Web Page](https://img.shields.io/badge/Web%20Page-caceli.net-blue)](https://fragrant-knight-4af.notion.site/Main-Page-5c5f007b3f3f4c76a604960d9dbffca7?pvs=4)[![GitHub Carlos Celi](https://img.shields.io/github/followers/Normando1945?label=follow&style=social)](https://github.com/Normando1945)[![ResearchGate](https://img.shields.io/badge/-ResearchGate-00CCBB?style=social&logo=researchgate)](https://www.researchgate.net/profile/Carlos-Celi)[![Google Scholar](https://img.shields.io/badge/-Google%20Scholar-4285F4?style=social&logo=google)](https://scholar.google.com.ec/citations?hl=es&user=yR4Gz7kAAAAJ)')
+if profile_views is not None:
+    coll2.metric(label='GitHub Followers', value=profile_views)
+else:
+    coll2.metric(label='GitHub Followers', value="N/A")
+    
+    
+
+st.markdown('You can find me on : [![Web Page](https://img.shields.io/badge/Web%20Page-caceli.net-blue)](https://fragrant-knight-4af.notion.site/Main-Page-5c5f007b3f3f4c76a604960d9dbffca7?pvs=4)[![GitHub Carlos Celi](https://img.shields.io/github/followers/Normando1945?label=follow&style=social)](https://github.com/Normando1945)[![ResearchGate](https://img.shields.io/badge/-ResearchGate-00CCBB?style=social&logo=researchgate)](https://www.researchgate.net/profile/Carlos-Celi)[![Google Scholar](https://img.shields.io/badge/-Google%20Scholar-4285F4?style=social&logo=google)](https://scholar.google.com.ec/citations?hl=es&user=yR4Gz7kAAAAJ)')
 
 st.markdown('This simple app performs spectral calculations using the NEC-SE-DS-2015 Ecuadorian Code. It computes the Elastic and Inelastic Acceleration Response Spectra for a range of structural periods and visualizes the results.')
+
+with st.expander("**Click to read more**"):
+    j1, j2 = st.columns([1, 2])
+    with j1:
+        image_path = 'https://raw.githubusercontent.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/main/fun_SPEC_NEC/Chapter1_portada.gif'
+        st.image(image_path, use_column_width=True)
+        
+        st.markdown(
+            """
+            <div style="text-align: center;">
+            <a href="https://cceli.neocities.org"> Online Book, Chapter 1</b></a>
+            </div>
+            """, 
+            unsafe_allow_html=True
+        )
+        
+    with j2:
+        st.markdown(
+            '''
+             **General Overview**
+             
+             Welcome to this presentation of the draft for the opening chapter of my upcoming book, titled **"Structural Engineering: Dynamics, Seismic Solution, and AI Integration."** This chapter delves into the intricate realm of undergraduate structural dynamics. This endeavor is not meant to mirror the exhaustive details laid out in some of the field's seminal literature. If you're familiar with works from esteemed authors such as **Chopra**, **Mario Paz**, **Cloth & Penzien**, among others, you'll be aware of the profound depth and rigor they bring to the underlying concepts and mathematical foundations of structural dynamics. Rather than merely echoing their profound insights, this book and the initial chapter provided here chart a distinctive course.
+
+             The chief aim is to distill intricate theoretical mathematics into more accessible discrete mathematical frameworks, offering clear outlines of pivotal concepts in dynamic structures. This proves indispensable for students traversing the expansive realm of structural dynamics. By intertwining essential theories with illustrative **Python code samples**, readers will unlock understanding of the fundamental mechanics underpinning both single-degree-of-freedom **SDOF** and multi-degree-of-freedom **MDOF** dynamic systems. The focus remains unwaveringly on applications within structural engineering, positioning this as a prized asset for those immersing themselves in the field. It's vital to understand that this draft of the initial chapter isn't designed to serve as an isolated guide. Instead, it acts in tandem with conventional educational tools, reinforcing the bedrock knowledge students garner in academic settings. For a nuanced and comprehensive grasp of the domain, turning to the venerable tomes of dedicated structural dynamics literature is imperative. When combined with in-depth classroom learning, the revelations from such extensive studies will unquestionably refine a scholar's proficiency. I invite you to join me on this illuminating expedition, and I hope it lays the foundation for your scholastic and professional achievements in structural dynamics.
+           
+            ''', unsafe_allow_html=True
+        )
 
 st.markdown("#### **Parameters**")
 
@@ -105,6 +152,7 @@ st.pyplot(fig1)
 
 st.markdown("##### **Response Spectra [Elastic and Inelastic]**")
 st.write(Resul)
+
 def display_footer():
     footer = """
     <style>
@@ -144,5 +192,3 @@ def display_footer():
     st.markdown(footer, unsafe_allow_html=True)
 
 display_footer()
-
-  
