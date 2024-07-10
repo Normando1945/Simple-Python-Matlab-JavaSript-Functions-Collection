@@ -25,17 +25,8 @@ st.markdown(
 
 st.markdown('You can find me on : [![Web Page](https://img.shields.io/badge/Web%20Page-caceli.net-blue)](https://fragrant-knight-4af.notion.site/Main-Page-5c5f007b3f3f4c76a604960d9dbffca7?pvs=4)[![GitHub Carlos Celi](https://img.shields.io/github/followers/Normando1945?label=follow&style=social)](https://github.com/Normando1945)[![ResearchGate](https://img.shields.io/badge/-ResearchGate-00CCBB?style=social&logo=researchgate)](https://www.researchgate.net/profile/Carlos-Celi)[![Google Scholar](https://img.shields.io/badge/-Google%20Scholar-4285F4?style=social&logo=google)](https://scholar.google.com.ec/citations?hl=es&user=yR4Gz7kAAAAJ)')
 
-st.markdown(
-    '''
-    ##### :open_book: Description
-    
-    This simple app performs spectral calculations using the NEC-SE-DS-2015 Ecuadorian Code. It computes the Elastic and Inelastic Acceleration Response Spectra for a range of structural periods and visualizes the results.
-    
-    '''
-    )
-
-
-st.markdown('##### :ledger: **About the Author**')
+###################################### Author #########################################################
+st.markdown('##### :Nerd Face: **About the Author**')
 with st.expander("**Click to read more**"):
     coll1, coll2 = st.columns([1,1])
     with coll1:
@@ -55,7 +46,18 @@ with st.expander("**Click to read more**"):
             """
         )
 
-st.markdown('##### :ledger: **More Information**')
+###################################### Description #########################################################
+st.markdown(
+    '''
+    ##### :open_book: Description
+    
+    This simple app performs spectral calculations using the NEC-SE-DS-2015 Ecuadorian Code. It computes the Elastic and Inelastic Acceleration Response Spectra for a range of structural periods and visualizes the results.
+    
+    '''
+    )
+
+###################################### More Information #########################################################
+st.markdown('##### :ledger: **More Information about this Simple App**')
 with st.expander("**Click to read more**"):
     j1, j2 = st.columns([1, 2])
     with j1:
