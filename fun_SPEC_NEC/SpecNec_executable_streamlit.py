@@ -199,11 +199,11 @@ st.markdown('##### 📊 **Response Spectra [Elastic and Inelastic]**')
 
 o1, o2 = st.columns([1,1])
 with o1:
-    st.write('hola')
+    st.write(Resul)
 with o2:
     st.write('hola')
     
-st.write(Resul)
+# st.write(Resul)
 
 
 
