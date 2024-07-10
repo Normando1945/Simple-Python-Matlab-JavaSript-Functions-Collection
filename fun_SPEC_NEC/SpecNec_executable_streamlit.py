@@ -39,11 +39,11 @@ st.markdown('##### :ledger: **About the Author**')
 with st.expander("**Click to read more**"):
     coll1, coll2 = st.columns([1,1])
     with coll1:
-        st.image("https://raw.githubusercontent.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/main/fun_SPEC_NEC/pages/assets/foto.jpg", width= 350)
+        st.image("https://raw.githubusercontent.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/main/fun_SPEC_NEC/assets/foto.jpg", width= 350)
     with coll2:
         st.markdown(
             """
-            ### **Short Curriculum Vitae Overview**.
+            **Short Curriculum Vitae Overview**.
 
             I am Ecuadorian, I have a Master's degree in Structural Engineering with a **SUMMA CUM LAUDE** distinction from the National Polytechnic School. With over 15 years of experience, I have notably provided structural consultancy for buildings surpassing 140 meters in height. I am currently affiliated with the Department of Civil Engineering at the [**Pontifical Catholic University of Ecuador**](https://www.puce.edu.ec/). My primary research domain is nonlinear mathematical modeling, leading to several 
             international scientific publications. My ongoing projects include:
