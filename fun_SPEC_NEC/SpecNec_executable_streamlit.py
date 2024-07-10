@@ -47,9 +47,9 @@ with st.expander("**Click to read more**"):
         )
 
 st.markdown('##### :ledger: **More Information about my New Book**')
-    j1, j2 = st.columns([1, 1])
-    with j1:
-        st.image("pages/assets/Structural Engineering2.png", width= 300)
+    jj1, jj2 = st.columns([1, 1])
+    with jj1:
+        st.image("https://raw.githubusercontent.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/main/fun_SPEC_NEC/assets/Structural Engineering2.png", width= 300)
         st.markdown(
             """
             <div style="text-align: center;">
@@ -58,7 +58,7 @@ st.markdown('##### :ledger: **More Information about my New Book**')
             """, 
             unsafe_allow_html=True
         )
-    with j2:
+    with jj2:
         st.markdown(
         """
         #### Structural Engineering: Dynamics, Seismic Solution, and AI Integration
