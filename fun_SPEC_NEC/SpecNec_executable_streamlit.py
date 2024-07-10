@@ -76,7 +76,7 @@ st.markdown(
     '''
     ##### :open_book: Description of this Simple App
     
-    This simple app performs spectral calculations using the NEC-SE-DS-2015 Ecuadorian Code. It computes the Elastic and Inelastic Acceleration Response Spectra for a range of structural periods and visualizes the results.
+    This simple app performs spectral calculations using the NEC-SE-DS-2024 Ecuadorian Code. It computes the Elastic and Inelastic Acceleration Response Spectra for a range of structural periods and visualizes the results.
     
     '''
     )
@@ -194,7 +194,7 @@ ax1.plot(Tie, Sai, color=(0, 0, 0), marker='+', markersize=0, markerfacecolor='w
 markeredgewidth=0, linewidth=1.5, alpha=0.7,linestyle = '--',label= f'Sa_inelastic')
 ax1.set_xlim([Tie[0], (max(Tie))])                                                                               
 ax1.set_ylim([0, (max(Sae)*1.05)])                                                                              
-plt.title('UHS [NEC-SE-DS-2015]', fontsize=10, color=(0, 0, 1))                                                      
+plt.title('UHS [NEC-SE-DS-2024]', fontsize=10, color=(0, 0, 1))                                                      
 plt.xlabel('Period (T) [s]', rotation=0, fontsize=10, color=(0, 0, 0))                                          
 plt.ylabel('Max Response Acceleration (Sa) [g]', rotation=90, fontsize=10, color=(0, 0, 0))                     
 legend = plt.legend(fontsize=10)                                                                               
