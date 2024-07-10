@@ -61,7 +61,7 @@ with st.expander("**Click to read more**"):
     with jj2:
         st.markdown(
         """
-        #### Structural Engineering: Dynamics, Seismic Solution, and AI Integration
+        **Structural Engineering: Dynamics, Seismic Solution, and AI Integration**
     
         In an era where structural engineering faces multifaceted challenges, this book offers an integrated approach that melds core dynamics, seismic-resistant design techniques, and the transformative potential of AI in modern structural solutions. Beginning with foundational principles, readers are ushered into the intricate world of structural dynamics, with a spotlight on the importance of understanding multi-degree of freedom systems. As societies grapple with the increasing prominence of seismic threats, the imperative for resilient construction methods is laid bare.
     
