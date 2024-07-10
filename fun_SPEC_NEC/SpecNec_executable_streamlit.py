@@ -197,9 +197,9 @@ markeredgewidth=0, linewidth=1.5, alpha=1.0,linestyle = '-',label= f'Elastic Res
 ax1.plot(Tie, Sai, color=(0, 0, 1), marker='+', markersize=0, markerfacecolor='w',                              
 markeredgewidth=0, linewidth=1.5, alpha=1.0,linestyle = '-',label= f'Inelastic Response Spectra')
 
-ax1.plot([0.1,0.1], [0,Sds], color=(0, 0, 1), marker='o', markersize=5, markerfacecolor='w',                              
+ax1.plot([0.3,0.3], [0,Sds], color=(0, 0, 0), marker='o', markersize=5, markerfacecolor='w',                              
 markeredgewidth=1, linewidth=1.0, alpha=0.5,linestyle = '--')
-ax1.plot(0.1, Sd1, color=(0, 0, 1), marker='o', markersize=5, markerfacecolor='w',                              
+ax1.plot([1,1], [0,Sd1], color=(0, 0, 0), marker='o', markersize=5, markerfacecolor='w',                              
 markeredgewidth=1, linewidth=1.0, alpha=0.5,linestyle = '--')
 
 ax1.set_xlim([Tie[0], (max(Tie))])                                                                               
