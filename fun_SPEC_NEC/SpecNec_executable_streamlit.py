@@ -197,10 +197,10 @@ markeredgewidth=0, linewidth=1.5, alpha=1.0,linestyle = '-',label= f'Elastic Res
 ax1.plot(Tie, Sai, color=(0, 0, 1), marker='+', markersize=0, markerfacecolor='w',                              
 markeredgewidth=0, linewidth=1.5, alpha=1.0,linestyle = '-',label= f'Inelastic Response Spectra')
 
-# Add text annotation for Sds
-ax1.text(0.3, Sds+0.02, f'$\\mathbf{{Sds = {Sds:.4f} \\, g}}$', fontsize=10, verticalalignment='bottom', horizontalalignment='left')
-# Add text annotation for Sd1
-ax1.text(1, Sd1+0.02, f'$\\mathbf{{Sd1 = {Sd1:.4f} \\, g}}$', fontsize=10, verticalalignment='bottom', horizontalalignment='left')
+
+ax1.text(0.3, Sds + 0.01, f'Sds = {Sds:.3f} g', fontsize=10, verticalalignment='bottom', horizontalalignment='left')
+ax1.text(1, Sd1 + 0.01, f'Sd1 = {Sd1:.3f} g', fontsize=10, verticalalignment='bottom', horizontalalignment='left')
+
 
 
 ax1.set_xlim([Tie[0], (max(Tie))])                                                                               
