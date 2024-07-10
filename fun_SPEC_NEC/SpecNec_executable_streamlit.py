@@ -39,7 +39,7 @@ st.markdown('##### :ledger: **About the Author**')
 with st.expander("**Click to read more**"):
     coll1, coll2 = st.columns([1,1])
     with coll1:
-        st.image("https://raw.githubusercontent.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/main/fun_SPEC_NEC/assets/foto.jpg", width= 350)
+        st.image("https://raw.githubusercontent.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/main/fun_SPEC_NEC/assets/foto.jpg", width= 325)
     with coll2:
         st.markdown(
             """
