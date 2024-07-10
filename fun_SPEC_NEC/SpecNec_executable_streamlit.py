@@ -197,7 +197,7 @@ st.pyplot(fig1)
 
 st.markdown('##### 📊 **Response Spectra [Elastic and Inelastic]**')
 
-o1, o2 = st.columns([1,1])
+o1, o2 = st.columns([1,2])
 with o1:
     st.metric(label='Max Sae', value=np.max(Sae), delta='g')
     st.metric(label='Max Sai', value=np.max(Sai), delta='g')
