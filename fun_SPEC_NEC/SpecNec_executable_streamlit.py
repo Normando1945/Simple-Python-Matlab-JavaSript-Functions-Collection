@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 # line of run c:\users\normando\appdata\local\packages\pythonsoftwarefoundation.python.3.10_qbz5n2kfra8p0\localcache\local-packages\python310\scripts\streamlit.exe run SpecNec_executable_streamlit.py
 #########
 
-# Load and display the image
+######################################################## header ########################################################
 image_path = 'https://raw.githubusercontent.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/main/fun_SPEC_NEC/logo_TorreFuerte.png'
 st.image(image_path, use_column_width=True)
 
@@ -25,7 +25,7 @@ st.markdown(
 
 st.markdown('You can find me on : [![Web Page](https://img.shields.io/badge/Web%20Page-caceli.net-blue)](https://fragrant-knight-4af.notion.site/Main-Page-5c5f007b3f3f4c76a604960d9dbffca7?pvs=4)[![GitHub Carlos Celi](https://img.shields.io/github/followers/Normando1945?label=follow&style=social)](https://github.com/Normando1945)[![ResearchGate](https://img.shields.io/badge/-ResearchGate-00CCBB?style=social&logo=researchgate)](https://www.researchgate.net/profile/Carlos-Celi)[![Google Scholar](https://img.shields.io/badge/-Google%20Scholar-4285F4?style=social&logo=google)](https://scholar.google.com.ec/citations?hl=es&user=yR4Gz7kAAAAJ)')
 
-###################################### Author #########################################################
+######################################################## Author ########################################################
 st.markdown('##### 😎 **About the Author**')
 with st.expander("**Click to read more**"):
     coll1, coll2 = st.columns([1,1])
@@ -71,7 +71,7 @@ with st.expander("**Click to read more**"):
         """
         )
 
-###################################### Description #########################################################
+######################################################## Description ########################################################
 st.markdown(
     '''
     ##### :open_book: Description
@@ -81,7 +81,7 @@ st.markdown(
     '''
     )
 
-###################################### More Information #########################################################
+######################################################## More Information ########################################################
 st.markdown('##### :ledger: **More Information about this Simple App**')
 with st.expander("**Click to read more**"):
     j1, j2 = st.columns([1, 2])
@@ -116,8 +116,7 @@ st.markdown('You can read the documentation at [**Function: fun_Nec(n, z, I, fad
 
 
 
-
-######################################
+######################################################## user parameters ########################################################
 
 n = st.number_input('**n**: Ratio between spectral ordinates **Sa(T = 0.1 s)** and **PGA**:', value=2.48, step=0.1)
 z = st.number_input('**z**: Maximum expected acceleration (fraction of gravitational acceleration):', value=0.4, step=0.1)
@@ -143,10 +142,7 @@ with col4:
     r = st.number_input('**r**: Geographic zone factor [for Ecuador]:', value=1.0, step=0.1)
 
 
-
-
-
-#####################################################
+######################################################## Code ########################################################
 
 fads = [fa, fd, fs]
 To = 0.10 * fads[2] * fads[1] / fads[0]
@@ -202,6 +198,9 @@ st.pyplot(fig1)
 st.markdown('##### 📊 **Response Spectra [Elastic and Inelastic]**')
 
 st.write(Resul)
+
+
+######################################################## Footer ########################################################
 
 def display_footer():
     footer = """
