@@ -189,7 +189,7 @@ Sai = Sai[:, 0]
 fig1, ax1 = plt.subplots(figsize=(16/1.5, 9/1.5))                                                                
     
 ax1.plot(Tie, Sae, color=(0, 0, 0), marker='+', markersize=0, markerfacecolor='w',                             
-markeredgewidth=0, linewidth=1.0, alpha=1.0,linestyle = '-',label= f'Sa_elastic')
+markeredgewidth=0, linewidth=1.5, alpha=1.0,linestyle = '-',label= f'Sa_elastic')
 ax1.plot(Tie, Sai, color=(0, 0, 1), marker='+', markersize=0, markerfacecolor='w',                              
 markeredgewidth=0, linewidth=1.5, alpha=1.0,linestyle = '-',label= f'Sa_inelastic')
 ax1.set_xlim([Tie[0], (max(Tie))])                                                                               
