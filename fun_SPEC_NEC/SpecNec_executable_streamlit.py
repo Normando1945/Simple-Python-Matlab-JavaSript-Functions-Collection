@@ -203,11 +203,6 @@ ax1.text(0.3, Sds+0.02, f'$\\mathbf{{Sds = {Sds:.4f} \\, g}}$', fontsize=10, ver
 ax1.text(1, Sd1+0.02, f'$\\mathbf{{Sd1 = {Sd1:.4f} \\, g}}$', fontsize=10, verticalalignment='bottom', horizontalalignment='left')
 
 
-# Add text annotation for Sds
-ax1.text(0.3, Sds+0.02, f'Sds = {Sds:.4f} g', fontsize=10, verticalalignment='bottom', horizontalalignment='left')
-# Add text annotation for Sd1
-ax1.text(1, Sd1+0.02, f'Sd1 = {Sd1:.4f} g', fontsize=10, verticalalignment='bottom', horizontalalignment='left')
-
 ax1.set_xlim([Tie[0], (max(Tie))])                                                                               
 ax1.set_ylim([0, (max(Sae)*1.05)])                                                                              
 plt.title('SPEC NEC-SE-DS-2024', fontsize=10, color=(0, 0, 1))                                                      
