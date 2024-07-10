@@ -4,6 +4,7 @@ channels:
 dependencies:
   - python=3.10
   - streamlit
+  - streamlit_option_menu
   - numpy
   - pandas
   - matplotlib
