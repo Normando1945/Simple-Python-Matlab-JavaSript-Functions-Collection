@@ -199,8 +199,7 @@ st.markdown('##### 📊 **Response Spectra [Elastic and Inelastic]**')
 
 o1, o2 = st.columns([1,1])
 with o1:
-    st.metric(label='Max Sae', value=np.max(Sae), delta=' g&nbsp;')
-    # st.metric(label='Max Sae', value=np.max(Sae), delta='g')
+    st.metric(label='Max Sae', value=np.max(Sae), delta='g')
     st.metric(label='Max Sai', value=np.max(Sai), delta='g')
 with o2:
     st.write(Resul)
