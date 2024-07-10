@@ -193,9 +193,15 @@ Sd1 = I * n * z * fads[0] * (Tc / 1) ** r
 fig1, ax1 = plt.subplots(figsize=(16/1.5, 9/1.5))                                                                
     
 ax1.plot(Tie, Sae, color=(0, 0, 0), marker='+', markersize=0, markerfacecolor='w',                             
-markeredgewidth=0, linewidth=1.5, alpha=1.0,linestyle = '-',label= f'Sa_elastic')
+markeredgewidth=0, linewidth=1.5, alpha=1.0,linestyle = '-',label= f'Elastic Response Spectra')
 ax1.plot(Tie, Sai, color=(0, 0, 1), marker='+', markersize=0, markerfacecolor='w',                              
-markeredgewidth=0, linewidth=1.5, alpha=1.0,linestyle = '-',label= f'Sa_inelastic')
+markeredgewidth=0, linewidth=1.5, alpha=1.0,linestyle = '-',label= f'Inelastic Response Spectra')
+
+ax1.plot(0.1, Sds, color=(0, 0, 1), marker='o', markersize=5, markerfacecolor='w',                              
+markeredgewidth=1, linewidth=1.0, alpha=0.5,linestyle = '--')
+ax1.plot(0.1, Sd1, color=(0, 0, 1), marker='o', markersize=5, markerfacecolor='w',                              
+markeredgewidth=1, linewidth=1.0, alpha=0.5,linestyle = '--')
+
 ax1.set_xlim([Tie[0], (max(Tie))])                                                                               
 ax1.set_ylim([0, (max(Sae)*1.05)])                                                                              
 plt.title('SPEC NEC-SE-DS-2024', fontsize=10, color=(0, 0, 1))                                                      
