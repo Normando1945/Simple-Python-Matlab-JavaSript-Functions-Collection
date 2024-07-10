@@ -25,12 +25,16 @@
 # pg.run()
 
 import streamlit as st
-
-# --- Page Setup ---
+import runpy
 
 def main():
-    about_me()
-    spec_nec()
+    st.sidebar.title("Navigation")
+    app_mode = st.sidebar.radio("Go to", ["About Me", "Spec NEC"])
+
+    if app_mode == "About Me":
+        about_me()
+    elif app_mode == "Spec NEC":
+        spec_nec()
 
 def about_me():
     runpy.run_path('about_me.py')
@@ -40,6 +44,7 @@ def spec_nec():
 
 if __name__ == "__main__":
     main()
+
 
 
 
