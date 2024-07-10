@@ -6,14 +6,12 @@ import streamlit as st
 about_Me = st.Page(
     page = 'pages/about_me.py',
     title = "About Me",
-    icon = "😎",
-    # icon = ":material/account_circle"
+    # icon = "😎",
 )
 
 project_1_page = st.Page(
     page = 'pages/SpecNec_executable_streamlit.py',
-    title = "Spec NEC",
-    # icon = ":material/smart_toy",
+    # title = "Spec NEC",
     default= True,
 )
 
@@ -21,8 +19,8 @@ project_1_page = st.Page(
 
 pg = st.navigation(
     {
-        "📔 info": [about_Me],
-        "💻 Basic Apps": [project_1_page],
+        "info": [about_Me],
+        "Basic Apps": [project_1_page],
     }
 )
 

@@ -4,7 +4,7 @@ import streamlit as st
 image_path = 'https://raw.githubusercontent.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/main/fun_SPEC_NEC/logo_TorreFuerte.png'
 st.image(image_path, use_column_width=True)
 
-col1, col2 = st.columns(2, gap = "small", vertical_alignment= "center")
+col1, col2 = st.columns([1, 1])
 with col1:
     st.image("pages/assets/foto.jpg", width= 350)
 with col2:
