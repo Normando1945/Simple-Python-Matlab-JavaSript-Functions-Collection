@@ -74,7 +74,7 @@ with st.expander("**Click to read more**"):
 ######################################################## Description ########################################################
 st.markdown(
     '''
-    ##### :open_book: Description
+    ##### :open_book: Description of this Simple App
     
     This simple app performs spectral calculations using the NEC-SE-DS-2015 Ecuadorian Code. It computes the Elastic and Inelastic Acceleration Response Spectra for a range of structural periods and visualizes the results.
     
