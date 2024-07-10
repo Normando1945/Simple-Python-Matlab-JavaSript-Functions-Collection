@@ -184,6 +184,10 @@ Sai = np.array(Sai)
 Tie = Tie[:, 0]
 Sae = Sae[:, 0]
 Sai = Sai[:, 0]
+
+# Valores de SDS & SD1
+Sds = n * z * fads[0] * I
+Sd1 = I * n * z * fads[0] * (Tc / 1) ** r
     
 
 fig1, ax1 = plt.subplots(figsize=(16/1.5, 9/1.5))                                                                
@@ -194,7 +198,7 @@ ax1.plot(Tie, Sai, color=(0, 0, 1), marker='+', markersize=0, markerfacecolor='w
 markeredgewidth=0, linewidth=1.5, alpha=1.0,linestyle = '-',label= f'Sa_inelastic')
 ax1.set_xlim([Tie[0], (max(Tie))])                                                                               
 ax1.set_ylim([0, (max(Sae)*1.05)])                                                                              
-plt.title('UHS [NEC-SE-DS-2024]', fontsize=10, color=(0, 0, 1))                                                      
+plt.title('SPEC NEC-SE-DS-2024', fontsize=10, color=(0, 0, 1))                                                      
 plt.xlabel('Period (T) [s]', rotation=0, fontsize=10, color=(0, 0, 0))                                          
 plt.ylabel('Max Response Acceleration (Sa) [g]', rotation=90, fontsize=10, color=(0, 0, 0))                     
 legend = plt.legend(fontsize=10)                                                                               
@@ -210,8 +214,10 @@ st.markdown('##### 📊 **Response Spectra [Elastic and Inelastic]**')
 
 o1, o2 = st.columns([1,1])
 with o1:
-    st.metric(label='Max Sae', value=np.max(Sae), delta='g')
-    st.metric(label='Max Sai', value=np.max(Sai), delta='g')
+    st.metric(label='Max Sae', value = np.max(Sae), delta='g')
+    st.metric(label='Max Sai', value = np.max(Sai), delta='g')
+    st.metric(label='Sds', value = Sds, delta='g')
+    st.metric(label='Sd1', value = Sd1, delta='g')
 with o2:
     st.write(Resul)
     
