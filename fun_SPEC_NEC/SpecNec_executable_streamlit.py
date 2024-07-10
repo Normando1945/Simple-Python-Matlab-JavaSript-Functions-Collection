@@ -118,7 +118,7 @@ st.markdown('You can read the documentation at [**Function: fun_Nec(n, z, I, fad
 
 ######################################################## user parameters ########################################################
 
-n = st.number_input('**n**: Ratio between spectral ordinates **Sa(T = 0.1 s)** and **PGA**:', value=2.48, step=0.1)
+n = st.number_input('**n**: Ratio between spectral ordinates **Sa(T = 0.1 s)** and **PGA**:', value=2.40, step=0.1)
 z = st.number_input('**z**: Maximum expected acceleration (fraction of gravitational acceleration):', value=0.4, step=0.1)
 
 # Create a grid layout with a maximum of 5 columns
@@ -135,7 +135,7 @@ with col2:
         
 with col3:
     fs = st.number_input('**fs**: Soil non-linearity amplification factor:', value=1.11, step=0.1)
-    R = st.number_input('**R**: Seismic response reduction factor:', value=6.0, step=0.5)
+    R = st.number_input('**R**: Seismic response reduction factor:', value=7.0, step=0.5)
 
 with col4:
     I = st.number_input('**I**: Importance coefficient [for different structures]:', value=1.0, step=0.1)
