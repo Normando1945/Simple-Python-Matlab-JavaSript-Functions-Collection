@@ -2,13 +2,13 @@ import streamlit as st
 
 # --- Page Setup ---
 
-about_Me = st.Page(
+about_Me = st.page(
     page = 'about_me.py',
     title = "About Me",
     # icon = ":material/account_circle"
 )
 
-project_1_page = st.Page(
+project_1_page = st.page(
     page = 'SpecNec_executable_streamlit.py',
     title = "Spec NEC",
     # icon = ":material/smart_toy",
