@@ -47,7 +47,7 @@ with st.expander("**Click to read more**"):
         )
 
 st.markdown('##### :ledger: **More Information about my New Book**')
-    jj1, jj2 = st.columns([1, 1])
+    # jj1, jj2 = st.columns([1, 1])
     # with jj1:
     #     st.image("https://raw.githubusercontent.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/main/fun_SPEC_NEC/assets/Structural Engineering2.png", width= 300)
     #     st.markdown(
