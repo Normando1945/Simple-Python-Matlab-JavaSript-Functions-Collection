@@ -6,6 +6,7 @@ st.image(image_path, use_column_width=True)
 
 col1, col2 = st.columns([1, 1])
 with col1:
+    # st.image("pages/assets/foto.jpg", width= 350)
     st.image("https://raw.githubusercontent.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/main/Prueba/pages/assets/foto.jpg", width= 350)
 with col2:
     st.markdown(
@@ -29,6 +30,7 @@ st.markdown('##### :ledger: **More Information about my New Book**')
 with st.expander("**Click to read more**"):
     j1, j2 = st.columns([1, 1])
     with j1:
+        # st.image("pages/assets/Structural Engineering2.png", width= 300)
         st.image("https://raw.githubusercontent.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/main/Prueba/pages/assets/Structural Engineering2.png", width= 300)
         st.markdown(
             """
