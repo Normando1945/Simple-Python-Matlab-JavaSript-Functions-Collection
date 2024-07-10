@@ -202,6 +202,11 @@ markeredgewidth=1, linewidth=1.0, alpha=0.5,linestyle = '--')
 ax1.plot([1,1], [0,Sd1], color=(0, 0, 0), marker='o', markersize=5, markerfacecolor='w',                              
 markeredgewidth=1, linewidth=1.0, alpha=0.5,linestyle = '--')
 
+# Add text annotation for Sds
+ax1.text(0.3, Sds, f'Sds = {Sds:.2f} g', fontsize=10, verticalalignment='bottom', horizontalalignment='right')
+# Add text annotation for Sd1
+ax1.text(1, Sd1, f'Sds = {Sds:.2f} g', fontsize=10, verticalalignment='bottom', horizontalalignment='right')
+
 ax1.set_xlim([Tie[0], (max(Tie))])                                                                               
 ax1.set_ylim([0, (max(Sae)*1.05)])                                                                              
 plt.title('SPEC NEC-SE-DS-2024', fontsize=10, color=(0, 0, 1))                                                      
