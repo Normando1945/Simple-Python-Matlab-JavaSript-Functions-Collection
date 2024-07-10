@@ -1,4 +1,4 @@
-import streamlit as st
+# import streamlit as st
 
 # # --- Page Setup ---
 
@@ -25,29 +25,24 @@ import streamlit as st
 # pg.run()
 
 import streamlit as st
+import runpy
 
-# Define a simple navigation function
 def main():
     st.sidebar.title("Navigation")
-    page = st.sidebar.radio("Go to", ["About Me", "Spec NEC"])
+    app_mode = st.sidebar.radio("Go to", ["About Me", "Spec NEC"])
 
-    if page == "About Me":
+    if app_mode == "About Me":
         about_me()
-    elif page == "Spec NEC":
+    elif app_mode == "Spec NEC":
         spec_nec()
 
 def about_me():
-    st.title("About Me")
-    runpy('about_me.py')
+    runpy.run_path('about_me.py')
 
 def spec_nec():
-    st.title("Spec NEC")
-    runpy('SpecNec_executable_streamlit.py')
-
-def runpy(filepath):
-    with open(filepath) as file:
-        exec(file.read(), globals())
+    runpy.run_path('SpecNec_executable_streamlit.py')
 
 if __name__ == "__main__":
     main()
+
 
