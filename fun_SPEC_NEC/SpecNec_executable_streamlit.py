@@ -11,7 +11,6 @@ st.image(image_path, use_column_width=True)
 # Título de la aplicación
 st.markdown("<h4 style='text-align: center;'>Simple App: Seismic Response Spectrum [Normative Ecuadorian Spectrum]</h4>", unsafe_allow_html=True)
 
-st.markdown("**Hola Xavier**")
 
 st.markdown(
     """
