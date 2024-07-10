@@ -3,6 +3,9 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
+#########
+# line of run c:\users\normando\appdata\local\packages\pythonsoftwarefoundation.python.3.10_qbz5n2kfra8p0\localcache\local-packages\python310\scripts\streamlit.exe run SpecNec_executable_streamlit.py
+#########
 
 # Load and display the image
 image_path = 'https://raw.githubusercontent.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/main/fun_SPEC_NEC/logo_TorreFuerte.png'
@@ -30,6 +33,27 @@ st.markdown(
     
     '''
     )
+
+
+st.markdown('##### :ledger: **About the Author**')
+with st.expander("**Click to read more**"):
+    coll1, coll2 = st.columns([1,1])
+    with coll1:
+        st.image("https://raw.githubusercontent.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/main/fun_SPEC_NEC/pages/assets/foto.jpg", width= 350)
+    with coll2:
+        st.markdown(
+            """
+            ### **Short Curriculum Vitae Overview**.
+
+            I am Ecuadorian, I have a Master's degree in Structural Engineering with a **SUMMA CUM LAUDE** distinction from the National Polytechnic School. With over 15 years of experience, I have notably provided structural consultancy for buildings surpassing 140 meters in height. I am currently affiliated with the Department of Civil Engineering at the [**Pontifical Catholic University of Ecuador**](https://www.puce.edu.ec/). My primary research domain is nonlinear mathematical modeling, leading to several 
+            international scientific publications. My ongoing projects include:
+            
+            * The Application of Artificial Neural Networks (ANN) in Estimating Local Fragility in Zero-Length Elements.
+            * Generating Synthetic Accelerograms based on Chaos Theory and Wavelets.
+            * Participation in the 'Training And Communication for Earthquake Risk Assessment - GEM' project.
+            
+            """
+        )
 
 st.markdown('##### :ledger: **More Information**')
 with st.expander("**Click to read more**"):
@@ -63,6 +87,11 @@ st.markdown('##### :scroll: **Parameters**')
 st.markdown('You can read the documentation at [**Function: fun_Nec(n, z, I, fads, r, R, fip, fie, TR)**](https://github.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/tree/main/fun_SPEC_NEC)')
 
 
+
+
+
+######################################
+
 n = st.number_input('**n**: Ratio between spectral ordinates **Sa(T = 0.1 s)** and **PGA**:', value=2.48, step=0.1)
 z = st.number_input('**z**: Maximum expected acceleration (fraction of gravitational acceleration):', value=0.4, step=0.1)
 
@@ -86,6 +115,11 @@ with col4:
     I = st.number_input('**I**: Importance coefficient [for different structures]:', value=1.0, step=0.1)
     r = st.number_input('**r**: Geographic zone factor [for Ecuador]:', value=1.0, step=0.1)
 
+
+
+
+
+#####################################################
 
 fads = [fa, fd, fs]
 To = 0.10 * fads[2] * fads[1] / fads[0]
