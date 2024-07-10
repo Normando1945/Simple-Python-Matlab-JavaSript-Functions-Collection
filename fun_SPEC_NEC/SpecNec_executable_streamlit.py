@@ -142,7 +142,7 @@ with col4:
     r = st.number_input('**r**: Geographic zone factor [for Ecuador]:', value=1.0, step=0.1)
 
 dt = 0.005
-Tf = 6
+Tf = 5
 
 ######################################################## Code ########################################################
 fads = [fa, fd, fs]
