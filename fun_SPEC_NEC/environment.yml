@@ -3,7 +3,7 @@ channels:
   - defaults
 dependencies:
   - python=3.10
-  - streamlit=1.16.0  # Cambia a una versión válida
+  - streamlit
   - numpy
   - pandas
   - matplotlib
