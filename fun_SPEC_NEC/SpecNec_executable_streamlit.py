@@ -141,18 +141,21 @@ with col4:
     I = st.number_input('**I**: Importance coefficient [for different structures]:', value=1.0, step=0.1)
     r = st.number_input('**r**: Geographic zone factor [for Ecuador]:', value=1.0, step=0.1)
 
+dt = 0.005
+Tf = 6
 
 ######################################################## Code ########################################################
-
 fads = [fa, fd, fs]
+
 To = 0.10 * fads[2] * fads[1] / fads[0]
 Tc = 0.55 * fads[2] * fads[1] / fads[0]
+Tl = 2.4 * fads[1]
 
 Sae = []
 Sai = []
 Tie = []
 
-for T in np.arange(0, 4, 0.005):
+for T in np.arange(0, Tf, dt):
     if T <= To:
         Sae.append([z * fads[0] * (1 + (n - 1) * T / To) * I])
         Sai.append([n * z * fads[0] / (R * fip * fie) * I])
@@ -163,9 +166,15 @@ for T in np.arange(0, 4, 0.005):
             Sai.append([n * z * fads[0] / (R * fip * fie) * I])
             Tie.append([T])
         else:
-            Sae.append([I * n * z * fads[0] * (Tc / T) ** r])
-            Sai.append([I * n * z * fads[0] * (Tc / T) ** r / (R * fip * fie)])
-            Tie.append([T])
+            if T <= Tl:
+                Sae.append([I * n * z * fads[0] * (Tc / T) ** r])
+                Sai.append([I * n * z * fads[0] * (Tc / T) ** r / (R * fip * fie)])
+                Tie.append([T])
+            else:
+                Sae.append([I * n * z * fads[0] * (Tc / T) ** r * (Tl / T) ** 2])
+                Sai.append([I * n * z * fads[0] * (Tc / T) ** r * (Tl / T) ** 2 / (R * fip * fie)])
+                Tie.append([T])
+
 
 Resul = pd.DataFrame({ 'Period [s]': Tie,'Sae [g]': Sae,'Sai [g]': Sai})
     
@@ -190,7 +199,9 @@ plt.xlabel('Period (T) [s]', rotation=0, fontsize=10, color=(0, 0, 0))
 plt.ylabel('Max Response Acceleration (Sa) [g]', rotation=90, fontsize=10, color=(0, 0, 0))                     
 legend = plt.legend(fontsize=10)                                                                               
 legend.get_frame().set_edgecolor('none')                                                                       
-ax1.grid(which='both', axis='x', alpha=0.5)                                                                      
+ax1.grid(which='both', axis='x', alpha=0.5) 
+
+# plt.show()                                                                     
     
 st.pyplot(fig1)
 
