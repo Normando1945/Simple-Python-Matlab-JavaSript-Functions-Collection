@@ -197,10 +197,10 @@ st.pyplot(fig1)
 
 st.markdown('##### 📊 **Response Spectra [Elastic and Inelastic]**')
 
-col1, col2 = st.columns([1,1])
-    with col1:
+o1, o2 = st.columns([1,1])
+    with o1:
         st.write(Resul)
-    with col2:
+    with o2:
         st.write(Resul)
 
 
