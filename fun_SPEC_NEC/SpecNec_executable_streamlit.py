@@ -220,7 +220,51 @@ ax1.grid(which='both', axis='x', alpha=0.5)
 st.pyplot(fig1)
 
 
+################################################ Results #################################################
+
+# Lista de mensajes graciosos
+messages = [
+    "Well, well, well... look who needed some results.",
+    "Behold! The miraculous results you've been waiting for!",
+    "Surprise! Here are your results. Try not to faint.",
+    "Results are in. Try to act surprised.",
+    "Ta-da! Your results, served with a side of irony.",
+    "Eureka! Your results are here. Don't spend them all in one place.",
+    "Drum roll, please... Your results have arrived.",
+    "Breaking news! Your results are hot off the press.",
+    "Hold onto your hat! Here are your sparkling new results.",
+    "Voilà! Your results have magically appeared.",
+    "No, I am not ChatGPT, don't insist. Wink wink."
+]
+# Lista de gif's
+gifs = [
+    "https://media4.giphy.com/media/EbeeDkvlC3fFRGJ6Om/200.webp?cid=ecf05e47pr1lqu1ercua819ufpxbbjc92z3b6eerc825ilv1&ep=v1_gifs_search&rid=200.webp&ct=g",
+    "https://media2.giphy.com/media/dXpAxrUk0Ya9TXBJH9/200.webp?cid=ecf05e47pr1lqu1ercua819ufpxbbjc92z3b6eerc825ilv1&ep=v1_gifs_search&rid=200.webp&ct=g",
+    "https://media0.giphy.com/media/wzu3RR6iZGD7ryCFdm/200.webp?cid=ecf05e472d4zjoh9xvy2h63ugepvflgkoseft7fe2rjdcs7a&ep=v1_gifs_search&rid=200.webp&ct=g",
+    "https://media1.giphy.com/media/XreQmk7ETCak0/200.webp?cid=ecf05e478au4hlrh86lo1v25qxz7hrz7qkubs967m720usle&ep=v1_gifs_search&rid=200.webp&ct=g",
+    "https://media1.giphy.com/media/xUPGcmvgjMIEhy6jZu/200.webp?cid=ecf05e474k63y0j7jtbydaaikmvhrfsz8bcdlzji0u0jr385&ep=v1_gifs_search&rid=200.webp&ct=g",
+    "https://media4.giphy.com/media/JliGmPEIgzGLe/200.webp?cid=ecf05e474k63y0j7jtbydaaikmvhrfsz8bcdlzji0u0jr385&ep=v1_gifs_search&rid=200.webp&ct=g",
+    "https://media3.giphy.com/media/l3fZXTZdS6Ofi7U6A/100.webp?cid=ecf05e47rwnp5i6yc3odmtob7g480qqlo56d0pugbbtroo7q&ep=v1_gifs_search&rid=100.webp&ct=g",
+    "https://media1.giphy.com/media/3oswhordgO0ZbDkTio/200.webp?cid=ecf05e472vc7m7m1ngpi9rkt38gk6200t3c5ov68mq6nauuh&ep=v1_gifs_search&rid=200.webp&ct=g",
+    "https://media0.giphy.com/media/xTdy8lYBh2XGvzz5UA/200.webp?cid=ecf05e472vc7m7m1ngpi9rkt38gk6200t3c5ov68mq6nauuh&ep=v1_gifs_search&rid=200.webp&ct=g",
+    "https://media2.giphy.com/media/l0MYuPnFNsKteNw1a/200.webp?cid=ecf05e471izn0s02usul3fv0scf9mtjmghbsryi3rsbufpcd&ep=v1_gifs_search&rid=200.webp&ct=g",
+    "https://media0.giphy.com/media/Dh5q0sShxgp13DwrvG/200.webp?cid=790b7611oiq55hr7mtdyx682bu69e8tfe4597zdp56l1ezeu&ep=v1_gifs_search&rid=200.webp&ct=g",
+    "https://media2.giphy.com/media/EHxx63vDG0jQ8bKIkP/200.webp?cid=ecf05e470cgg4omlys19jn9w0dv38kqrz7wlbjpyg8f83kn7&ep=v1_gifs_search&rid=200.webp&ct=g",
+    "https://media0.giphy.com/media/26gJAkoJKPKoFH7DW/200.webp?cid=ecf05e4712aizlynkwpnfsfwaf5aboy7qf6aacbaodjfso58&ep=v1_gifs_search&rid=200.webp&ct=g"
+]
+
+# Seleccionar un mensaje al azar
+random_message = np.random.choice(messages)
+random_gif = np.random.choice(gifs)
+
 st.markdown('##### 📊 **Response Spectra [Elastic and Inelastic]**')
+
+col1, col2 = st.columns([1, 3])
+with col1:
+    st.image(random_gif, use_column_width=True)
+with col2:
+    with st.chat_message("assistant"):
+        st.write(random_message)
 
 o1, o2 = st.columns([1,2])
 with o1:
