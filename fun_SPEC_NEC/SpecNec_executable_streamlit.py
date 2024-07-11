@@ -277,6 +277,12 @@ with o2:
     
 
 
+st.markdown('##### ⚠️ **Disclaimer**')
+st.markdown(
+    '''
+    It is important for users to understand that this application is provided for academic purposes only. The scope and use of this tool are entirely the responsibility of the user. The developers assume no liability for any misuse or unintended use of this application.
+    '''
+)
 
 
 
@@ -323,9 +329,4 @@ def display_footer():
 
 display_footer()
 
-st.markdown('##### ⚠️ **Disclaimer**')
-st.markdown(
-    '''
-    It is important for users to understand that this application is provided for academic purposes only. The scope and use of this tool are entirely the responsibility of the user. The developers assume no liability for any misuse or unintended use of this application.
-    '''
-)
+
