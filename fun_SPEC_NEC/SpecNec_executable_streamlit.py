@@ -18,6 +18,7 @@ st.markdown("<h4 style='text-align: center;'>Simple App: Seismic Response Spectr
 st.markdown(
     """
     * Author: [Msc. Ing. Carlos Andrés Celi Sánchez](https://fragrant-knight-4af.notion.site/Main-Page-5c5f007b3f3f4c76a604960d9dbffca7?pvs=4)
+    * University: [PUCE](https://www.puce.edu.ec/)
     * Course: Structural Dynamics
     """
 )
