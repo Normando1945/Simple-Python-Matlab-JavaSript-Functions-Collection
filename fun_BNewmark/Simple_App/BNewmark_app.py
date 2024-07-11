@@ -113,29 +113,39 @@ st.markdown('You can read the documentation at [**Function: fun_B_Newmark_2023(T
 
 
 ################################################ Selection of Record #################################################
+# Selection of Record
 at2_files = glob.glob('*.AT2')
 
-
-col1, col2 = st.columns([1,2])
-with col1:
-    st.markdown('**Seismic Records in the Directory**')
-    srd = pd.DataFrame(at2_files)
-    st.write(srd)
-
-with col2:
-    st.markdown('**Select a Record form the list**')
-    row_numbers = list(range(len(srd)))
-    aux = st.selectbox('**Record #**:', row_numbers)
-    st.metric(label='Record Selected', value= at2_files[aux])
+if len(at2_files) > 0:
+    col1, col2 = st.columns([1, 2])
+    with col1:
+        st.markdown('**Seismic Records in the Directory**')
+        srd = pd.DataFrame(at2_files, columns=["Record Files"])
+        st.write(srd)
     
-    with open(at2_files[aux], 'r') as f:
-        contents = f.read()
-    lines = contents.splitlines()
-    data = []
-    for line in lines:
-        time, accel = line.split()
-        data.append((float(time), float(accel)))
-    Seismic = pd.DataFrame(data, columns=["Time [s]", "Acceleration [g]"])
+    with col2:
+        st.markdown('**Select a Record form the list**')
+        row_numbers = list(range(len(srd)))
+        aux = st.selectbox('**Record #**:', row_numbers)
+        
+        if aux is not None:
+            st.metric(label='Record Selected', value=at2_files[aux])
+            with open(at2_files[aux], 'r') as f:
+                contents = f.read()
+            lines = contents.splitlines()
+            data = []
+            for line in lines:
+                time, accel = line.split()
+                data.append((float(time), float(accel)))
+            Seismic = pd.DataFrame(data, columns=["Time [s]", "Acceleration [g]"])
+            
+            # Further processing of the selected record
+            TG = np.vstack([item[0] for item in data])  # Extracting the first column of data (time) as a NumPy array
+            SG = np.vstack([item[1] for item in data])  # Extracting the second column of data (Acceleration) as a NumPy array
+
+            # Other parts of your code for plotting and displaying results remain the same
+else:
+    st.warning("No seismic records found in the directory.")
 
 
     ################################################ Convertion of Selected Record #################################################
