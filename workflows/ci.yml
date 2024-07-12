@@ -22,14 +22,14 @@ jobs:
       run: conda env create -f environment.yml
 
     - name: Activate environment
-      run: conda activate myenv
+      run: echo "conda activate myenv" >> $GITHUB_ENV
 
     - name: Install dependencies
       run: |
-        conda activate myenv
+        source activate myenv
         python -m pip install --upgrade pip
 
     - name: Run tests
       run: |
-        conda activate myenv
+        source activate myenv
         python -m unittest discover
