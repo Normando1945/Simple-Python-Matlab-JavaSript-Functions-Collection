@@ -25,7 +25,7 @@ jobs:
       run: ls -la
 
     - name: Create environment
-      run: conda env create -f environment.yml
+      run: conda env create -f environment.yaml
 
     - name: Activate environment
       run: echo "conda activate myenv" >> $GITHUB_ENV
