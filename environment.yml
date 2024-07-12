@@ -1,8 +1,0 @@
-name: myenv
-channels:
-  - defaults
-dependencies:
-  - streamlit
-  - numpy
-  - pandas
-  - matplotlib
