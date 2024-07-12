@@ -79,6 +79,10 @@ st.markdown(
     '''
     ##### 📖 **Description of this Simple App**
     This simple application performs step-by-step calculations of the displacement, velocity, and acceleration response of a single-degree-of-freedom (SDOF) structure, whether conservative or non-conservative, subjected to ground motion using the Newmark method.
+    
+    ##### 📥 **Seismic Records**
+    You can download .AT2 files with examples of real earthquakes in the required format from the following [**repository**](https://github.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/tree/main/fun_BNewmark/Simple_App/Records_Zip)
+    
     '''
 )
 
