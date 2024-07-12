@@ -6,7 +6,6 @@ import matplotlib.pyplot as plt
 #########
 # line of run c:\users\normando\appdata\local\packages\pythonsoftwarefoundation.python.3.10_qbz5n2kfra8p0\localcache\local-packages\python310\scripts\streamlit.exe run SpecNec_executable_streamlit.py
 #########
-
 ######################################################## header ########################################################
 image_path = 'https://drive.google.com/uc?export=view&id=1fzXiKwm8eCYFvZuU61ttcPPGAnlA5NYT'
 st.image(image_path, use_column_width=True)
@@ -34,7 +33,8 @@ st.markdown('##### 😎 **About the Author**')
 with st.expander("**Click to read more**"):
     coll1, coll2 = st.columns([1,1])
     with coll1:
-        st.image("https://raw.githubusercontent.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/main/fun_SPEC_NEC/assets/foto.jpg", width= 325)
+        st.image("https://drive.google.com/uc?export=view&id=18xGwyds7qL-yUL4oP9Hjv4QCj1UGak7h", width= 325)
+        # st.image("https://raw.githubusercontent.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/main/fun_SPEC_NEC/assets/foto.jpg", width= 325)
     with coll2:
         st.markdown(
             """
@@ -53,7 +53,8 @@ with st.expander("**Click to read more**"):
     st.markdown(':ledger: **More Information about my New Book**')
     jj1, jj2 = st.columns([1, 1])
     with jj1:
-        st.image("https://raw.githubusercontent.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/main/fun_SPEC_NEC/assets/Structural Engineering2.png", width= 300)
+        st.image("https://drive.google.com/uc?export=view&id=1aexKAxy7oXrTxsRiVXj5PPNpE7rIsvcq", width= 300)
+        # st.image("https://raw.githubusercontent.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/main/fun_SPEC_NEC/assets/Structural Engineering2.png", width= 300)
         st.markdown(
             """
             <div style="text-align: center;">
@@ -90,7 +91,8 @@ st.markdown('##### :ledger: **More Information about this Simple App**')
 with st.expander("**Click to read more**"):
     j1, j2 = st.columns([1, 2])
     with j1:
-        image_path = 'https://raw.githubusercontent.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/main/fun_SPEC_NEC/Chapter1_portada.gif'
+        image_path = 'https://drive.google.com/uc?export=view&id=1ZuqTstQSu-W_M5XxR61VKELvQKT-5vj_'
+        # image_path = 'https://raw.githubusercontent.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/main/fun_SPEC_NEC/Chapter1_portada.gif'
         st.image(image_path, use_column_width=True)
         
         st.markdown(
