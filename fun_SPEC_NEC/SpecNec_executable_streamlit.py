@@ -8,8 +8,11 @@ import matplotlib.pyplot as plt
 #########
 
 ######################################################## header ########################################################
-image_path = 'https://raw.githubusercontent.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/main/fun_SPEC_NEC/logo_TorreFuerte.png'
+image_path = 'https://drive.google.com/uc?export=view&id=1fzXiKwm8eCYFvZuU61ttcPPGAnlA5NYT'
 st.image(image_path, use_column_width=True)
+
+# image_path = 'https://raw.githubusercontent.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/main/fun_SPEC_NEC/logo_TorreFuerte.png'
+# st.image(image_path, use_column_width=True)
 
 # Título de la aplicación
 st.markdown("<h4 style='text-align: center;'>Simple App: Seismic Response Spectrum [Normative Ecuadorian Spectrum]</h4>", unsafe_allow_html=True)
