@@ -1,1 +1,7 @@
-aaa
+name: myenv
+dependencies:
+  - python=3.10
+  - streamlit
+  - numpy
+  - pandas
+  - matplotlib
