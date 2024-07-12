@@ -36,4 +36,3 @@ jobs:
       run: |
         source activate myenv
         python -m unittest discover
-
