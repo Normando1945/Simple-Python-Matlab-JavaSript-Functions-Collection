@@ -325,7 +325,7 @@ def display_footer():
         <div class="separator"></div>
         <div>
             <p>Developed by Carlos Celi | <a href="https://www.http://torrefuerte.ec" target="_blank">TORREFUERTE</a> | <a href="https://www.caceli.net" target="_blank">Carlos Celi</a> | <a href="https://github.com/Normando1945" target="_blank">GitHub</a></p>
-            <p>© Version 1.0.1 - July, 2024</p>
+            <p>© Version 1.0.2 - July, 2024</p>
         </div>
     </div>
     """
