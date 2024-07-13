@@ -5,3 +5,4 @@ dependencies:
   - numpy
   - pandas
   - matplotlib
+  - scipy.signal
