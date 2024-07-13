@@ -7,6 +7,6 @@ dependencies:
   - numpy
   - pandas
   - matplotlib
+  - scipy.signal
   - requests
   - pip
-  - scipy.signal
