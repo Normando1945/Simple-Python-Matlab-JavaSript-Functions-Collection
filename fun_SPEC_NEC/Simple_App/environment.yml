@@ -1,0 +1,12 @@
+name: myenv
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+  - streamlit
+  - numpy
+  - pandas
+  - matplotlib
+  - scipy.signal
+  - requests
+  - pip
