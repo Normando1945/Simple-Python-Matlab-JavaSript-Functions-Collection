@@ -2,8 +2,6 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-import glob
-import os
 
 ######################################################## header ########################################################
 # # image_path = 'https://raw.githubusercontent.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/main/fun_SPEC_NEC/logo_TorreFuerte.png'
