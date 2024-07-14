@@ -74,7 +74,7 @@ with st.sidebar.expander("**Click to read more**"):
     ### University ###
     st.sidebar.markdown('##### 🎓 **About the PUCE University**')
     with st.sidebar.expander("**Click to read more**"):
-        st.image("https://www.puce.edu.ec/sites/default/files/2020-10/logotipo_puce_v1.0-06.png", use_column_width=True)
+        st.image("https://www.puce.edu.ec/wp-content/uploads/2024/02/imagen-cabecera-ingenieria-civil-posagrado.png", use_column_width=True)
         st.markdown(
             """
             The Pontifical Catholic University of Ecuador (PUCE), founded in 1946, is one of the most prestigious universities in Ecuador. It offers a wide range of undergraduate and postgraduate programs across various disciplines, fostering a rich environment for research and academic excellence. The university is dedicated to the holistic development of its students, emphasizing both academic rigor and ethical values.
