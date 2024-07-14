@@ -1,1 +1,6 @@
-a
+streamlit
+numpy
+pandas
+matplotlib
+scipy.signal
+
