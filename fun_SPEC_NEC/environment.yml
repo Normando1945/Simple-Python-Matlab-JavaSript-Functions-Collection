@@ -10,3 +10,5 @@ dependencies:
   - scipy.signal
   - requests
   - pip
+  - os
+  - subprocess
