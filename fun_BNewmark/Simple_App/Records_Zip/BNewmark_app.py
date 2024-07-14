@@ -6,7 +6,8 @@ from scipy.signal import butter, lfilter
 from datetime import datetime
 import pytz
 
-# Agregar estilo CSS para cambiar el color del sidebar
+
+######################################################## Side BAR ########################################################
 st.markdown(
     """
     <style>
@@ -29,7 +30,7 @@ formatted_time = current_time.strftime("%Y-%m-%d %H:%M:%S")
 # Mostrar la fecha y hora en el sidebar
 st.sidebar.markdown(f"**Current Date and Time in Quito, Ecuador:**\n\n{formatted_time}")
 
-######################################################## Author ########################################################
+## Author ##
 st.sidebar.markdown('##### 😎 **About the Author**')
 with st.sidebar.expander("**Click to read more**"):
     st.image("https://www.dropbox.com/scl/fi/24umxisfp4tedeqzndj3n/foto.jpg?rlkey=4yrliifi3xjuhbmjbhh1zrjv8&st=widakesu&raw=1", width=150)
@@ -70,7 +71,6 @@ with st.sidebar.expander("**Click to read more**"):
     )
 
 
-
 ## # line of run c:\users\normando\appdata\local\packages\pythonsoftwarefoundation.python.3.10_qbz5n2kfra8p0\localcache\local-packages\python310\scripts\streamlit.exe run BNewmark_app.py
 
 
@@ -94,54 +94,6 @@ st.markdown(
 
 
 st.markdown('You can find me on : [![Web Page](https://img.shields.io/badge/Web%20Page-caceli.net-blue)](https://fragrant-knight-4af.notion.site/Main-Page-5c5f007b3f3f4c76a604960d9dbffca7?pvs=4)[![GitHub Carlos Celi](https://img.shields.io/github/followers/Normando1945?label=follow&style=social)](https://github.com/Normando1945)[![ResearchGate](https://img.shields.io/badge/-ResearchGate-00CCBB?style=social&logo=researchgate)](https://www.researchgate.net/profile/Carlos-Celi)[![Google Scholar](https://img.shields.io/badge/-Google%20Scholar-4285F4?style=social&logo=google)](https://scholar.google.com.ec/citations?hl=es&user=yR4Gz7kAAAAJ)')
-
-######################################################## Author ########################################################
-st.markdown('##### 😎 **About the Author**')
-with st.expander("**Click to read more**"):
-    coll1, coll2 = st.columns([1,1])
-    with coll1:
-        # st.image("https://raw.githubusercontent.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/main/fun_SPEC_NEC/assets/foto.jpg", width= 325)
-        st.image("https://www.dropbox.com/scl/fi/24umxisfp4tedeqzndj3n/foto.jpg?rlkey=4yrliifi3xjuhbmjbhh1zrjv8&st=widakesu&raw=1", width= 325)
-    with coll2:
-        st.markdown(
-            """
-            **Short Curriculum Vitae Overview**.
-
-            I am Ecuadorian, I have a Master's degree in Structural Engineering with a **SUMMA CUM LAUDE** distinction from the National Polytechnic School. With over 15 years of experience, I have notably provided structural consultancy for buildings surpassing 140 meters in height. I am currently affiliated with the Department of Civil Engineering at the [**Pontifical Catholic University of Ecuador**](https://www.puce.edu.ec/). My primary research domain is nonlinear mathematical modeling, leading to several 
-            international scientific publications. My ongoing projects include:
-            
-            * The Application of Artificial Neural Networks (ANN) in Estimating Local Fragility in Zero-Length Elements.
-            * Generating Synthetic Accelerograms based on Chaos Theory and Wavelets.
-            * Participation in the 'Training And Communication for Earthquake Risk Assessment - GEM' project.
-            
-            """
-        )
-
-    st.markdown(':ledger: **More Information about my New Book**')
-    jj1, jj2 = st.columns([1, 1])
-    with jj1:
-        # st.image("https://raw.githubusercontent.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/main/fun_SPEC_NEC/assets/Structural Engineering2.png", width= 300)
-        st.image("https://www.dropbox.com/scl/fi/o9os3igy46ynjzw2stt1a/Structural-Engineering2.png?rlkey=so80xqe0zuj3ilsdlwm4awkmz&st=9v750dgq&raw=1", width= 300)
-        st.markdown(
-            """
-            <div style="text-align: center;">
-            <a href="https://fragrant-knight-4af.notion.site/My-Personal-Page-for-Academic-Use-5c5f007b3f3f4c76a604960d9dbffca7"> Online Book </b></a>
-            </div>
-            """, 
-            unsafe_allow_html=True
-        )
-    with jj2:
-        st.markdown(
-        """
-        **Structural Engineering: Dynamics, Seismic Solution, and AI Integration**
-    
-        In an era where structural engineering faces multifaceted challenges, this book offers an integrated approach that melds core dynamics, seismic-resistant design techniques, and the transformative potential of AI in modern structural solutions. Beginning with foundational principles, readers are ushered into the intricate world of structural dynamics, with a spotlight on the importance of understanding multi-degree of freedom systems. As societies grapple with the increasing prominence of seismic threats, the imperative for resilient construction methods is laid bare.
-    
-        However, it's paramount to note that this work doesn't aspire to replace or overshadow the comprehensive mathematical insights found in the seminal works of the discipline or the invaluable depth of formal university education. Rather, this book positions itself as a supplementary resource, designed to complement these foundational sources of knowledge. By bridging the gap between time-honored techniques and contemporary technological advancements, it underscores the evolving synergy between traditional engineering practices and modern AI-driven tools.
-    
-        Harnessing the power of discrete mathematics, the book reveals how automation is revolutionizing the field, not just simplifying but also optimizing the design process. In ensuring structural safety and cost-effectiveness, it aims to pave a path toward a future where structures are not only robust against threats but are also emblematic of efficiency and innovation. Dive in to discover a confluence of tradition and technology, all designed to enhance and enrich the existing knowledge landscape of structural engineering.
-        """
-        )
 
 ######################################################## Description ########################################################
 st.markdown(
