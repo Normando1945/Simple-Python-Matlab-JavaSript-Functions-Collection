@@ -125,7 +125,7 @@ st.markdown(
     This simple application performs step-by-step calculations of the displacement, velocity, and acceleration response of a single-degree-of-freedom (SDOF) structure, whether conservative or non-conservative, subjected to ground motion using the Newmark method.
     
     ##### 📥 **Seismic Records**
-    This simple application utilizes the PEER format, enabling you to download seismic records directly from the [**PEER Ground Motion Database**](https://ngawest2.berkeley.edu/). Additionally, you can download .AT2 files with real earthquake examples in the required format from the following [**repository**](https://github.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/tree/main/fun_BNewmark/Simple_App/Records_Zip)
+    This simple application utilizes the PEER format, enabling you to download seismic records directly from the [**PEER Ground Motion Database**](https://ngawest2.berkeley.edu/). Additionally, you can download .AT2 files with real earthquake examples in the required format from the following [**repository**](https://github.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/tree/main/fun_BNewmark/Simple_App/Records_Zip/Examples%20of%20Seismic%20Records%20PEER)
     
     '''
 )
