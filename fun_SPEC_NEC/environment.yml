@@ -7,8 +7,6 @@ dependencies:
   - numpy
   - pandas
   - matplotlib
-  - scipy.signal
+  - scipy
   - requests
   - pip
-  - os
-  - subprocess
