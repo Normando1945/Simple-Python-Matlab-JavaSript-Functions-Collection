@@ -4,21 +4,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-import os
-import subprocess
-
-# Verificar si matplotlib está instalado, de lo contrario, instalarlo
-try:
-    import matplotlib.pyplot as plt
-except ImportError:
-    subprocess.check_call([os.sys.executable, "-m", "pip", "install", "matplotlib"])
-    import matplotlib.pyplot as plt
-
-import streamlit as st
-import numpy as np
-import pandas as pd
-
-
 
 #########
 # line of run c:\users\normando\appdata\local\packages\pythonsoftwarefoundation.python.3.10_qbz5n2kfra8p0\localcache\local-packages\python310\scripts\streamlit.exe run SpecNec_executable_streamlit.py
