@@ -4,6 +4,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from scipy.signal import butter, lfilter
 
+
+st.sidebar.title("Welcome")
+
 ## # line of run c:\users\normando\appdata\local\packages\pythonsoftwarefoundation.python.3.10_qbz5n2kfra8p0\localcache\local-packages\python310\scripts\streamlit.exe run BNewmark_app.py
 
 
