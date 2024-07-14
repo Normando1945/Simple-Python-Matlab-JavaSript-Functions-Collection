@@ -10,7 +10,7 @@ st.markdown(
     <style>
     /* Cambia el fondo del sidebar */
     .css-1d391kg { 
-        background-color: #f0f0f0; /* Aquí puedes cambiar el color de fondo */
+        background-color: #fdc30a; /* Aquí puedes cambiar el color de fondo */
     }
     </style>
     """,
