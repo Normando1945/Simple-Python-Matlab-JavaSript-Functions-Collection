@@ -20,7 +20,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.sidebar.title("# **Welcome to Simple App: Time History Response, SDOF (B_Newmark)**")
+st.sidebar.title("**Welcome to Simple App: Time History Response, SDOF (B_Newmark)**")
 
 # Obtener la fecha y hora actual en Quito, Ecuador
 ecuador_tz = pytz.timezone('America/Guayaquil')
@@ -31,7 +31,7 @@ formatted_time = current_time.strftime("%Y-%m-%d %H:%M:%S")
 st.sidebar.markdown(f"**Current Date and Time in Quito, Ecuador:**\n\n{formatted_time}")
 
 ## Author ##
-st.sidebar.markdown('##### 😎 **About the Author**')
+st.sidebar.markdown('#### 😎 **About the Author**')
 with st.sidebar.expander("**Click to read more**"):
     st.image("https://www.dropbox.com/scl/fi/24umxisfp4tedeqzndj3n/foto.jpg?rlkey=4yrliifi3xjuhbmjbhh1zrjv8&st=widakesu&raw=1",  use_column_width=True)
        
