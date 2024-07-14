@@ -437,7 +437,7 @@ else:
     st.markdown('##### ⚠️ **Disclaimer**')
     st.markdown(
         '''
-        It is important for users to understand that this application is provided for academic purposes only. The scope and use of this tool are entirely the responsibility of the user. The developers assume no liability for any misuse or unintended use of this application.
+        This application is provided solely for academic purposes. The user bears full responsibility for the scope and application of this tool. The developers disclaim any liability for misuse or any unintended consequences arising from the use of this application.
         '''
     )
 
