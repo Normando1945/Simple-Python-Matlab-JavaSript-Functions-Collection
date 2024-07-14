@@ -3,7 +3,8 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from scipy.signal import butter, lfilter
-
+from datetime import datetime
+import pytz
 
 # Agregar estilo CSS para cambiar el color del sidebar
 st.markdown(
@@ -19,6 +20,15 @@ st.markdown(
 )
 
 st.sidebar.title("Welcome")
+
+# Obtener la fecha y hora actual en Quito, Ecuador
+ecuador_tz = pytz.timezone('America/Guayaquil')
+current_time = datetime.now(ecuador_tz)
+formatted_time = current_time.strftime("%Y-%m-%d %H:%M:%S")
+
+# Mostrar la fecha y hora en el sidebar
+st.sidebar.markdown(f"**Current Date and Time in Quito, Ecuador:**\n\n{formatted_time}")
+
 
 
 ## # line of run c:\users\normando\appdata\local\packages\pythonsoftwarefoundation.python.3.10_qbz5n2kfra8p0\localcache\local-packages\python310\scripts\streamlit.exe run BNewmark_app.py
