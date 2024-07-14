@@ -71,6 +71,28 @@ with st.sidebar.expander("**Click to read more**"):
     """
     )
 
+    ### University ###
+    st.sidebar.markdown('##### 🎓 **About the PUCE University**')
+    with st.sidebar.expander("**Click to read more**"):
+        st.image("https://www.puce.edu.ec/sites/default/files/2020-10/logotipo_puce_v1.0-06.png", use_column_width=True)
+        st.markdown(
+            """
+            The Pontifical Catholic University of Ecuador (PUCE), founded in 1946, is one of the most prestigious universities in Ecuador. It offers a wide range of undergraduate and postgraduate programs across various disciplines, fostering a rich environment for research and academic excellence. The university is dedicated to the holistic development of its students, emphasizing both academic rigor and ethical values.
+            
+            **Mission and Vision**:
+            
+            PUCE aims to contribute to society by training competent, ethical professionals committed to the development of their communities and the country. The university focuses on creating knowledge through research and innovation, promoting cultural and social activities that enrich the educational experience.
+            
+            **Notable Achievements**:
+            
+            * Extensive research output with numerous publications in international journals.
+            * Strong emphasis on community engagement and social responsibility.
+            * Wide network of international collaborations and exchange programs.
+            
+            For more information, visit the [**PUCE website**](https://www.puce.edu.ec/).
+            """
+        )
+
 
 ## # line of run c:\users\normando\appdata\local\packages\pythonsoftwarefoundation.python.3.10_qbz5n2kfra8p0\localcache\local-packages\python310\scripts\streamlit.exe run BNewmark_app.py
 
