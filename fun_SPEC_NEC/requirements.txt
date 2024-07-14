@@ -4,5 +4,4 @@ pandas
 matplotlib
 scipy
 requests
-os
-subprocess
+
