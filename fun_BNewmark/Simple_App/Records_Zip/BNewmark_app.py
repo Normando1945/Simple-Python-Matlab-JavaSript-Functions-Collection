@@ -33,7 +33,7 @@ st.sidebar.markdown(f"**Current Date and Time in Quito, Ecuador:**\n\n{formatted
 ## Author ##
 st.sidebar.markdown('##### 😎 **About the Author**')
 with st.sidebar.expander("**Click to read more**"):
-    st.image("https://www.dropbox.com/scl/fi/24umxisfp4tedeqzndj3n/foto.jpg?rlkey=4yrliifi3xjuhbmjbhh1zrjv8&st=widakesu&raw=1", width=150)
+    st.image("https://www.dropbox.com/scl/fi/24umxisfp4tedeqzndj3n/foto.jpg?rlkey=4yrliifi3xjuhbmjbhh1zrjv8&st=widakesu&raw=1", width=200)
     st.markdown(
         """
         **Short Curriculum Vitae Overview**.
@@ -49,7 +49,7 @@ with st.sidebar.expander("**Click to read more**"):
     )
 
     st.markdown(':ledger: **More Information about my New Book**')
-    st.image("https://www.dropbox.com/scl/fi/o9os3igy46ynjzw2stt1a/Structural-Engineering2.png?rlkey=so80xqe0zuj3ilsdlwm4awkmz&st=9v750dgq&raw=1", width=150)
+    st.image("https://www.dropbox.com/scl/fi/o9os3igy46ynjzw2stt1a/Structural-Engineering2.png?rlkey=so80xqe0zuj3ilsdlwm4awkmz&st=9v750dgq&raw=1", width=200)
     st.markdown(
         """
         <div style="text-align: center;">
