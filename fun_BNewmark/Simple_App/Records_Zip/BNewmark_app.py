@@ -49,7 +49,7 @@ with st.sidebar.expander("**Click to read more**"):
         """
     )
 
-    st.markdown(':ledger: **More Information about my New Book**')
+    st.markdown('📘 **More Information about my New Book**')
     st.image("https://www.dropbox.com/scl/fi/o9os3igy46ynjzw2stt1a/Structural-Engineering2.png?rlkey=so80xqe0zuj3ilsdlwm4awkmz&st=9v750dgq&raw=1", use_column_width=True)
     st.markdown(
         """
