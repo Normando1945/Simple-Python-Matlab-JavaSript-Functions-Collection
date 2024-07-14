@@ -93,6 +93,29 @@ with st.sidebar.expander("**Click to read more**"):
             """
         )
 
+    st.sidebar.markdown('#### 🌎 **About Ecuador**')
+    with st.sidebar.expander("**Click to read more**"):
+        st.image("https://upload.wikimedia.org/wikipedia/commons/e/e8/Flag_of_Ecuador.svg", use_column_width=True)
+        st.markdown(
+            """
+            Ecuador, located on the west coast of South America, is renowned for its stunning natural beauty, megadiversity, and vibrant culture. From the lush Amazon rainforest to the breathtaking Andes mountains and the beautiful beaches of the Pacific coast, Ecuador offers a diverse range of landscapes and ecosystems.
+            
+            **Biodiversity**:
+            
+            Ecuador is one of the most biodiverse countries in the world, home to a vast array of flora and fauna. The Galápagos Islands, a UNESCO World Heritage site, are famous for their unique wildlife and played a crucial role in Charles Darwin's theory of evolution.
+            
+            **Culture and People**:
+            
+            Ecuador boasts a rich cultural heritage, with influences from indigenous, Spanish, and African traditions. The capital city, Quito, is known for its well-preserved colonial architecture and is also a UNESCO World Heritage site. Ecuadorians are known for their warm hospitality and vibrant traditions.
+            
+            **Cosmopolitan Cities**:
+            
+            Cities like Quito and Guayaquil offer a blend of modern amenities and historical charm. These cosmopolitan hubs are centers of commerce, culture, and education, offering a dynamic lifestyle for residents and visitors alike.
+            
+            For more information, visit the [**Ecuador Travel website**](https://ecuador.travel/en/).
+            """
+        )
+
 
 ## # line of run c:\users\normando\appdata\local\packages\pythonsoftwarefoundation.python.3.10_qbz5n2kfra8p0\localcache\local-packages\python310\scripts\streamlit.exe run BNewmark_app.py
 
