@@ -33,9 +33,7 @@ st.sidebar.markdown(f"**Current Date and Time in Quito, Ecuador:**\n\n{formatted
 ## Author ##
 st.sidebar.markdown('##### 😎 **About the Author**')
 with st.sidebar.expander("**Click to read more**"):
-    col1, col2, col3 = st.columns([1,2,1])
-    with col2:
-        st.image("https://www.dropbox.com/scl/fi/24umxisfp4tedeqzndj3n/foto.jpg?rlkey=4yrliifi3xjuhbmjbhh1zrjv8&st=widakesu&raw=1", width=150)
+    st.image("https://www.dropbox.com/scl/fi/24umxisfp4tedeqzndj3n/foto.jpg?rlkey=4yrliifi3xjuhbmjbhh1zrjv8&st=widakesu&raw=1", width=300)
        
     st.markdown(
         """
