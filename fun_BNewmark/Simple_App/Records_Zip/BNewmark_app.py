@@ -72,7 +72,7 @@ with st.sidebar.expander("**Click to read more**"):
     )
 
     ### University ###
-    st.sidebar.markdown('##### 🎓 **About the PUCE University**')
+    st.sidebar.markdown('#### 🎓 **About the PUCE University**')
     with st.sidebar.expander("**Click to read more**"):
         st.image("https://conexion.puce.edu.ec/wp-content/uploads/2021/11/M7A4696-1024x683.jpg", use_column_width=True)
         st.markdown(
