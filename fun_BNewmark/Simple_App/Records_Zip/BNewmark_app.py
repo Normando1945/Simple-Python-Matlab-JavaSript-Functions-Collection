@@ -95,7 +95,7 @@ with st.sidebar.expander("**Click to read more**"):
 
     st.sidebar.markdown('#### 🌎 **About Ecuador**')
     with st.sidebar.expander("**Click to read more**"):
-        st.image("https://upload.wikimedia.org/wikipedia/commons/e/e8/Flag_of_Ecuador.svg", use_column_width=True)
+        st.image("https://d3rhcahk56mofm.cloudfront.net/eyJrZXkiOiJtZWRpYS9iYzMyODNlYS0yYjI1LTRmYWEtYTA2Yy0xM2VlODhmMjhiMjEuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjozMDcuNSwiaGVpZ2h0IjozNzAuNX0sIndlYnAiOnsibG9zc2xlc3MiOmZhbHNlLCJxdWFsaXR5Ijo4MCwibmVhckxvc3NsZXNzIjpmYWxzZSwic21hcnRTdWJzYW1wbGUiOmZhbHNlfX19", use_column_width=True)
         st.markdown(
             """
             Ecuador, located on the west coast of South America, is renowned for its stunning natural beauty, megadiversity, and vibrant culture. From the lush Amazon rainforest to the breathtaking Andes mountains and the beautiful beaches of the Pacific coast, Ecuador offers a diverse range of landscapes and ecosystems.
