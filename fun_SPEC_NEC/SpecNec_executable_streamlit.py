@@ -8,6 +8,127 @@ import matplotlib.pyplot as plt
 #########
 # line of run c:\users\normando\appdata\local\packages\pythonsoftwarefoundation.python.3.10_qbz5n2kfra8p0\localcache\local-packages\python310\scripts\streamlit.exe run SpecNec_executable_streamlit.py
 #########
+
+######################################################## Side BAR ########################################################
+st.markdown(
+    """
+    <style>
+    /* Cambia el fondo del sidebar */
+    [data-testid="stSidebar"] {
+        background-color: #fdc30a;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+st.sidebar.markdown(
+    """
+    <div style="text-align: center;">
+        <img src="https://www.dropbox.com/scl/fi/3vpwdr61i4la2hhqq54lz/TorreFuerte_ico.png?rlkey=yd6ll1cojtfybjvo8jmtc6zj3&raw=1" alt="Torre Fuerte Icon" style="width: 35%;">
+    </div>
+    """, 
+    unsafe_allow_html=True
+)
+
+
+st.sidebar.title("**Welcome to Simple App: Time History Response, SDOF (B_Newmark)**")
+
+# Obtener la fecha y hora actual en Quito, Ecuador
+ecuador_tz = pytz.timezone('America/Guayaquil')
+current_time = datetime.now(ecuador_tz)
+formatted_time = current_time.strftime("%Y-%m-%d %H:%M:%S")
+
+# Mostrar la fecha y hora en el sidebar
+st.sidebar.markdown(f"**Current Date and Time in Quito, Ecuador:**\n\n{formatted_time}")
+
+## Author ##
+st.sidebar.markdown('#### 😎 **About the Author**')
+with st.sidebar.expander("**Click to read more**"):
+    st.image("https://www.dropbox.com/scl/fi/24umxisfp4tedeqzndj3n/foto.jpg?rlkey=4yrliifi3xjuhbmjbhh1zrjv8&st=widakesu&raw=1",  use_column_width=True)
+       
+    st.markdown(
+        """
+        **Short Curriculum Vitae Overview**.
+
+        I am Ecuadorian, I have a Master's degree in Structural Engineering with a **SUMMA CUM LAUDE** distinction from the National Polytechnic School. With over 15 years of experience, I have notably provided structural consultancy for buildings surpassing 140 meters in height. I am currently affiliated with the Department of Civil Engineering at the [**Pontifical Catholic University of Ecuador**](https://www.puce.edu.ec/). My primary research domain is nonlinear mathematical modeling, leading to several 
+        international scientific publications. My ongoing projects include:
+        
+        * The Application of Artificial Neural Networks (ANN) in Estimating Local Fragility in Zero-Length Elements.
+        * Generating Synthetic Accelerograms based on Chaos Theory and Wavelets.
+        * Participation in the 'Training And Communication for Earthquake Risk Assessment - GEM' project.
+        
+        """
+    )
+
+    st.markdown('📘 **More Information about my New Book**')
+    st.image("https://www.dropbox.com/scl/fi/o9os3igy46ynjzw2stt1a/Structural-Engineering2.png?rlkey=so80xqe0zuj3ilsdlwm4awkmz&st=9v750dgq&raw=1", use_column_width=True)
+    st.markdown(
+        """
+        <div style="text-align: center;">
+        <a href="https://fragrant-knight-4af.notion.site/My-Personal-Page-for-Academic-Use-5c5f007b3f3f4c76a604960d9dbffca7"> Online Book </b></a>
+        </div>
+        """, 
+        unsafe_allow_html=True
+    )
+    st.markdown(
+    """
+    **Structural Engineering: Dynamics, Seismic Solution, and AI Integration**
+
+    In an era where structural engineering faces multifaceted challenges, this book offers an integrated approach that melds core dynamics, seismic-resistant design techniques, and the transformative potential of AI in modern structural solutions. Beginning with foundational principles, readers are ushered into the intricate world of structural dynamics, with a spotlight on the importance of understanding multi-degree of freedom systems. As societies grapple with the increasing prominence of seismic threats, the imperative for resilient construction methods is laid bare.
+
+    However, it's paramount to note that this work doesn't aspire to replace or overshadow the comprehensive mathematical insights found in the seminal works of the discipline or the invaluable depth of formal university education. Rather, this book positions itself as a supplementary resource, designed to complement these foundational sources of knowledge. By bridging the gap between time-honored techniques and contemporary technological advancements, it underscores the evolving synergy between traditional engineering practices and modern AI-driven tools.
+
+    Harnessing the power of discrete mathematics, the book reveals how automation is revolutionizing the field, not just simplifying but also optimizing the design process. In ensuring structural safety and cost-effectiveness, it aims to pave a path toward a future where structures are not only robust against threats but are also emblematic of efficiency and innovation. Dive in to discover a confluence of tradition and technology, all designed to enhance and enrich the existing knowledge landscape of structural engineering.
+    """
+    )
+
+    ### University ###
+    st.sidebar.markdown('#### 🎓 **About the PUCE University**')
+    with st.sidebar.expander("**Click to read more**"):
+        st.image("https://conexion.puce.edu.ec/wp-content/uploads/2021/11/M7A4696-1024x683.jpg", use_column_width=True)
+        st.markdown(
+            """
+            The Pontifical Catholic University of Ecuador (PUCE), founded in 1946, is one of the most prestigious universities in Ecuador. It offers a wide range of undergraduate and postgraduate programs across various disciplines, fostering a rich environment for research and academic excellence. The university is dedicated to the holistic development of its students, emphasizing both academic rigor and ethical values.
+            
+            **Mission and Vision**:
+            
+            PUCE aims to contribute to society by training competent, ethical professionals committed to the development of their communities and the country. The university focuses on creating knowledge through research and innovation, promoting cultural and social activities that enrich the educational experience.
+            
+            **Notable Achievements**:
+            
+            * Extensive research output with numerous publications in international journals.
+            * Strong emphasis on community engagement and social responsibility.
+            * Wide network of international collaborations and exchange programs.
+            
+            For more information, visit the [**PUCE website**](https://www.puce.edu.ec/).
+            """
+        )
+
+    st.sidebar.markdown('#### 🌎 **About Ecuador**')
+    with st.sidebar.expander("**Click to read more**"):
+        st.image("https://d3rhcahk56mofm.cloudfront.net/eyJrZXkiOiJtZWRpYS9iYzMyODNlYS0yYjI1LTRmYWEtYTA2Yy0xM2VlODhmMjhiMjEuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjozMDcuNSwiaGVpZ2h0IjozNzAuNX0sIndlYnAiOnsibG9zc2xlc3MiOmZhbHNlLCJxdWFsaXR5Ijo4MCwibmVhckxvc3NsZXNzIjpmYWxzZSwic21hcnRTdWJzYW1wbGUiOmZhbHNlfX19", use_column_width=True)
+        st.markdown(
+            """
+            Ecuador, located on the west coast of South America, is renowned for its stunning natural beauty, megadiversity, and vibrant culture. From the lush Amazon rainforest to the breathtaking Andes mountains and the beautiful beaches of the Pacific coast, Ecuador offers a diverse range of landscapes and ecosystems.
+            
+            **Biodiversity**:
+            
+            Ecuador is one of the most biodiverse countries in the world, home to a vast array of flora and fauna. The Galápagos Islands, a UNESCO World Heritage site, are famous for their unique wildlife and played a crucial role in Charles Darwin's theory of evolution.
+            
+            **Culture and People**:
+            
+            Ecuador boasts a rich cultural heritage, with influences from indigenous, Spanish, and African traditions. The capital city, Quito, is known for its well-preserved colonial architecture and is also a UNESCO World Heritage site. Ecuadorians are known for their warm hospitality and vibrant traditions.
+            
+            **Cosmopolitan Cities**:
+            
+            Cities like Quito and Guayaquil offer a blend of modern amenities and historical charm. These cosmopolitan hubs are centers of commerce, culture, and education, offering a dynamic lifestyle for residents and visitors alike.
+            
+            For more information, visit the [**Ecuador Travel website**](https://ecuador.travel/en/).
+            """
+        )
+
+
 ######################################################## header ########################################################
 image_path = 'https://www.dropbox.com/scl/fi/y0c4h21d3ymdowbvj6o21/logo_TorreFuerte.png?rlkey=5iwsegde7z8b7k59b54nrj1y8&st=jfn90j36&raw=1'
 st.image(image_path, use_column_width=True)
@@ -30,53 +151,53 @@ st.markdown(
 
 st.markdown('You can find me on : [![Web Page](https://img.shields.io/badge/Web%20Page-caceli.net-blue)](https://fragrant-knight-4af.notion.site/Main-Page-5c5f007b3f3f4c76a604960d9dbffca7?pvs=4)[![GitHub Carlos Celi](https://img.shields.io/github/followers/Normando1945?label=follow&style=social)](https://github.com/Normando1945)[![ResearchGate](https://img.shields.io/badge/-ResearchGate-00CCBB?style=social&logo=researchgate)](https://www.researchgate.net/profile/Carlos-Celi)[![Google Scholar](https://img.shields.io/badge/-Google%20Scholar-4285F4?style=social&logo=google)](https://scholar.google.com.ec/citations?hl=es&user=yR4Gz7kAAAAJ)')
 
-######################################################## Author ########################################################
-st.markdown('##### 😎 **About the Author**')
-with st.expander("**Click to read more**"):
-    coll1, coll2 = st.columns([1,1])
-    with coll1:
-        st.image("https://www.dropbox.com/scl/fi/24umxisfp4tedeqzndj3n/foto.jpg?rlkey=4yrliifi3xjuhbmjbhh1zrjv8&st=widakesu&raw=1", width= 325)
-        # st.image("https://raw.githubusercontent.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/main/fun_SPEC_NEC/assets/foto.jpg", width= 325)
-    with coll2:
-        st.markdown(
-            """
-            **Short Curriculum Vitae Overview**.
+# ######################################################## Author ########################################################
+# st.markdown('##### 😎 **About the Author**')
+# with st.expander("**Click to read more**"):
+#     coll1, coll2 = st.columns([1,1])
+#     with coll1:
+#         st.image("https://www.dropbox.com/scl/fi/24umxisfp4tedeqzndj3n/foto.jpg?rlkey=4yrliifi3xjuhbmjbhh1zrjv8&st=widakesu&raw=1", width= 325)
+#         # st.image("https://raw.githubusercontent.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/main/fun_SPEC_NEC/assets/foto.jpg", width= 325)
+#     with coll2:
+#         st.markdown(
+#             """
+#             **Short Curriculum Vitae Overview**.
 
-            I am Ecuadorian, I have a Master's degree in Structural Engineering with a **SUMMA CUM LAUDE** distinction from the National Polytechnic School. With over 15 years of experience, I have notably provided structural consultancy for buildings surpassing 140 meters in height. I am currently affiliated with the Department of Civil Engineering at the [**Pontifical Catholic University of Ecuador**](https://www.puce.edu.ec/). My primary research domain is nonlinear mathematical modeling, leading to several 
-            international scientific publications. My ongoing projects include:
+#             I am Ecuadorian, I have a Master's degree in Structural Engineering with a **SUMMA CUM LAUDE** distinction from the National Polytechnic School. With over 15 years of experience, I have notably provided structural consultancy for buildings surpassing 140 meters in height. I am currently affiliated with the Department of Civil Engineering at the [**Pontifical Catholic University of Ecuador**](https://www.puce.edu.ec/). My primary research domain is nonlinear mathematical modeling, leading to several 
+#             international scientific publications. My ongoing projects include:
             
-            * The Application of Artificial Neural Networks (ANN) in Estimating Local Fragility in Zero-Length Elements.
-            * Generating Synthetic Accelerograms based on Chaos Theory and Wavelets.
-            * Participation in the 'Training And Communication for Earthquake Risk Assessment - GEM' project.
+#             * The Application of Artificial Neural Networks (ANN) in Estimating Local Fragility in Zero-Length Elements.
+#             * Generating Synthetic Accelerograms based on Chaos Theory and Wavelets.
+#             * Participation in the 'Training And Communication for Earthquake Risk Assessment - GEM' project.
             
-            """
-        )
+#             """
+#         )
 
-    st.markdown(':ledger: **More Information about my New Book**')
-    jj1, jj2 = st.columns([1, 1])
-    with jj1:
-        st.image("https://www.dropbox.com/scl/fi/o9os3igy46ynjzw2stt1a/Structural-Engineering2.png?rlkey=so80xqe0zuj3ilsdlwm4awkmz&st=9v750dgq&raw=1", width= 300)
-        # st.image("https://raw.githubusercontent.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/main/fun_SPEC_NEC/assets/Structural Engineering2.png", width= 300)
-        st.markdown(
-            """
-            <div style="text-align: center;">
-            <a href="https://fragrant-knight-4af.notion.site/My-Personal-Page-for-Academic-Use-5c5f007b3f3f4c76a604960d9dbffca7"> Online Book </b></a>
-            </div>
-            """, 
-            unsafe_allow_html=True
-        )
-    with jj2:
-        st.markdown(
-        """
-        **Structural Engineering: Dynamics, Seismic Solution, and AI Integration**
+#     st.markdown(':ledger: **More Information about my New Book**')
+#     jj1, jj2 = st.columns([1, 1])
+#     with jj1:
+#         st.image("https://www.dropbox.com/scl/fi/o9os3igy46ynjzw2stt1a/Structural-Engineering2.png?rlkey=so80xqe0zuj3ilsdlwm4awkmz&st=9v750dgq&raw=1", width= 300)
+#         # st.image("https://raw.githubusercontent.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/main/fun_SPEC_NEC/assets/Structural Engineering2.png", width= 300)
+#         st.markdown(
+#             """
+#             <div style="text-align: center;">
+#             <a href="https://fragrant-knight-4af.notion.site/My-Personal-Page-for-Academic-Use-5c5f007b3f3f4c76a604960d9dbffca7"> Online Book </b></a>
+#             </div>
+#             """, 
+#             unsafe_allow_html=True
+#         )
+#     with jj2:
+#         st.markdown(
+#         """
+#         **Structural Engineering: Dynamics, Seismic Solution, and AI Integration**
     
-        In an era where structural engineering faces multifaceted challenges, this book offers an integrated approach that melds core dynamics, seismic-resistant design techniques, and the transformative potential of AI in modern structural solutions. Beginning with foundational principles, readers are ushered into the intricate world of structural dynamics, with a spotlight on the importance of understanding multi-degree of freedom systems. As societies grapple with the increasing prominence of seismic threats, the imperative for resilient construction methods is laid bare.
+#         In an era where structural engineering faces multifaceted challenges, this book offers an integrated approach that melds core dynamics, seismic-resistant design techniques, and the transformative potential of AI in modern structural solutions. Beginning with foundational principles, readers are ushered into the intricate world of structural dynamics, with a spotlight on the importance of understanding multi-degree of freedom systems. As societies grapple with the increasing prominence of seismic threats, the imperative for resilient construction methods is laid bare.
     
-        However, it's paramount to note that this work doesn't aspire to replace or overshadow the comprehensive mathematical insights found in the seminal works of the discipline or the invaluable depth of formal university education. Rather, this book positions itself as a supplementary resource, designed to complement these foundational sources of knowledge. By bridging the gap between time-honored techniques and contemporary technological advancements, it underscores the evolving synergy between traditional engineering practices and modern AI-driven tools.
+#         However, it's paramount to note that this work doesn't aspire to replace or overshadow the comprehensive mathematical insights found in the seminal works of the discipline or the invaluable depth of formal university education. Rather, this book positions itself as a supplementary resource, designed to complement these foundational sources of knowledge. By bridging the gap between time-honored techniques and contemporary technological advancements, it underscores the evolving synergy between traditional engineering practices and modern AI-driven tools.
     
-        Harnessing the power of discrete mathematics, the book reveals how automation is revolutionizing the field, not just simplifying but also optimizing the design process. In ensuring structural safety and cost-effectiveness, it aims to pave a path toward a future where structures are not only robust against threats but are also emblematic of efficiency and innovation. Dive in to discover a confluence of tradition and technology, all designed to enhance and enrich the existing knowledge landscape of structural engineering.
-        """
-        )
+#         Harnessing the power of discrete mathematics, the book reveals how automation is revolutionizing the field, not just simplifying but also optimizing the design process. In ensuring structural safety and cost-effectiveness, it aims to pave a path toward a future where structures are not only robust against threats but are also emblematic of efficiency and innovation. Dive in to discover a confluence of tradition and technology, all designed to enhance and enrich the existing knowledge landscape of structural engineering.
+#         """
+#         )
 
 ######################################################## Description ########################################################
 st.markdown(
