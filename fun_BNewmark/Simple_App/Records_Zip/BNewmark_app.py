@@ -510,9 +510,9 @@ else:
         with col3:
             st.write(Resul)
 
-        # Definir los datos
-        seismic_accelerations = SG.flatten()
-        response_accelerations = Xan1.flatten()
+        # # Definir los datos
+        # seismic_accelerations = SG.flatten()
+        # response_accelerations = Xan1.flatten()
         
         # # Crear el histograma
         # fig, ax = plt.subplots()
