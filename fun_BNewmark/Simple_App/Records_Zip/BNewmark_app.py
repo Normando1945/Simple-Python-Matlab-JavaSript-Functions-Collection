@@ -435,7 +435,7 @@ else:
         ax1.grid(which='both', axis='x', alpha=0.5)
         ax1.text(0.01, 0.99, '© by Carlos Celi', transform=ax1.transAxes, color=(0, 0, 1), alpha=0.5,
                 fontsize=7, verticalalignment='top', horizontalalignment='left')
-        ax1.tick_params(axis='both', labelsize=5)
+        ax1.tick_params(axis='both', labelsize=7)
 
         ax2.plot(ti, xn1, color=(0, 0, 1), marker='+', markersize=0, markerfacecolor='w',
                 markeredgewidth=0, linewidth=scale_line, alpha=0.5, label='Displacement')
@@ -448,6 +448,7 @@ else:
         ax2.grid(which='both', axis='x', alpha=0.5)
         ax2.text(0.01, 0.99, '© by Carlos Celi', transform=ax2.transAxes, color=(0, 0, 1), alpha=0.5,
                 fontsize=7, verticalalignment='top', horizontalalignment='left')
+        ax2.tick_params(axis='both', labelsize=7)
 
         ax3.plot(ti, xvn1, color=(1, 0, 0), marker='+', markersize=0, markerfacecolor='w',
                 markeredgewidth=0, linewidth=scale_line, alpha=0.5, label='Velocity')
@@ -460,6 +461,7 @@ else:
         ax3.grid(which='both', axis='x', alpha=0.5)
         ax3.text(0.01, 0.99, '© by Carlos Celi', transform=ax3.transAxes, color=(0, 0, 1), alpha=0.5,
                 fontsize=7, verticalalignment='top', horizontalalignment='left')
+        ax3.tick_params(axis='both', labelsize=7)
 
         ax4.plot(ti, Sgg, color=(0, 0, 0), marker='+', markersize=0, markerfacecolor='w',                                
                 markeredgewidth=0, linewidth=scale_line, alpha=1.0,label= f'Seismic Record')
@@ -476,7 +478,8 @@ else:
                 fontsize=7, verticalalignment='top', horizontalalignment='left')   
 
         legend1 = ax4.legend(fontsize=7, loc='lower center', ncol=3)
-        legend1.get_frame().set_edgecolor('none')                                                                      
+        legend1.get_frame().set_edgecolor('none')  
+        ax4.tick_params(axis='both', labelsize=7)
 
         plt.tight_layout()
         plt.show() 
