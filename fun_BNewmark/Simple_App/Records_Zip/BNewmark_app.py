@@ -478,8 +478,8 @@ else:
         legend1 = ax4.legend(fontsize=7, loc='lower center', ncol=3)
         legend1.get_frame().set_edgecolor('none')                                                                      
 
-        #plt.tight_layout()
-        #plt.show() 
+        plt.tight_layout()
+        plt.show() 
         st.pyplot(fig2) 
 
         TG = np.array([item[0] for item in data]).flatten()  
