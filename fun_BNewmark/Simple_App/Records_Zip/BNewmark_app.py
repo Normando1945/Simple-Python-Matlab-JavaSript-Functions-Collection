@@ -512,7 +512,7 @@ else:
 
         # Definir los datos
         seismic_accelerations = SG.flatten()
-        response_accelerations = Xan1.flatten()
+        response_accelerations = Xan1
         
         # Crear el histograma
         fig, ax = plt.subplots()
