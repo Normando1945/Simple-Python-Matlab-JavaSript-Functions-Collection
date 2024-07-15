@@ -20,7 +20,7 @@ import pytz
 #     unsafe_allow_html=True
 # )
 # st.sidebar.title("**Welcome to Simple App: Time History Response, SDOF (B_Newmark)**")
-
+hex_color = "#333333"
 # Agregar estilo CSS para cambiar el color del sidebar y el estilo del título
 st.markdown(
     f"""
