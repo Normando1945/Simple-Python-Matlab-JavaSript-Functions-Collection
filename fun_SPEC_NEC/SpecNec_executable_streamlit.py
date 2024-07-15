@@ -33,7 +33,7 @@ st.sidebar.markdown(
 )
 
 
-st.sidebar.title("**Welcome to Simple App: Time History Response, SDOF (B_Newmark)**")
+st.sidebar.title("**Welcome to Simple App: Seismic Response Spectrum [Normative Ecuadorian Spectrum]**")
 
 # Obtener la fecha y hora actual en Quito, Ecuador
 ecuador_tz = pytz.timezone('America/Guayaquil')
