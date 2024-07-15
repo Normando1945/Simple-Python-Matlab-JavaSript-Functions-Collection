@@ -8,12 +8,35 @@ import pytz
 
 
 ######################################################## Side BAR ########################################################
+# st.markdown(
+#     """
+#     <style>
+#     /* Cambia el fondo del sidebar */
+#     [data-testid="stSidebar"] {
+#         background-color: #fdc30a;
+#     }
+#     </style>
+#     """,
+#     unsafe_allow_html=True
+# )
+
 st.markdown(
     """
     <style>
     /* Cambia el fondo del sidebar */
     [data-testid="stSidebar"] {
         background-color: #fdc30a;
+    }
+    
+    /* Estilo para el título del sidebar */
+    .sidebar-title {
+        background-color: #004080;  /* Color de fondo del botón */
+        color: white;               /* Color del texto */
+        padding: 10px;
+        text-align: center;
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: bold;
     }
     </style>
     """,
