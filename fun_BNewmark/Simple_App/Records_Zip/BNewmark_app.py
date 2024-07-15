@@ -8,42 +8,19 @@ import pytz
 
 
 ######################################################## Side BAR ########################################################
-# st.markdown(
-#     """
-#     <style>
-#     /* Cambia el fondo del sidebar */
-#     [data-testid="stSidebar"] {
-#         background-color: #fdc30a;
-#     }
-#     </style>
-#     """,
-#     unsafe_allow_html=True
-# )
-# st.sidebar.title("**Welcome to Simple App: Time History Response, SDOF (B_Newmark)**")
-hex_color = "#3b3f45"
-# Agregar estilo CSS para cambiar el color del sidebar y el estilo del título
 st.markdown(
-    f"""
+    """
     <style>
     /* Cambia el fondo del sidebar */
-    [data-testid="stSidebar"] {{
+    [data-testid="stSidebar"] {
         background-color: #fdc30a;
-    }}
-    
-    /* Estilo para el título del sidebar */
-    .sidebar-title {{
-        background-color: {hex_color};  /* Color de fondo del botón */
-        color: white;               /* Color del texto */
-        padding: 10px;
-        text-align: center;
-        border-radius: 5px;
-        font-size: 18px;
-        font-weight: bold;
-    }}
+    }
     </style>
     """,
     unsafe_allow_html=True
 )
+
+st.sidebar.title("**Welcome to Simple App: Time History Response, SDOF (B_Newmark)**")
 
 st.sidebar.markdown('<div class="sidebar-title">Welcome to Simple App: Time History Response, SDOF (B_Newmark)</div>', unsafe_allow_html=True)
 
