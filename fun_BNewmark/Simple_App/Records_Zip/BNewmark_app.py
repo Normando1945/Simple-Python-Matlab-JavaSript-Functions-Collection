@@ -20,6 +20,9 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+st.sidebar.image("https://www.dropbox.com/scl/fi/3vpwdr61i4la2hhqq54lz/TorreFuerte_ico.png?rlkey=yd6ll1cojtfybjvo8jmtc6zj3&raw=1")
+
+
 st.sidebar.title("**Welcome to Simple App: Time History Response, SDOF (B_Newmark)**")
 
 st.sidebar.markdown('<div class="sidebar-title">Welcome to Simple App: Time History Response, SDOF (B_Newmark)</div>', unsafe_allow_html=True)
