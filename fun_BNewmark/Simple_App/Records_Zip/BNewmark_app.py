@@ -435,6 +435,7 @@ else:
         ax1.grid(which='both', axis='x', alpha=0.5)
         ax1.text(0.01, 0.99, '© by Carlos Celi', transform=ax1.transAxes, color=(0, 0, 1), alpha=0.5,
                 fontsize=7, verticalalignment='top', horizontalalignment='left')
+        ax1.tick_params(axis='both', labelsize=5)
 
         ax2.plot(ti, xn1, color=(0, 0, 1), marker='+', markersize=0, markerfacecolor='w',
                 markeredgewidth=0, linewidth=scale_line, alpha=0.5, label='Displacement')
