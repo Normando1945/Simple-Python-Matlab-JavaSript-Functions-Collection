@@ -509,23 +509,24 @@ else:
             st.metric(label='Max AT', value=f"{max_abs_AT:.4f}", delta='g')
         with col3:
             st.write(Resul)
-
+        st.markdown('**Hystogram**')
         # Definir los datos
         seismic_accelerations = SG.flatten()
         response_accelerations = Xan1
         
         # Crear el histograma
-        fig, ax = plt.subplots()
+        fig3, ax3 = plt.subplots()
         
-        ax.hist(seismic_accelerations, bins=50, alpha=0.5, label='Seismic Accelerations')
-        ax.hist(response_accelerations, bins=50, alpha=0.5, label='Response Accelerations')
+        ax3.hist(seismic_accelerations, bins=50, alpha=0.5, label='Seismic Accelerations')
+        ax3.hist(response_accelerations, bins=50, alpha=0.5, label='Response Accelerations')
         
-        ax.set_xlabel('Acceleration [g]')
-        ax.set_ylabel('Frequency')
-        ax.set_title('Histogram of Seismic and Response Accelerations')
-        ax.legend(loc='upper right')
-        
-        st.pyplot(fig)
+        ax3.set_xlabel('Acceleration [g]')
+        ax3.set_ylabel('Frequency')
+        ax3.set_title('Histogram of Seismic and Response Accelerations')
+        ax3.legend(loc='upper right')
+        plt.tight_layout()
+        plt.show()
+        st.pyplot(fig3)
 
 
 
