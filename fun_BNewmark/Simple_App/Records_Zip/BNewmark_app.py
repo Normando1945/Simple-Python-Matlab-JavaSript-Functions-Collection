@@ -23,7 +23,7 @@ st.markdown(
 st.sidebar.markdown(
     """
     <div style="text-align: center;">
-        <img src="https://www.dropbox.com/scl/fi/3vpwdr61i4la2hhqq54lz/TorreFuerte_ico.png?rlkey=yd6ll1cojtfybjvo8jmtc6zj3&raw=1" alt="Torre Fuerte Icon" style="width: 70%;">
+        <img src="https://www.dropbox.com/scl/fi/3vpwdr61i4la2hhqq54lz/TorreFuerte_ico.png?rlkey=yd6ll1cojtfybjvo8jmtc6zj3&raw=1" alt="Torre Fuerte Icon" style="width: 30%;">
     </div>
     """, 
     unsafe_allow_html=True
