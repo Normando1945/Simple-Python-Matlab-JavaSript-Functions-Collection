@@ -514,18 +514,18 @@ else:
         seismic_accelerations = SG.flatten()
         response_accelerations = Xan1.flatten()
         
-        # Crear el histograma
-        fig, ax = plt.subplots()
+        # # Crear el histograma
+        # fig, ax = plt.subplots()
         
-        ax.hist(seismic_accelerations, bins=50, alpha=0.5, label='Seismic Accelerations')
-        ax.hist(response_accelerations, bins=50, alpha=0.5, label='Response Accelerations')
+        # ax.hist(seismic_accelerations, bins=50, alpha=0.5, label='Seismic Accelerations')
+        # ax.hist(response_accelerations, bins=50, alpha=0.5, label='Response Accelerations')
         
-        ax.set_xlabel('Acceleration [g]')
-        ax.set_ylabel('Frequency')
-        ax.set_title('Histogram of Seismic and Response Accelerations')
-        ax.legend(loc='upper right')
+        # ax.set_xlabel('Acceleration [g]')
+        # ax.set_ylabel('Frequency')
+        # ax.set_title('Histogram of Seismic and Response Accelerations')
+        # ax.legend(loc='upper right')
         
-        st.pyplot(fig)
+        # st.pyplot(fig)
 
 
 
