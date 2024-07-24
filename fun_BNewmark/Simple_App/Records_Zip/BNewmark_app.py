@@ -468,7 +468,7 @@ else:
         ax4.plot(ti, Xan1, color=(0, 0, 1), marker='+', markersize=0, markerfacecolor='w',                               
                 markeredgewidth=0, linewidth=scale_line, alpha=0.5,label= f'Acceleration Response [B-Newmark]')
         ax4.plot(ti, At, color=(1, 0, 0), marker='+', linestyle = '--', markersize=0, markerfacecolor='w',               
-                markeredgewidth=0, linewidth=scale_line, alpha=0.5,label= f'Total Acceleration Response [B-Newmark]')
+                markeredgewidth=0, linewidth=scale_line, alpha=1.0,label= f'Total Acceleration Response [B-Newmark]')
         ax4.set_xlim([0, (max(ti))])                                                                                     
         ax4.set_title(f'Acceleration ({record})', fontsize=7, color=(0, 0, 1))                                                         
         ax4.set_xlabel('Time [s]', rotation=0, fontsize=7, color=(0, 0, 0))                                                
