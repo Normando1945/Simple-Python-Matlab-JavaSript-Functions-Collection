@@ -139,21 +139,7 @@ url = 'https://juant27.sg-host.com/'  # Replace this with your desired URL
 st.markdown(f'<a href="{url}" target="_blank"><img src="{image_path}" width="100%"></a>', unsafe_allow_html=True)
 
 
-# Título de la aplicación
-# st.markdown("<h4 style='text-align: center;'>Simple App: Time History Response, SDOF (B_Newmark)</h4>", unsafe_allow_html=True)
-
-
-# st.markdown(
-#     """
-#     * Author: [Msc. Ing. Carlos Andrés Celi Sánchez](https://fragrant-knight-4af.notion.site/Main-Page-5c5f007b3f3f4c76a604960d9dbffca7?pvs=4)
-#     * University: [PUCE](https://www.puce.edu.ec/)
-#     * Course: Structural Dynamics
-#     """
-# )
-
-
-# st.markdown('You can find me on : [![Web Page](https://img.shields.io/badge/Web%20Page-caceli.net-blue)](https://fragrant-knight-4af.notion.site/Main-Page-5c5f007b3f3f4c76a604960d9dbffca7?pvs=4)[![GitHub Carlos Celi](https://img.shields.io/github/followers/Normando1945?label=follow&style=social)](https://github.com/Normando1945)[![ResearchGate](https://img.shields.io/badge/-ResearchGate-00CCBB?style=social&logo=researchgate)](https://www.researchgate.net/profile/Carlos-Celi)[![Google Scholar](https://img.shields.io/badge/-Google%20Scholar-4285F4?style=social&logo=google)](https://scholar.google.com.ec/citations?hl=es&user=yR4Gz7kAAAAJ)')
-
+# App Title
 col1, col2  = st.columns([1,1])
 with col1:
     st.markdown(
