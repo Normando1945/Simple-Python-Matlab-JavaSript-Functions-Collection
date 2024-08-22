@@ -135,21 +135,32 @@ with st.sidebar.expander("**Click to read more**"):
 st.markdown(
     """
     <style>
-    /* Elimina el margen y el relleno del contenedor principal para que la imagen llegue hasta arriba */
-    .css-18e3th9 {
-        padding-top: 0px;
+    /* Elimina cualquier margen o padding en el cuerpo de la página */
+    .main {
+        padding-top: 0px !important;
+        margin-top: -60px;
     }
 
-    /* Elimina el margen superior que podría estar creando el espacio en blanco */
+    /* Elimina margen superior y padding del contenedor de la imagen */
     .css-1d391kg {
-        margin-top: 0px;
+        margin-top: 0px !important;
+        padding-top: 0px !important;
     }
+
+    /* Asegura que la imagen en el header esté bien alineada */
+    header {
+        margin-top: 0px !important;
+        padding-top: 0px !important;
+    }
+
     </style>
     """, unsafe_allow_html=True
 )
+
 image_path = 'https://www.dropbox.com/scl/fi/y0c4h21d3ymdowbvj6o21/logo_TorreFuerte.png?rlkey=5iwsegde7z8b7k59b54nrj1y8&st=jfn90j36&raw=1'
 url = 'https://juant27.sg-host.com/'  # Replace this with your desired URL
 st.markdown(f'<a href="{url}" target="_blank"><img src="{image_path}" width="100%"></a>', unsafe_allow_html=True)
+
 
 
 # App Title
