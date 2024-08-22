@@ -135,39 +135,22 @@ with st.sidebar.expander("**Click to read more**"):
 st.markdown(
     """
     <style>
-    /* Elimina cualquier margen o padding en el cuerpo de la página */
     .main {
         padding-top: 0px !important;
-        margin-top: -60px !important;
+        margin-top: -50px !important;
     }
-
-    /* Elimina margen superior y padding del contenedor de la imagen */
     .css-1d391kg {
         margin-top: 0px !important;
         padding-top: 0px !important;
     }
-
-    /* Elimina margen superior del primer contenedor de la página (puede que sea este el que crea el espacio) */
-    .css-1npx7fw {
-        margin-top: -20px !important;
-        padding-top: 0px !important;
-    }
-
-    /* Asegura que la imagen en el header esté bien alineada */
     header {
         margin-top: 0px !important;
         padding-top: 0px !important;
     }
-
-    /* Intenta eliminar cualquier padding/margen del contenedor principal */
-    .css-18e3th9 {
-        padding-top: 0px !important;
-        margin-top: -60px !important;
-    }
-
     </style>
     """, unsafe_allow_html=True
 )
+
 
 image_path = 'https://www.dropbox.com/scl/fi/y0c4h21d3ymdowbvj6o21/logo_TorreFuerte.png?rlkey=5iwsegde7z8b7k59b54nrj1y8&st=jfn90j36&raw=1'
 url = 'https://juant27.sg-host.com/'  # Replace this with your desired URL
