@@ -170,34 +170,17 @@ with col2:
             If you found this free application useful and enjoyable, please consider supporting us with a donation. Your contribution helps us continue developing and maintaining free software.
             """
         )
-    j1, j2, j3 = st.columns([0.2,1,0.2])
-    with j1:
-        st.metric(label= "",value="")
-    with j2:
-        components.html(
-            """
-            <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi', '#29abe0', 'H2H111V2R3');kofiwidget2.draw();</script> 
-            """,
-        )
-    with j3:
-        st.metric(label= "",value="")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    # j1, j2, j3 = st.columns([0.2,1,0.2])
+    # with j1:
+    #     st.metric(label= "",value="")
+    # with j2:
+    #     components.html(
+    #         """
+    #         <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi', '#29abe0', 'H2H111V2R3');kofiwidget2.draw();</script> 
+    #         """,
+    #     )
+    # with j3:
+    #     st.metric(label= "",value="")
 
 ######################################################## Description ########################################################
 st.markdown(
