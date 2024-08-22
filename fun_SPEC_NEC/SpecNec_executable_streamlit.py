@@ -137,20 +137,44 @@ st.image(image_path, use_column_width=True)
 # image_path = 'https://raw.githubusercontent.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/main/fun_SPEC_NEC/logo_TorreFuerte.png'
 # st.image(image_path, use_column_width=True)
 
-# Título de la aplicación
-st.markdown("<h4 style='text-align: center;'>Simple App: Seismic Response Spectrum [Normative Ecuadorian Spectrum]</h4>", unsafe_allow_html=True)
+# App Title
+col1, col2  = st.columns([1,1])
+with col1:
+    st.markdown(
+        """
+        * Author: [Msc. Ing. Carlos Andrés Celi Sánchez](https://fragrant-knight-4af.notion.site/Main-Page-5c5f007b3f3f4c76a604960d9dbffca7?pvs=4)
+        * University: [PUCE](https://www.puce.edu.ec/)
+        * Course: Structural Dynamics
+        """
+    )
+    st.markdown(
+        """
+        You can find me on : 
+        [![Web Page](https://img.shields.io/badge/Web%20Page-caceli.net-blue)](http:caceli.net)
+        [![GitHub Carlos Celi](https://img.shields.io/github/followers/Normando1945?label=follow&style=social)](https://github.com/Normando1945)
+        [![ResearchGate](https://img.shields.io/badge/-ResearchGate-00CCBB?style=social&logo=researchgate)](https://www.researchgate.net/profile/Carlos-Celi)
+        [![Google Scholar](https://img.shields.io/badge/-Google%20Scholar-4285F4?style=social&logo=google)](https://scholar.google.com.ec/citations?hl=es&user=yR4Gz7kAAAAJ)
+        [![YouTube](https://img.shields.io/badge/-YouTube-FF0000?style=social&logo=youtube)](https://www.youtube.com/@CCeli1945)
+        """
+    )
+with col2:
+    st.markdown(
+            """
+            If you found this free application useful and enjoyable, please consider supporting us with a donation. Your contribution helps us continue developing and maintaining free software.
+            """
+        )
+    j1, j2, j3 = st.columns([0.2,1,0.2])
+    with j1:
+        st.metric(label= "",value="")
+    with j2:
+        components.html(
+            """
+            <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi', '#29abe0', 'H2H111V2R3');kofiwidget2.draw();</script> 
+            """,
+        )
+    with j3:
+        st.metric(label= "",value="")
 
-
-st.markdown(
-    """
-    * Author: [Msc. Ing. Carlos Andrés Celi Sánchez](https://fragrant-knight-4af.notion.site/Main-Page-5c5f007b3f3f4c76a604960d9dbffca7?pvs=4)
-    * University: [PUCE](https://www.puce.edu.ec)
-    * Course: Structural Dynamics
-    """
-)
-
-
-st.markdown('You can find me on : [![Web Page](https://img.shields.io/badge/Web%20Page-caceli.net-blue)](https://fragrant-knight-4af.notion.site/Main-Page-5c5f007b3f3f4c76a604960d9dbffca7?pvs=4)[![GitHub Carlos Celi](https://img.shields.io/github/followers/Normando1945?label=follow&style=social)](https://github.com/Normando1945)[![ResearchGate](https://img.shields.io/badge/-ResearchGate-00CCBB?style=social&logo=researchgate)](https://www.researchgate.net/profile/Carlos-Celi)[![Google Scholar](https://img.shields.io/badge/-Google%20Scholar-4285F4?style=social&logo=google)](https://scholar.google.com.ec/citations?hl=es&user=yR4Gz7kAAAAJ)')
 
 # ######################################################## Author ########################################################
 # st.markdown('##### 😎 **About the Author**')
