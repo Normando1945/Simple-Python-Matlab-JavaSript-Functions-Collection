@@ -138,7 +138,7 @@ st.markdown(
     /* Elimina cualquier margen o padding en el cuerpo de la página */
     .main {
         padding-top: 0px !important;
-        margin-top: -60px;
+        margin-top: -60px !important;
     }
 
     /* Elimina margen superior y padding del contenedor de la imagen */
@@ -147,10 +147,22 @@ st.markdown(
         padding-top: 0px !important;
     }
 
+    /* Elimina margen superior del primer contenedor de la página (puede que sea este el que crea el espacio) */
+    .css-1npx7fw {
+        margin-top: -20px !important;
+        padding-top: 0px !important;
+    }
+
     /* Asegura que la imagen en el header esté bien alineada */
     header {
         margin-top: 0px !important;
         padding-top: 0px !important;
+    }
+
+    /* Intenta eliminar cualquier padding/margen del contenedor principal */
+    .css-18e3th9 {
+        padding-top: 0px !important;
+        margin-top: -60px !important;
     }
 
     </style>
