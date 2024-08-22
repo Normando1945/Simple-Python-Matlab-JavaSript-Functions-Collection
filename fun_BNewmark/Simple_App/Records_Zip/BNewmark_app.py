@@ -132,18 +132,6 @@ with st.sidebar.expander("**Click to read more**"):
 
 
 ######################################################## header ########################################################
-st.markdown(
-    """
-    <style>
-    /* Configura el fondo de la página para que sea transparente */
-    body {
-        background-color: transparent !important;
-    }
-    </style>
-    """, unsafe_allow_html=True
-)
-
-
 image_path = 'https://www.dropbox.com/scl/fi/y0c4h21d3ymdowbvj6o21/logo_TorreFuerte.png?rlkey=5iwsegde7z8b7k59b54nrj1y8&st=jfn90j36&raw=1'
 url = 'https://juant27.sg-host.com/'  # Replace this with your desired URL
 st.markdown(f'<a href="{url}" target="_blank"><img src="{image_path}" width="100%"></a>', unsafe_allow_html=True)
