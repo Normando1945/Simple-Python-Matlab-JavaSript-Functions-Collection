@@ -546,16 +546,12 @@ else:
     st.markdown('##### ⚠️ **Disclaimer**')
     st.markdown(
         '''
-        <div style="display: flex; align-items: center;">
-            <span>
-                This application is provided solely for academic purposes. The user bears full responsibility for the scope and application of this tool. The developers disclaim any liability for misuse or any unintended consequences arising from the use of this application.
-            </span>
-            <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" style="margin-left: 10px;">
-                <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="Creative Commons License" style="width: 24px; height: 24px;">
-            </a>
-        </div>
+        This application is provided solely for academic purposes. The user bears full responsibility for the scope and application of this tool. The developers disclaim any liability for misuse or any unintended consequences arising from the use of this application.
+        
+        [![Creative Commons License](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
         ''', unsafe_allow_html=True
     )
+
 
 
 
