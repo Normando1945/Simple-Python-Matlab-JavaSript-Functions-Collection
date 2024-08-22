@@ -133,10 +133,8 @@ with st.sidebar.expander("**Click to read more**"):
 
 ######################################################## header ########################################################
 image_path = 'https://www.dropbox.com/scl/fi/y0c4h21d3ymdowbvj6o21/logo_TorreFuerte.png?rlkey=5iwsegde7z8b7k59b54nrj1y8&st=jfn90j36&raw=1'
-st.image(image_path, use_column_width=True)
-
-# image_path = 'https://raw.githubusercontent.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/main/fun_SPEC_NEC/logo_TorreFuerte.png'
-# st.image(image_path, use_column_width=True)
+url = 'https://juant27.sg-host.com/'  # Replace this with your desired URL
+st.markdown(f'<a href="{url}" target="_blank"><img src="{image_path}" width="100%"></a>', unsafe_allow_html=True)
 
 # App Title
 col1, col2  = st.columns([1,1])
