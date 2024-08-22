@@ -135,33 +135,14 @@ with st.sidebar.expander("**Click to read more**"):
 st.markdown(
     """
     <style>
-    /* Remove margin and padding from the root and main container */
-    .block-container {
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-        margin-top: -40px !important; /* Adjust this value based on your needs */
-    }
-
-    .css-18e3th9 {
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
-    }
-
-    /* Remove margin from the top element */
-    header {
-        margin-top: 0px !important;
-    }
-
-    /* Adjust the margin of the image container */
-    .css-1d391kg {
-        margin-top: 0px !important;
-        padding-top: 0px !important;
+    /* Configura el fondo de la página para que sea transparente */
+    body {
+        background-color: transparent !important;
     }
     </style>
     """, unsafe_allow_html=True
 )
+
 
 image_path = 'https://www.dropbox.com/scl/fi/y0c4h21d3ymdowbvj6o21/logo_TorreFuerte.png?rlkey=5iwsegde7z8b7k59b54nrj1y8&st=jfn90j36&raw=1'
 url = 'https://juant27.sg-host.com/'  # Replace this with your desired URL
