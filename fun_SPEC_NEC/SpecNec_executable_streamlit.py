@@ -430,13 +430,13 @@ with o2:
 
 
 st.markdown('##### ⚠️ **Disclaimer**')
-    st.markdown(
-        '''
-        This application is provided solely for academic purposes. The user bears full responsibility for the scope and application of this tool. The developers disclaim any liability for misuse or any unintended consequences arising from the use of this application.
+st.markdown(
+    '''
+    This application is provided solely for academic purposes. The user bears full responsibility for the scope and application of this tool. The developers disclaim any liability for misuse or any unintended consequences arising from the use of this application.
         
-        [![Creative Commons License](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
-        ''', unsafe_allow_html=True
-    )
+    [![Creative Commons License](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
+    ''', unsafe_allow_html=True
+)
 
 
 
