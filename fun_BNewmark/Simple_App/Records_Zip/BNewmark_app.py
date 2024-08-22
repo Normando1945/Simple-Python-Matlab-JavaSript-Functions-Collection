@@ -153,6 +153,54 @@ st.markdown(
 
 st.markdown('You can find me on : [![Web Page](https://img.shields.io/badge/Web%20Page-caceli.net-blue)](https://fragrant-knight-4af.notion.site/Main-Page-5c5f007b3f3f4c76a604960d9dbffca7?pvs=4)[![GitHub Carlos Celi](https://img.shields.io/github/followers/Normando1945?label=follow&style=social)](https://github.com/Normando1945)[![ResearchGate](https://img.shields.io/badge/-ResearchGate-00CCBB?style=social&logo=researchgate)](https://www.researchgate.net/profile/Carlos-Celi)[![Google Scholar](https://img.shields.io/badge/-Google%20Scholar-4285F4?style=social&logo=google)](https://scholar.google.com.ec/citations?hl=es&user=yR4Gz7kAAAAJ)')
 
+col1, col2  = st.columns([1,1])
+with col1:
+    st.markdown(
+        """
+        * Author: [Msc. Ing. Carlos Andrés Celi Sánchez](https://fragrant-knight-4af.notion.site/Main-Page-5c5f007b3f3f4c76a604960d9dbffca7?pvs=4)
+        * University: [PUCE](https://www.puce.edu.ec/)
+        * Course: Structural Dynamics
+    """
+)
+
+
+        st.markdown('You can find me on : [![Web Page](https://img.shields.io/badge/Web%20Page-caceli.net-blue)](https://fragrant-knight-4af.notion.site/Main-Page-5c5f007b3f3f4c76a604960d9dbffca7?pvs=4)[![GitHub Carlos Celi](https://img.shields.io/github/followers/Normando1945?label=follow&style=social)](https://github.com/Normando1945)[![ResearchGate](https://img.shields.io/badge/-ResearchGate-00CCBB?style=social&logo=researchgate)](https://www.researchgate.net/profile/Carlos-Celi)[![Google Scholar](https://img.shields.io/badge/-Google%20Scholar-4285F4?style=social&logo=google)](https://scholar.google.com.ec/citations?hl=es&user=yR4Gz7kAAAAJ)')
+    )
+with col2:
+    st.markdown(
+            """
+            If you found this free application useful and enjoyable, please consider supporting us with a donation. Your contribution helps us continue developing and maintaining free software.
+            """
+        )
+    j1, j2, j3 = st.columns([0.2,1,0.2])
+    with j1:
+        st.metric(label= "",value="")
+    with j2:
+        components.html(
+            """
+            <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi', '#29abe0', 'H2H111V2R3');kofiwidget2.draw();</script> 
+            """,
+        )
+    with j3:
+        st.metric(label= "",value="")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ######################################################## Description ########################################################
 st.markdown(
     '''
