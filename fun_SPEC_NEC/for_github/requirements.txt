@@ -2,7 +2,7 @@ streamlit
 streamlit.components.v1
 numpy
 pandas
-matplotlib
+matplotlib.pyplot 
 mpl_toolkits.mplot3d
 scipy
 datetime
