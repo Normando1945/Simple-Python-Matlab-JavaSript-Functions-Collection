@@ -3,14 +3,14 @@ import streamlit.components.v1 as components
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-from scipy.signal import butter, lfilter
-from datetime import datetime
-import pytz
-import os
-import string
-import random
-import pythoncom
-pythoncom.CoInitialize()
+# from scipy.signal import butter, lfilter
+# from datetime import datetime
+# import pytz
+# import os
+# import string
+# import random
+# import pythoncom
+# pythoncom.CoInitialize()
 
 #############################################################################################################################
 #############################################################################################################################
@@ -259,158 +259,158 @@ with st.expander('📺 **Tutorial Video**'):
 
 
 
-#############################################################################################################################
-#############################################################################################################################
-############################################## csv file and .ini file #######################################################
-#############################################################################################################################
-#############################################################################################################################
-df = []
+# #############################################################################################################################
+# #############################################################################################################################
+# ############################################## csv file and .ini file #######################################################
+# #############################################################################################################################
+# #############################################################################################################################
+# df = []
 
-project_name = st.text_input("Enter the project name:")         # name of the project
-if not project_name:
-    st.warning("Please enter a project name before uploading files.")
-    st.stop()
-
-
-uploaded_file = st.file_uploader(
-    "Upload a csv file",
-    type=["csv"],
-    help="Read the Documentation",
-)
-
-uploaded_file2 = st.file_uploader(
-    "Upload a ini file",
-    type=["ini"],
-    help="Read the Documentation",
-)
+# project_name = st.text_input("Enter the project name:")         # name of the project
+# if not project_name:
+#     st.warning("Please enter a project name before uploading files.")
+#     st.stop()
 
 
+# uploaded_file = st.file_uploader(
+#     "Upload a csv file",
+#     type=["csv"],
+#     help="Read the Documentation",
+# )
 
-if uploaded_file is not None and uploaded_file2 is not None:
-    col1, col2 = st.columns([1, 1])
+# uploaded_file2 = st.file_uploader(
+#     "Upload a ini file",
+#     type=["ini"],
+#     help="Read the Documentation",
+# )
+
+
+
+# if uploaded_file is not None and uploaded_file2 is not None:
+#     col1, col2 = st.columns([1, 1])
     
-    with col1:
-        file_csv_name = uploaded_file.name
-        st.metric(label='Name of the file', value=uploaded_file.name)
-        df = pd.read_csv(uploaded_file, skiprows=1, header=0) 
+#     with col1:
+#         file_csv_name = uploaded_file.name
+#         st.metric(label='Name of the file', value=uploaded_file.name)
+#         df = pd.read_csv(uploaded_file, skiprows=1, header=0) 
         
-        if not df.empty:
-            st.write(df)
-        else:
-            st.write("The uploaded CSV file is empty.")
+#         if not df.empty:
+#             st.write(df)
+#         else:
+#             st.write("The uploaded CSV file is empty.")
     
-    with col2:
-        st.metric(label='Name of the file', value=uploaded_file2.name)
-        lines_data = uploaded_file2.getvalue().decode('utf-8').splitlines()                         # Read .ini file
-        Lines_ini = pd.DataFrame(lines_data, columns=['Data_from_Configuration ".ini"_file'])       # Convert to DataFrame to see the Data
+#     with col2:
+#         st.metric(label='Name of the file', value=uploaded_file2.name)
+#         lines_data = uploaded_file2.getvalue().decode('utf-8').splitlines()                         # Read .ini file
+#         Lines_ini = pd.DataFrame(lines_data, columns=['Data_from_Configuration ".ini"_file'])       # Convert to DataFrame to see the Data
         
-        sites_line = next((line for line in lines_data if "sites" in line), None)                   # Find in the variable the line with the content "sites" and in a varible type 'str'
-        if sites_line:
-            values_of_site = sites_line.split('=')[1].strip().split()                               # Separate the values of the variable 'str'
-            LAT = float(values_of_site[0])                                                          # Save the value Latitude
-            LON = float(values_of_site[1])                                                          # Save the value Longitude
+#         sites_line = next((line for line in lines_data if "sites" in line), None)                   # Find in the variable the line with the content "sites" and in a varible type 'str'
+#         if sites_line:
+#             values_of_site = sites_line.split('=')[1].strip().split()                               # Separate the values of the variable 'str'
+#             LAT = float(values_of_site[0])                                                          # Save the value Latitude
+#             LON = float(values_of_site[1])                                                          # Save the value Longitude
 
-        if not Lines_ini.empty:
-            st.write(Lines_ini)
-        else:
-            st.write("The uploaded ini file is empty.")
+#         if not Lines_ini.empty:
+#             st.write(Lines_ini)
+#         else:
+#             st.write("The uploaded ini file is empty.")
 
 
-#############################################################################################################################
-#############################################################################################################################
-######################################################## CODE ###############################################################
-#############################################################################################################################
-#############################################################################################################################
-    col1, col2, col3, col4 = st.columns([1,1,1,1])
-    with col1:
-        st.metric(label= "",value="")
-    with col2:
-        st.metric(label= "Latitude",value=f"{LAT:.5f}", delta='')
-    with col3:
-        st.metric(label= "Longitude",value=f"{LON:.5f}", delta='')
-    with col4:
-        st.metric(label= "",value="")
+# #############################################################################################################################
+# #############################################################################################################################
+# ######################################################## CODE ###############################################################
+# #############################################################################################################################
+# #############################################################################################################################
+#     col1, col2, col3, col4 = st.columns([1,1,1,1])
+#     with col1:
+#         st.metric(label= "",value="")
+#     with col2:
+#         st.metric(label= "Latitude",value=f"{LAT:.5f}", delta='')
+#     with col3:
+#         st.metric(label= "Longitude",value=f"{LON:.5f}", delta='')
+#     with col4:
+#         st.metric(label= "",value="")
 
-    ecuador_tz = pytz.timezone('America/Guayaquil')
-    current_time = datetime.now(ecuador_tz)
-    Dia_mes_ano = current_time.strftime("%Y-%m-%d %H:%M:%S")
+#     ecuador_tz = pytz.timezone('America/Guayaquil')
+#     current_time = datetime.now(ecuador_tz)
+#     Dia_mes_ano = current_time.strftime("%Y-%m-%d %H:%M:%S")
     
     
-    ############################# Map of the Location of for the Dissagregation Analysis #####################################
-    LaT = [LON]                                                                         # Longitud extracted from the .ini file.
-    LoN = [LAT]                                                                         # Latitude extracted from the .ini file.
-    Disagre = [Dia_mes_ano]                                                             # Date.
+#     ############################# Map of the Location of for the Dissagregation Analysis #####################################
+#     LaT = [LON]                                                                         # Longitud extracted from the .ini file.
+#     LoN = [LAT]                                                                         # Latitude extracted from the .ini file.
+#     Disagre = [Dia_mes_ano]                                                             # Date.
 
-    from World_MAP_LAT_LON import World_Map_LAT_LON                                     # World Map Function imported
-    map, latitudes, longitudes, Locations, Date = World_Map_LAT_LON(LaT, LoN, Dia_mes_ano)  # Using of World_Map Function
+#     from World_MAP_LAT_LON import World_Map_LAT_LON                                     # World Map Function imported
+#     map, latitudes, longitudes, Locations, Date = World_Map_LAT_LON(LaT, LoN, Dia_mes_ano)  # Using of World_Map Function
     
     
-    ########################################### Code Dissagregation ###########################################################
-    st.markdown('##### :earth_americas: **Results for Seismic Disaggregation Analysis**')
-    st.markdown('Please follow the instructions')
-    # Ask the user to specify the folder path for saving images
-    # Initialize the folder path
-    if "folder_path" not in st.session_state:
-        st.session_state.folder_path = ''
-    folder_path = st.text_input("Enter the folder path where you want to save all the results:", value=st.session_state.folder_path)
-    # Add a button to use the current working directory
-    if st.button("Use current working directory"):
-        st.session_state.folder_path = os.getcwd()
-        folder_path = st.session_state.folder_path
+#     ########################################### Code Dissagregation ###########################################################
+#     st.markdown('##### :earth_americas: **Results for Seismic Disaggregation Analysis**')
+#     st.markdown('Please follow the instructions')
+#     # Ask the user to specify the folder path for saving images
+#     # Initialize the folder path
+#     if "folder_path" not in st.session_state:
+#         st.session_state.folder_path = ''
+#     folder_path = st.text_input("Enter the folder path where you want to save all the results:", value=st.session_state.folder_path)
+#     # Add a button to use the current working directory
+#     if st.button("Use current working directory"):
+#         st.session_state.folder_path = os.getcwd()
+#         folder_path = st.session_state.folder_path
         
-        # Funtion for create a random 5 letter name
-        def random_string(length=5):
-            letters = string.ascii_lowercase
-            return ''.join(random.choice(letters) for i in range(length))
+#         # Funtion for create a random 5 letter name
+#         def random_string(length=5):
+#             letters = string.ascii_lowercase
+#             return ''.join(random.choice(letters) for i in range(length))
 
-        folder_name = f"{'Results_TF_'+ random_string()}"                                   # Create a new Folder
+#         folder_name = f"{'Results_TF_'+ random_string()}"                                   # Create a new Folder
 
-        directory = os.path.join(folder_path, folder_name)
-        folder_path = directory
-        # Folder Creation
-        if not os.path.exists(folder_path):
-            os.makedirs(folder_path)
-        else:
-            print(f"The folder '{folder_path}' already exists!")                             
+#         directory = os.path.join(folder_path, folder_name)
+#         folder_path = directory
+#         # Folder Creation
+#         if not os.path.exists(folder_path):
+#             os.makedirs(folder_path)
+#         else:
+#             print(f"The folder '{folder_path}' already exists!")                             
         
         
         
-    # Ensure the folder path is valid
-    if not folder_path:
-        st.error("Please enter a valid folder path or use the current working directory.")
-        st.stop()
-    if not os.path.exists(folder_path):
-        st.error("The specified folder does not exist. Please enter a valid folder path.")
-        st.stop()
-    # Display the selected folder path
-    st.success(f"The selected folder path is: {folder_path}")
+#     # Ensure the folder path is valid
+#     if not folder_path:
+#         st.error("Please enter a valid folder path or use the current working directory.")
+#         st.stop()
+#     if not os.path.exists(folder_path):
+#         st.error("The specified folder does not exist. Please enter a valid folder path.")
+#         st.stop()
+#     # Display the selected folder path
+#     st.success(f"The selected folder path is: {folder_path}")
     
 
-    # Dissagregation function
-    from Dissagregation_functions import Code_dissagregation                                     
-    TRT_Rmeans_Mmeans_IMT= Code_dissagregation(df,LAT, LON, file_csv_name, folder_path, project_name)
+#     # Dissagregation function
+#     from Dissagregation_functions import Code_dissagregation                                     
+#     TRT_Rmeans_Mmeans_IMT= Code_dissagregation(df,LAT, LON, file_csv_name, folder_path, project_name)
     
     
-##############################################################################################################################
-else:
-    if uploaded_file is None:
-        st.markdown("**Please upload a .csv file.**")
-    if uploaded_file2 is None:
-        st.markdown("**Please upload a .ini file.**")
+# ##############################################################################################################################
+# else:
+#     if uploaded_file is None:
+#         st.markdown("**Please upload a .csv file.**")
+#     if uploaded_file2 is None:
+#         st.markdown("**Please upload a .ini file.**")
 
-#############################################################################################################################
-#############################################################################################################################
-#################################################### Disclaimer #############################################################
-#############################################################################################################################
-#############################################################################################################################
-st.markdown('##### ⚠️ **Disclaimer**')
-st.markdown(
-    '''
-    This application is provided solely for academic purposes. The user bears full responsibility for the scope and application of this tool. The developers disclaim any liability for misuse or any unintended consequences arising from the use of this application.
+# #############################################################################################################################
+# #############################################################################################################################
+# #################################################### Disclaimer #############################################################
+# #############################################################################################################################
+# #############################################################################################################################
+# st.markdown('##### ⚠️ **Disclaimer**')
+# st.markdown(
+#     '''
+#     This application is provided solely for academic purposes. The user bears full responsibility for the scope and application of this tool. The developers disclaim any liability for misuse or any unintended consequences arising from the use of this application.
         
-    [![Creative Commons License](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
-    ''', unsafe_allow_html=True
-)
+#     [![Creative Commons License](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
+#     ''', unsafe_allow_html=True
+# )
 
 
 #############################################################################################################################
