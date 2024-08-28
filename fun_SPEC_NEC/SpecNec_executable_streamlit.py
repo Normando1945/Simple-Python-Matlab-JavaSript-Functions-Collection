@@ -301,7 +301,7 @@ Tf = 5
 fads = [fa, fd, fs]
 
 To = 0.10 * fads[2] * fads[1] / fads[0]
-Tc = 0.55 * fads[2] * fads[1] / fads[0]
+Tc = 0.45 * fads[2] * fads[1] / fads[0]
 Tl = 2.4 * fads[1]
 
 Sae = []
