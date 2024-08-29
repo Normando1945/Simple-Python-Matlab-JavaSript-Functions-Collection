@@ -1,4 +1,7 @@
 streamlit
+win32com.client
+openpyxl
+PIL
 IPython
 folium
 numpy
