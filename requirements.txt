@@ -6,5 +6,5 @@ pandas
 matplotlib
 scipy
 requests
-
+streamlit.components.v1
 
