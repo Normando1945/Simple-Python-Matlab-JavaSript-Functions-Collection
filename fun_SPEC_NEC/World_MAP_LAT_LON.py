@@ -3,8 +3,13 @@ from IPython.core.display import HTML
 from IPython.display import IFrame
 import os
 # os.system('pip install folium')
-
-import folium
+try:
+    import folium
+    from folium import Map, CircleMarker, GeoJson, Marker, TileLayer, Popup
+    st.write("Folium imported successfully")
+except ImportError as e:
+    st.write(f"Folium import failed: {e}")
+# import folium
 import random
 import os
 import glob
