@@ -1,4 +1,4 @@
-import win32com.client as win32                                                         # Using xlwings, save the Excel file as a PDF
+# import win32com.client as win32                                                         # Using xlwings, save the Excel file as a PDF
 from openpyxl.styles.colors import Color
 from openpyxl.styles import PatternFill
 from openpyxl.drawing.image import Image
@@ -380,17 +380,17 @@ def Code_dissagregation(df, LAT, LON, file_csv_name, folder_path, project_name):
         worksheet.evenFooter.center.text = disclaimer_text
 
 
-    file_pdf_name2 = "Summary_Results_Rmean_Mmean.pdf"                                            
-    excel2_to_pdf2_path = os.path.join(folder_path, file_pdf_name2)                     
+    # file_pdf_name2 = "Summary_Results_Rmean_Mmean.pdf"                                            
+    # excel2_to_pdf2_path = os.path.join(folder_path, file_pdf_name2)                     
 
-    # Waiting time for excel file to open and transform in PDF file
-    import time
-    time.sleep(5)
-    excel = win32.DispatchEx("Excel.Application")
-    wb = excel.Workbooks.Open(os.path.abspath(os.path.join(folder_path, file_excel_name2)))
-    wb.ExportAsFixedFormat(0, excel2_to_pdf2_path)
-    wb.Close(False)
-    excel.Quit()
+    # # Waiting time for excel file to open and transform in PDF file
+    # import time
+    # time.sleep(5)
+    # excel = win32.DispatchEx("Excel.Application")
+    # wb = excel.Workbooks.Open(os.path.abspath(os.path.join(folder_path, file_excel_name2)))
+    # wb.ExportAsFixedFormat(0, excel2_to_pdf2_path)
+    # wb.Close(False)
+    # excel.Quit()
 
     
     
