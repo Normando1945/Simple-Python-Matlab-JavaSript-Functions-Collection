@@ -16,5 +16,8 @@ dependencies:
   - streamlit.components.v1
   - mpl_toolkits
   - subprocess
+  - IPython
+  - folium
+
   
 
