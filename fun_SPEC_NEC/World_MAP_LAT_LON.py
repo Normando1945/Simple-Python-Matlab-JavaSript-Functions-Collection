@@ -1,3 +1,4 @@
+import streamlit as st
 from IPython.core.display import HTML
 from IPython.display import IFrame
 # from folium import Map, CircleMarker, GeoJson
