@@ -4,3 +4,6 @@ pandas
 matplotlib
 scipy
 requests
+os
+string
+random
