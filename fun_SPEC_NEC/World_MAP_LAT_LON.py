@@ -38,7 +38,8 @@ def World_Map_LAT_LON(LoN, LaT, Disagre):
     # Create the map
     # "OpenStreetMap"  # "Stamen Terrain"  # "Stamen Toner"  # "Stamen Watercolor"  # "CartoDB positron"  # "CartoDB dark_matter" **
     # map = Map(location=[-0.201858 - 2, (-78.480166)], zoom_start=6, width='100%', height='100%', zoom_control=True)
-    map = Map(location=[-0.201858, -78.480166], zoom_start=6, width='100%', height='100%', zoom_control=True)
+    # map = Map(location=[-0.201858, -78.480166], zoom_start=6, width='100%', height='100%', zoom_control=True)
+    map = Map(location=[-0.201858, -78.480166], zoom_start=6, zoom_control=True)
     # TileLayer('CartoDB positron').add_to(map)
     TileLayer('CartoDB positron', opacity=1).add_to(map)
 
