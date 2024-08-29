@@ -1,5 +1,4 @@
 streamlit
-shutil
 openpyxl
 Pillow
 IPython
