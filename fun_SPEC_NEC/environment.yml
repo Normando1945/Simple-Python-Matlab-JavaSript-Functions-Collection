@@ -13,4 +13,8 @@ dependencies:
   - os
   - string
   - random
-  - pythoncom
+  - streamlit.components.v1
+  - mpl_toolkits
+  - subprocess
+  
+
