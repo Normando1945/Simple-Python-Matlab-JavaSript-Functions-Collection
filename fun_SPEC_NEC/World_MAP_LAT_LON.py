@@ -1,9 +1,9 @@
 import streamlit as st
 from IPython.core.display import HTML
 from IPython.display import IFrame
-# from folium import Map, CircleMarker, GeoJson
-# from folium import Map, CircleMarker, TileLayer, Popup
-# from folium import Marker
+import os
+os.system('pip install folium')
+import folium
 try:
     import folium
     from folium import Map, CircleMarker, GeoJson, Marker, TileLayer, Popup
