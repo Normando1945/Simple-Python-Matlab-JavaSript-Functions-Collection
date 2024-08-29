@@ -10,3 +10,7 @@ dependencies:
   - scipy
   - requests
   - pip
+  - os
+  - string
+  - random
+  - pythoncom
