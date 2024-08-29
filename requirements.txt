@@ -1,11 +1,5 @@
 streamlit
 folium
-string
-random
-streamlit.components.v1
-mpl_toolkits
-subprocess
-IPython
 numpy
 pandas
 matplotlib
