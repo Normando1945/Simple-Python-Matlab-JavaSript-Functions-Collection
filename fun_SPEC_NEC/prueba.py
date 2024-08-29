@@ -385,6 +385,15 @@ if uploaded_file is not None and uploaded_file2 is not None:
     st.success(f"The selected folder path is: {folder_path}")
 
 
+
+
+    # Assuming folder_path is where the files are saved
+    shutil.make_archive(folder_path, 'zip', folder_path)
+
+    with open(f"{folder_path}.zip", "rb") as zip_file:
+    st.download_button(label="Download Results", data=zip_file, file_name=f"{folder_path.split('/')[-1]}.zip")
+
+
     
     
 ##############################################################################################################################
