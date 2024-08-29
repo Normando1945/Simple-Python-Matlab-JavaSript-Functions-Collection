@@ -260,6 +260,63 @@ with st.expander('📺 **Tutorial Video**'):
 
 
 
+#############################################################################################################################
+#############################################################################################################################
+############################################## csv file and .ini file #######################################################
+#############################################################################################################################
+#############################################################################################################################
+df = []
+
+project_name = st.text_input("Enter the project name:")         # name of the project
+if not project_name:
+    st.warning("Please enter a project name before uploading files.")
+    st.stop()
+
+
+uploaded_file = st.file_uploader(
+    "Upload a csv file",
+    type=["csv"],
+    help="Read the Documentation",
+)
+
+uploaded_file2 = st.file_uploader(
+    "Upload a ini file",
+    type=["ini"],
+    help="Read the Documentation",
+)
+
+
+
+if uploaded_file is not None and uploaded_file2 is not None:
+    col1, col2 = st.columns([1, 1])
+    
+    with col1:
+        file_csv_name = uploaded_file.name
+        st.metric(label='Name of the file', value=uploaded_file.name)
+        df = pd.read_csv(uploaded_file, skiprows=1, header=0) 
+        
+        if not df.empty:
+            st.write(df)
+        else:
+            st.write("The uploaded CSV file is empty.")
+    
+    with col2:
+        st.metric(label='Name of the file', value=uploaded_file2.name)
+        lines_data = uploaded_file2.getvalue().decode('utf-8').splitlines()                         # Read .ini file
+        Lines_ini = pd.DataFrame(lines_data, columns=['Data_from_Configuration ".ini"_file'])       # Convert to DataFrame to see the Data
+        
+        sites_line = next((line for line in lines_data if "sites" in line), None)                   # Find in the variable the line with the content "sites" and in a varible type 'str'
+        if sites_line:
+            values_of_site = sites_line.split('=')[1].strip().split()                               # Separate the values of the variable 'str'
+            LAT = float(values_of_site[0])                                                          # Save the value Latitude
+            LON = float(values_of_site[1])                                                          # Save the value Longitude
+
+        if not Lines_ini.empty:
+            st.write(Lines_ini)
+        else:
+            st.write("The uploaded ini file is empty.")
+
+
 
 
 
