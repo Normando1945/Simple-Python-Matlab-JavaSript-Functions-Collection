@@ -1,10 +1,11 @@
 from IPython.core.display import HTML
 from IPython.display import IFrame
-from folium import Map, CircleMarker, GeoJson
-from folium import Marker
+# from folium import Map, CircleMarker, GeoJson
+# from folium import Map, CircleMarker, TileLayer, Popup
+# from folium import Marker
 import folium
+from folium import Map, CircleMarker, GeoJson, Marker, TileLayer, Popup
 import random
-from folium import Map, CircleMarker, TileLayer, Popup
 import os
 import glob
 import pandas as pd
