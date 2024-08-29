@@ -1,4 +1,5 @@
 streamlit
+mpl_toolkits
 folium
 numpy
 pandas
