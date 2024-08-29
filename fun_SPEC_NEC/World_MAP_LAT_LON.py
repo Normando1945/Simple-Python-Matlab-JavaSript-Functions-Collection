@@ -6,8 +6,9 @@ from IPython.display import IFrame
 try:
     import folium
     from folium import Map, CircleMarker, GeoJson, Marker, TileLayer, Popup
+    st.write("Folium imported successfully")
 except ImportError as e:
-    st.write("ImportError: {e}")
+    st.write(f"Folium import failed: {e}")
 import random
 import os
 import glob
@@ -44,7 +45,8 @@ def World_Map_LAT_LON(LoN, LaT, Disagre):
         map = Map(location=[-0.201858 - 2, (-78.480166)], zoom_start=6, width='100%', height='100%', zoom_control=True)
         st.write("Map created successfully")
     except Exception as e:
-        st.write("Map creation failed: {e}")
+        st.write(f"Map creation failed: {e}")
+        return None, None, None, None, None
 
     
     # TileLayer('CartoDB positron').add_to(map)
