@@ -1,5 +1,4 @@
 streamlit
-streamlit.components.v1
 folium
 numpy
 pandas
