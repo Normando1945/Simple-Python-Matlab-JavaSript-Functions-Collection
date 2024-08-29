@@ -1,10 +1,10 @@
 streamlit
-os
+streamlit.components.v1
 folium
 numpy
 pandas
 matplotlib
 scipy
 requests
-streamlit.components.v1
+
 
