@@ -7,7 +7,7 @@ try:
     import folium
     from folium import Map, CircleMarker, GeoJson, Marker, TileLayer, Popup
 except ImportError as e:
-    print(f"ImportError: {e}")
+    st.write(f"ImportError: {e}")
 import random
 import os
 import glob
@@ -42,9 +42,9 @@ def World_Map_LAT_LON(LoN, LaT, Disagre):
     # map = Map(location=[-0.201858, -78.480166], zoom_start=6, zoom_control=True)
     try:
         map = Map(location=[-0.201858 - 2, (-78.480166)], zoom_start=6, width='100%', height='100%', zoom_control=True)
-        print("Map created successfully")
+        st.write("Map created successfully")
     except Exception as e:
-        print(f"Map creation failed: {e}")
+        st.write(f"Map creation failed: {e}")
 
     
     # TileLayer('CartoDB positron').add_to(map)
