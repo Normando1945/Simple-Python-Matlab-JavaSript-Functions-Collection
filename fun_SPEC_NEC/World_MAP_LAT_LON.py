@@ -3,8 +3,11 @@ from IPython.display import IFrame
 # from folium import Map, CircleMarker, GeoJson
 # from folium import Map, CircleMarker, TileLayer, Popup
 # from folium import Marker
-import folium
-from folium import Map, CircleMarker, GeoJson, Marker, TileLayer, Popup
+try:
+    import folium
+    from folium import Map, CircleMarker, GeoJson, Marker, TileLayer, Popup
+except ImportError as e:
+    print(f"ImportError: {e}")
 import random
 import os
 import glob
