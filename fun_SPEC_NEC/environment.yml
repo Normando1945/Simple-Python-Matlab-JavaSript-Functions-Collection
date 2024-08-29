@@ -2,8 +2,8 @@ name: myenv
 channels:
   - defaults
 dependencies:
-- python=3.10
-- pip:
+  - python=3.10
+  - pip:
   - streamlit
   - numpy
   - pandas
