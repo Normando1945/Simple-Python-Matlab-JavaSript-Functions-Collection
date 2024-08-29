@@ -1,5 +1,5 @@
 streamlit
-subprocess
+IPython
 folium
 numpy
 pandas
