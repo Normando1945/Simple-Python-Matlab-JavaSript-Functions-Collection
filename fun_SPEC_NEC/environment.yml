@@ -2,14 +2,14 @@ name: myenv
 channels:
   - defaults
 dependencies:
-  - python=3.10
+- python=3.10
+- pip:
   - streamlit
   - numpy
   - pandas
   - matplotlib
   - scipy
   - requests
-  - pip
   - os
   - string
   - random
