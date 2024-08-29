@@ -386,6 +386,14 @@ if uploaded_file is not None and uploaded_file2 is not None:
 
 
 
+    # Dissagregation function
+    from Dissagregation_functions import Code_dissagregation                                     
+    TRT_Rmeans_Mmeans_IMT= Code_dissagregation(df,LAT, LON, file_csv_name, folder_path, project_name)
+
+
+
+
+
 
     # Assuming folder_path is where the files are saved
     shutil.make_archive(folder_path, 'zip', folder_path)
