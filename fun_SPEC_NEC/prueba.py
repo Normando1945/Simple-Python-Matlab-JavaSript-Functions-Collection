@@ -316,7 +316,33 @@ if uploaded_file is not None and uploaded_file2 is not None:
         else:
             st.write("The uploaded ini file is empty.")
 
+#############################################################################################################################
+#############################################################################################################################
+######################################################## CODE ###############################################################
+#############################################################################################################################
+#############################################################################################################################
+    col1, col2, col3, col4 = st.columns([1,1,1,1])
+    with col1:
+        st.metric(label= "",value="")
+    with col2:
+        st.metric(label= "Latitude",value=f"{LAT:.5f}", delta='')
+    with col3:
+        st.metric(label= "Longitude",value=f"{LON:.5f}", delta='')
+    with col4:
+        st.metric(label= "",value="")
 
+    ecuador_tz = pytz.timezone('America/Guayaquil')
+    current_time = datetime.now(ecuador_tz)
+    Dia_mes_ano = current_time.strftime("%Y-%m-%d %H:%M:%S")
+    
+    
+    ############################# Map of the Location of for the Dissagregation Analysis #####################################
+    LaT = [LON]                                                                         # Longitud extracted from the .ini file.
+    LoN = [LAT]                                                                         # Latitude extracted from the .ini file.
+    Disagre = [Dia_mes_ano]                                                             # Date.
+
+    from World_MAP_LAT_LON import World_Map_LAT_LON                                     # World Map Function imported
+    map, latitudes, longitudes, Locations, Date = World_Map_LAT_LON(LaT, LoN, Dia_mes_ano)  # Using of World_Map Function
 
 
 
