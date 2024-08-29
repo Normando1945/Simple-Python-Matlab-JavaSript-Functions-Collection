@@ -5,3 +5,4 @@ matplotlib
 scipy
 requests
 random
+pip == 24.2
