@@ -384,11 +384,6 @@ if uploaded_file is not None and uploaded_file2 is not None:
     st.success(f"The selected folder path is: {folder_path}")
 
 
-
-
-    # Dissagregation function
-    from Dissagregation_functions import Code_dissagregation                                     
-    TRT_Rmeans_Mmeans_IMT= Code_dissagregation(df,LAT, LON, file_csv_name, folder_path, project_name)
     
     
 ##############################################################################################################################
