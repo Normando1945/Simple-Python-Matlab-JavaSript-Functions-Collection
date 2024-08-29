@@ -2,7 +2,8 @@ import streamlit as st
 from IPython.core.display import HTML
 from IPython.display import IFrame
 import os
-os.system('pip install folium')
+# os.system('pip install folium')
+
 import folium
 import random
 import os
