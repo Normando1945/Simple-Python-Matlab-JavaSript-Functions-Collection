@@ -20,8 +20,8 @@ import datetime
 import random
 import string
 import subprocess
-import pythoncom
-pythoncom.CoInitialize()
+# import pythoncom
+# pythoncom.CoInitialize()
 # %matplotlib widget
 
 
