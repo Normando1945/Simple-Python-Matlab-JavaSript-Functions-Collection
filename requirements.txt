@@ -1,6 +1,5 @@
 streamlit
 folium
-os
 string
 random
 streamlit.components.v1
