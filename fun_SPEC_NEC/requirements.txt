@@ -1,7 +1,7 @@
 streamlit
 numpy
 pandas
-matplotlib
+matplotlib==3.5.2
 scipy
 requests
 os
