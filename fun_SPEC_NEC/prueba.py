@@ -386,7 +386,17 @@ if uploaded_file is not None and uploaded_file2 is not None:
 
 
 
-
+    # Dissagregation function
+    from Dissagregation_functions import Code_dissagregation                                     
+    TRT_Rmeans_Mmeans_IMT= Code_dissagregation(df,LAT, LON, file_csv_name, folder_path, project_name)
+    
+    
+##############################################################################################################################
+else:
+    if uploaded_file is None:
+        st.markdown("**Please upload a .csv file.**")
+    if uploaded_file2 is None:
+        st.markdown("**Please upload a .ini file.**")
 
 
 
