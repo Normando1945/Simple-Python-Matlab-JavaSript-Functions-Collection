@@ -382,17 +382,21 @@ if uploaded_file is not None and uploaded_file2 is not None:
             if st.session_state.executed:
                 st.markdown(
                     """
-                    <div style="color: red; font-weight: bold; animation: blinker 3s linear infinite;">
-                        Due to server restrictions, once you click the download button, the sample results will no longer be visible. However, you can find <strong>ALL</strong> the analysis results in the ZIP file.
+                    <div style="font-weight: bold; animation: colorChange 3s infinite;">
+                        Due to server restrictions, once you click the download button, the sample results will no longer be visible. However, you can find <strong>ALL</strong> the analysis results in the ZIP file. 
+                        If you wish to perform another analysis, please refresh the webpage. Note that due to server restrictions, you might have to wait until another user finishes their calculations.
                     </div>
                     <style>
-                    @keyframes blinker {
-                        50% { opacity: 0; }
+                    @keyframes colorChange {
+                        0% { color: red; }
+                        50% { color: blue; }
+                        100% { color: red; }
                     }
                     </style>
                     """,
                     unsafe_allow_html=True
                 )
+
      
                 shutil.make_archive(folder_path, 'zip', folder_path)
             
