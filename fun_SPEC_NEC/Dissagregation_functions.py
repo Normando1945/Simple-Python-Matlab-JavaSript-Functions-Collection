@@ -417,7 +417,7 @@ def Code_dissagregation(df, LAT, LON, file_csv_name, folder_path, project_name):
         st.image(images["image4"], caption='Sample Disaggregation Plot')
         st.image(images["image5"], caption='Sample Disaggregation Plot')
 
-    return TRT_Rmeans_Mmeans_IMT
+    return TRT_Rmeans_Mmeans_IMT, all_means
 
 
 
