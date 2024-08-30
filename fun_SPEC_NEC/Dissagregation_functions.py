@@ -24,7 +24,6 @@ import subprocess
 # pythoncom.CoInitialize()
 # %matplotlib widget
 
-
 def Code_dissagregation(df, LAT, LON, file_csv_name, folder_path, project_name):
     all_means = []
     
@@ -451,5 +450,9 @@ def Code_dissagregation(df, LAT, LON, file_csv_name, folder_path, project_name):
         st.image(images["image4"], caption='Sample Disaggregation Plot')
         st.image(images["image5"], caption='Sample Disaggregation Plot')
 
-    
-    return TRT_Rmeans_Mmeans_IMT 
+    st.session_state.executed = True
+    return TRT_Rmeans_Mmeans_IMT
+
+
+
+
