@@ -399,10 +399,6 @@ if uploaded_file is not None and uploaded_file2 is not None:
         else:
             print(f"The folder '{folder_path}' already exists!")                             
         
-        
-        
-    # Display the selected folder path
-    st.success(f"The server being used is: {folder_path}")
 
 
     if not st.session_state.executed:
