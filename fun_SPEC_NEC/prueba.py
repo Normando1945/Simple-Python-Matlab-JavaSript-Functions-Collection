@@ -377,9 +377,10 @@ if uploaded_file is not None and uploaded_file2 is not None:
         
             st.session_state.executed = True  # Mark as executed
             st.session_state.folder_path = folder_path  # Save the folder path
-        
+            
             # Only do this if st.session_state.executed is True
             if st.session_state.executed:
+                st.markdown('Due to server restrictions, once you click the download button, the sample results will no longer be visible. However, you can find **ALL** the analysis results in the ZIP file.')
                 shutil.make_archive(folder_path, 'zip', folder_path)
             
                 with open(f"{folder_path}.zip", "rb") as zip_file:
