@@ -382,7 +382,7 @@ if uploaded_file is not None and uploaded_file2 is not None:
             if st.session_state.executed:
                 st.markdown(
                     """
-                    <div style="color: red; font-weight: bold; animation: blinker 1.5s linear infinite;">
+                    <div style="color: red; font-weight: bold; animation: blinker 3s linear infinite;">
                         Due to server restrictions, once you click the download button, the sample results will no longer be visible. However, you can find <strong>ALL</strong> the analysis results in the ZIP file.
                     </div>
                     <style>
