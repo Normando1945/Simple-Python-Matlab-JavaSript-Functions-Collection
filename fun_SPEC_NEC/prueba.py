@@ -381,9 +381,7 @@ if uploaded_file is not None and uploaded_file2 is not None:
     # Initialize the folder path
     if "folder_path" not in st.session_state:
         st.session_state.folder_path = ''
-    # folder_path = st.text_input("Enter the folder path where you want to save all the results:", value=st.session_state.folder_path)
-    # Add a button to use the current working directory
-    if st.button("Start the analysis"):
+        st.button("Start the analysis"):
         st.session_state.folder_path = os.getcwd()
         folder_path = st.session_state.folder_path
         
