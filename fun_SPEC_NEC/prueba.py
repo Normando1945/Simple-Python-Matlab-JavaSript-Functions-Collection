@@ -381,7 +381,7 @@ if uploaded_file is not None and uploaded_file2 is not None:
     # Initialize the folder path
     if "folder_path" not in st.session_state:
         st.session_state.folder_path = ''
-        st.button("Start the analysis"):
+        st.button("Start the analysis")
         st.session_state.folder_path = os.getcwd()
         folder_path = st.session_state.folder_path
         
