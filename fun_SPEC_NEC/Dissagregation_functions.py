@@ -325,7 +325,7 @@ def Code_dissagregation(df, LAT, LON, file_csv_name, folder_path, project_name):
 
     # Display a success message with the folder path
     st.markdown('##### :sparkles: **Results Ready!**')
-    st.markdown('* Use this directory to see all the results:')
+    st.markdown('* The server where the analysis was executed and the results were saved is:')
     st.success(st.session_state.folder_path)
     st.markdown('**Sample Result:**')
     st.markdown('* Mean Values of **Rjb** and **Mw** for Each **IMT**')
