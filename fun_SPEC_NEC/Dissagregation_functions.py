@@ -314,17 +314,17 @@ def Code_dissagregation(df, LAT, LON, file_csv_name, folder_path, project_name):
     if not os.path.exists(folder_path):
         os.makedirs(folder_path)
     workbook.save(file_excel_path)
-    file_pdf_name = "Disaggregation.pdf"                                            
-    excel_to_pdf_path = os.path.join(folder_path, file_pdf_name)                     
+    # file_pdf_name = "Disaggregation.pdf"                                            
+    # excel_to_pdf_path = os.path.join(folder_path, file_pdf_name)                     
     
-    # Waiting time for excel file to open and transform in PDF file
-    import time
-    time.sleep(5)
-    excel = win32.DispatchEx("Excel.Application")
-    wb = excel.Workbooks.Open(os.path.abspath(os.path.join(folder_path, file_excel_name)))
-    wb.ExportAsFixedFormat(0, excel_to_pdf_path)
-    wb.Close(False)
-    excel.Quit()
+    # # Waiting time for excel file to open and transform in PDF file
+    # import time
+    # time.sleep(5)
+    # excel = win32.DispatchEx("Excel.Application")
+    # wb = excel.Workbooks.Open(os.path.abspath(os.path.join(folder_path, file_excel_name)))
+    # wb.ExportAsFixedFormat(0, excel_to_pdf_path)
+    # wb.Close(False)
+    # excel.Quit()
 
 
     # Progrres bar
