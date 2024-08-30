@@ -351,63 +351,34 @@ if uploaded_file is not None and uploaded_file2 is not None:
     map, latitudes, longitudes, Locations, Date = World_Map_LAT_LON(LaT, LoN, Dia_mes_ano)  # Using of World_Map Function
     ########################################### Code Dissagregation ###########################################################
     
-    # # Ask the user to specify the folder path for saving images
-    # # Initialize the folder path
-    # if "folder_path" not in st.session_state:
-    #     st.session_state.folder_path = ''
-    # folder_path = st.text_input("Enter the folder path where you want to save all the results:", value=st.session_state.folder_path)
-    # # Add a button to use the current working directory
-    # if st.button("Use current working directory"):
-    #     st.session_state.folder_path = os.getcwd()
-    #     folder_path = st.session_state.folder_path
-        
-    #     # Funtion for create a random 5 letter name
-    #     def random_string(length=5):
-    #         letters = string.ascii_lowercase
-    #         return ''.join(random.choice(letters) for i in range(length))
-
-    #     folder_name = f"{'Results_TF_'+ random_string()}"                                   # Create a new Folder
-
-    #     directory = os.path.join(folder_path, folder_name)
-    #     folder_path = directory
-    #     # Folder Creation
-    #     if not os.path.exists(folder_path):
-    #         os.makedirs(folder_path)
-    #     else:
-    #         print(f"The folder '{folder_path}' already exists!")
-
-
-
-
     if st.button("Start the analysis"):
         st.markdown('##### :earth_americas: **Results for Seismic Disaggregation Analysis**')
-        st.markdown('Please follow the instructions')
-        # Establecer el directorio de trabajo actual como el directorio de resultados
+        # Set the current working directory as the results directory
         st.session_state.folder_path = os.getcwd()
         
-        # Función para crear un nombre de carpeta aleatorio de 5 letras
+        # Function to create a random 5-letter folder name
         def random_string(length=5):
             letters = string.ascii_lowercase
             return ''.join(random.choice(letters) for i in range(length))
         
-        folder_name = f"{'Results_TF_'+ random_string()}"  # Crear una nueva carpeta
+        folder_name = f"{'Results_TF_'+ random_string()}"  # Create a new folder
         folder_path = os.path.join(st.session_state.folder_path, folder_name)
     
-        # Crear la carpeta si no existe
+        # Create the folder if it does not exist
         if not os.path.exists(folder_path):
             os.makedirs(folder_path)
         else:
             print(f"The folder '{folder_path}' already exists!")
-    
-    
+        
+        # Check if the analysis has already been executed
         if not st.session_state.executed:
             from Dissagregation_functions import Code_dissagregation                                     
             TRT_Rmeans_Mmeans_IMT = Code_dissagregation(df, LAT, LON, file_csv_name, folder_path, project_name)
         
-            st.session_state.executed = True  # Marcar como ejecutado
-            st.session_state.folder_path = folder_path  # Guardar la ruta de la carpeta
-    
-            # Solo hacer esto si st.session_state.executed es True
+            st.session_state.executed = True  # Mark as executed
+            st.session_state.folder_path = folder_path  # Save the folder path
+        
+            # Only do this if st.session_state.executed is True
             if st.session_state.executed:
                 shutil.make_archive(folder_path, 'zip', folder_path)
             
@@ -415,6 +386,7 @@ if uploaded_file is not None and uploaded_file2 is not None:
                     st.download_button(label="Download Results", data=zip_file, file_name=f"{folder_path.split('/')[-1]}.zip")
         else:
             st.markdown('##### :sparkles: The results have been downloaded')
+
  
 
 
