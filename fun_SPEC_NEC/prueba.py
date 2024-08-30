@@ -403,33 +403,9 @@ if uploaded_file is not None and uploaded_file2 is not None:
         
             with open(f"{folder_path}.zip", "rb") as zip_file:
                 st.download_button(label="Download Results", data=zip_file, file_name=f"{folder_path.split('/')[-1]}.zip")
-
-        
     else:
-        st.markdown('##### :sparkles: El cálculo ya se ha ejecutado.')
-        st.markdown('* Puedes encontrar los resultados en el directorio especificado.')
-        st.success(st.session_state.folder_path)
-        
-
-        # Display a success message with the folder path
-        st.markdown('##### :sparkles: **Results Ready!**')
-        st.markdown('* Use this directory to see all the results:')
-        st.success(folder_path)
-        st.markdown('**Sample Result:**')
-        st.markdown('* Mean Values of **Rjb** and **Mw** for Each **IMT**')
-        
-           
-        # Display Table's of Means of each IMT
-        col1, col2, col3 = st.columns([0.08,1,0.08])
-        with col1:
-            st.metric(label= "",value="")
-        with col2:
-            TRT_Rmeans_Mmeans_IMTs = pd.concat(all_means, ignore_index=True)
-            st.write(TRT_Rmeans_Mmeans_IMTs)
-        with col3:
-            st.metric(label= "",value="")
-
-        st.stop()
+        st.markdown('##### :sparkles: The results have been downloaded')
+ 
 
 
 
