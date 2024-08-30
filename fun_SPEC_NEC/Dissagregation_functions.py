@@ -1,4 +1,3 @@
-# import win32com.client as win32                                                         # Using xlwings, save the Excel file as a PDF
 from openpyxl.styles.colors import Color
 from openpyxl.styles import PatternFill
 from openpyxl.drawing.image import Image
