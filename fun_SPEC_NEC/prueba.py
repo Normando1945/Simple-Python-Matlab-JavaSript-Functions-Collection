@@ -350,8 +350,7 @@ if uploaded_file is not None and uploaded_file2 is not None:
     from World_MAP_LAT_LON import World_Map_LAT_LON                                     # World Map Function imported
     map, latitudes, longitudes, Locations, Date = World_Map_LAT_LON(LaT, LoN, Dia_mes_ano)  # Using of World_Map Function
     ########################################### Code Dissagregation ###########################################################
-    st.markdown('##### :earth_americas: **Results for Seismic Disaggregation Analysis**')
-    st.markdown('Please follow the instructions')
+    
     # # Ask the user to specify the folder path for saving images
     # # Initialize the folder path
     # if "folder_path" not in st.session_state:
@@ -381,6 +380,8 @@ if uploaded_file is not None and uploaded_file2 is not None:
 
 
     if st.button("Start the analysis"):
+        st.markdown('##### :earth_americas: **Results for Seismic Disaggregation Analysis**')
+        st.markdown('Please follow the instructions')
         # Establecer el directorio de trabajo actual como el directorio de resultados
         st.session_state.folder_path = os.getcwd()
         
