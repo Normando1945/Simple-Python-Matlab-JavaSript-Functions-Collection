@@ -375,10 +375,13 @@ if uploaded_file is not None and uploaded_file2 is not None:
     #     if not os.path.exists(folder_path):
     #         os.makedirs(folder_path)
     #     else:
-    #         print(f"The folder '{folder_path}' already exists!")                             
-        
-        
-        
+    #         print(f"The folder '{folder_path}' already exists!")       
+
+    # Ask the user to specify the folder path for saving images
+    # Initialize the folder path
+    if "folder_path" not in st.session_state:
+        st.session_state.folder_path = ''
+    # folder_path = st.text_input("Enter the folder path where you want to save all the results:", value=st.session_state.folder_path)
     # Add a button to use the current working directory
     if st.button("Start the analysis"):
         st.session_state.folder_path = os.getcwd()
@@ -397,8 +400,8 @@ if uploaded_file is not None and uploaded_file2 is not None:
         if not os.path.exists(folder_path):
             os.makedirs(folder_path)
         else:
-            print(f"The folder '{folder_path}' already exists!")                             
-        
+            print(f"The folder '{folder_path}' already exists!")  
+
 
 
     if not st.session_state.executed:
