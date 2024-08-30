@@ -409,7 +409,7 @@ if uploaded_file is not None and uploaded_file2 is not None:
         st.markdown('##### :sparkles: El cálculo ya se ha ejecutado.')
         st.markdown('* Puedes encontrar los resultados en el directorio especificado.')
         st.success(st.session_state.folder_path)
-        st.stop()
+        
 
         # Display a success message with the folder path
         st.markdown('##### :sparkles: **Results Ready!**')
@@ -428,6 +428,8 @@ if uploaded_file is not None and uploaded_file2 is not None:
             st.write(TRT_Rmeans_Mmeans_IMTs)
         with col3:
             st.metric(label= "",value="")
+
+        st.stop()
 
 
 
