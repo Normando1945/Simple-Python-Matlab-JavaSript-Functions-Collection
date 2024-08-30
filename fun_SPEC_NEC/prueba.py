@@ -381,39 +381,39 @@ if uploaded_file is not None and uploaded_file2 is not None:
 
 
     if st.button("Start the analysis"):
-    # Establecer el directorio de trabajo actual como el directorio de resultados
-    st.session_state.folder_path = os.getcwd()
-    
-    # Función para crear un nombre de carpeta aleatorio de 5 letras
-    def random_string(length=5):
-        letters = string.ascii_lowercase
-        return ''.join(random.choice(letters) for i in range(length))
-    
-    folder_name = f"{'Results_TF_'+ random_string()}"  # Crear una nueva carpeta
-    folder_path = os.path.join(st.session_state.folder_path, folder_name)
-
-    # Crear la carpeta si no existe
-    if not os.path.exists(folder_path):
-        os.makedirs(folder_path)
-    else:
-        print(f"The folder '{folder_path}' already exists!")
-
-
-    if not st.session_state.executed:
-        from Dissagregation_functions import Code_dissagregation                                     
-        TRT_Rmeans_Mmeans_IMT = Code_dissagregation(df, LAT, LON, file_csv_name, folder_path, project_name)
-    
-        st.session_state.executed = True  # Marcar como ejecutado
-        st.session_state.folder_path = folder_path  # Guardar la ruta de la carpeta
-
-        # Solo hacer esto si st.session_state.executed es True
-        if st.session_state.executed:
-            shutil.make_archive(folder_path, 'zip', folder_path)
+        # Establecer el directorio de trabajo actual como el directorio de resultados
+        st.session_state.folder_path = os.getcwd()
         
-            with open(f"{folder_path}.zip", "rb") as zip_file:
-                st.download_button(label="Download Results", data=zip_file, file_name=f"{folder_path.split('/')[-1]}.zip")
-    else:
-        st.markdown('##### :sparkles: The results have been downloaded')
+        # Función para crear un nombre de carpeta aleatorio de 5 letras
+        def random_string(length=5):
+            letters = string.ascii_lowercase
+            return ''.join(random.choice(letters) for i in range(length))
+        
+        folder_name = f"{'Results_TF_'+ random_string()}"  # Crear una nueva carpeta
+        folder_path = os.path.join(st.session_state.folder_path, folder_name)
+    
+        # Crear la carpeta si no existe
+        if not os.path.exists(folder_path):
+            os.makedirs(folder_path)
+        else:
+            print(f"The folder '{folder_path}' already exists!")
+    
+    
+        if not st.session_state.executed:
+            from Dissagregation_functions import Code_dissagregation                                     
+            TRT_Rmeans_Mmeans_IMT = Code_dissagregation(df, LAT, LON, file_csv_name, folder_path, project_name)
+        
+            st.session_state.executed = True  # Marcar como ejecutado
+            st.session_state.folder_path = folder_path  # Guardar la ruta de la carpeta
+    
+            # Solo hacer esto si st.session_state.executed es True
+            if st.session_state.executed:
+                shutil.make_archive(folder_path, 'zip', folder_path)
+            
+                with open(f"{folder_path}.zip", "rb") as zip_file:
+                    st.download_button(label="Download Results", data=zip_file, file_name=f"{folder_path.split('/')[-1]}.zip")
+        else:
+            st.markdown('##### :sparkles: The results have been downloaded')
  
 
 
