@@ -69,7 +69,7 @@ def Code_dissagregation(df, LAT, LON, file_csv_name, folder_path, project_name):
 
     
     # num_imts = len(Accel)                                                           # number of selected IMT's [nomalie use the all  IMT's contained in "Accel"]
-    num_imts = 1                                                                      # number of selected IMT's [nomalie use the all  IMT's contained in "Accel"]
+    num_imts = 5                                                                      # number of selected IMT's [nomalie use the all  IMT's contained in "Accel"]
 
     images = {}                                                                         # Initialize a dictionary to store images
 
