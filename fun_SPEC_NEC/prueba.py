@@ -214,28 +214,69 @@ st.markdown('##### :ledger: **Proposal for 2024 Seismic Hazard Model and Seismic
 
 image_path = 'https://www.dropbox.com/scl/fi/6s7gnzoj2l2ybineetsu5/psha2.png?rlkey=qjyh1fx97c1i11g8tgcujgpmr&st=8ol1f98e&dl&raw=1'
 
+# st.markdown(
+#             """
+#             <style>
+#             @keyframes blinkingText {
+#                 0% { color: #007BFF; }
+#                 50% { color: #00BFFF; }
+#                 100% { color: #007BFF; }
+#             }
+
+#             .blinking {
+#                 animation: blinkingText 1.5s infinite;
+#                 font-weight: bold;
+#                 font-size: 18px;
+#             }
+#             </style>
+
+#             <div style="text-align: center;">
+#             <a href="https://ppalacios92.github.io/HazardMapTest03/HazardMapTest03.html" class="blinking">Interactive Map</a>
+#             </div>
+#             """, 
+#             unsafe_allow_html=True
+#         )
 st.markdown(
-            """
-            <style>
-            @keyframes blinkingText {
-                0% { color: #007BFF; }
-                50% { color: #00BFFF; }
-                100% { color: #007BFF; }
-            }
+    """
+    <style>
+    @keyframes wave {
+        0% { transform: rotate(0.0deg); }
+        10% { transform: rotate(14.0deg); }
+        20% { transform: rotate(-8.0deg); }
+        30% { transform: rotate(14.0deg); }
+        40% { transform: rotate(-4.0deg); }
+        50% { transform: rotate(10.0deg); }
+        60% { transform: rotate(0.0deg); }  
+        100% { transform: rotate(0.0deg); }
+    }
 
-            .blinking {
-                animation: blinkingText 1.5s infinite;
-                font-weight: bold;
-                font-size: 18px;
-            }
-            </style>
+    .wave-hand {
+        display: inline-block;
+        animation: wave 2s infinite;
+        transform-origin: 70% 70%;
+        font-size: 24px;
+    }
 
-            <div style="text-align: center;">
-            <a href="https://ppalacios92.github.io/HazardMapTest03/HazardMapTest03.html" class="blinking">Interactive Map</a>
-            </div>
-            """, 
-            unsafe_allow_html=True
-        )
+    .blinking {
+        animation: blinkingText 1.5s infinite;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    @keyframes blinkingText {
+        0% { color: #007BFF; }
+        50% { color: #00BFFF; }
+        100% { color: #007BFF; }
+    }
+    </style>
+
+    <div style="text-align: center;">
+        <span class="wave-hand">👉</span> <a href="https://ppalacios92.github.io/HazardMapTest03/HazardMapTest03.html" class="blinking">Interactive Map</a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
 
 st.image(image_path, use_column_width=True)
 with st.expander("**Click to read more**"):
