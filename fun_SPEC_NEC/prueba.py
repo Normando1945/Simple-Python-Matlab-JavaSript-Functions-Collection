@@ -13,6 +13,11 @@ import shutil
 # import pythoncom
 # pythoncom.CoInitialize()
 
+
+if 'executed' not in st.session_state:
+    st.session_state.executed = False
+    
+
 #############################################################################################################################
 #############################################################################################################################
 ######################################################## Side BAR ###########################################################
@@ -388,6 +393,10 @@ if uploaded_file is not None and uploaded_file2 is not None:
     # Dissagregation function
     from Dissagregation_functions import Code_dissagregation                                     
     TRT_Rmeans_Mmeans_IMT= Code_dissagregation(df,LAT, LON, file_csv_name, folder_path, project_name)
+
+
+    st.session_state.executed = True  # Marcar como ejecutado
+    st.session_state.folder_path = folder_path  # Guardar la ruta de la carpeta
 
 
 
