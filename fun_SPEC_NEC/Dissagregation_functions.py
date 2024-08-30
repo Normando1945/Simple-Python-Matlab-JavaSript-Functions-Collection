@@ -20,9 +20,7 @@ import datetime
 import random
 import string
 import subprocess
-# import pythoncom
-# pythoncom.CoInitialize()
-# %matplotlib widget
+
 
 def Code_dissagregation(df, LAT, LON, file_csv_name, folder_path, project_name):
     all_means = []
@@ -133,13 +131,6 @@ def Code_dissagregation(df, LAT, LON, file_csv_name, folder_path, project_name):
             peer_faults_str = ', '.join(peer_faults)
 
             # Add a new row to the DataFrame with the dominant fault information and its PEER equivalence
-            # TRT_Rmeans_Mmeans_Faults = TRT_Rmeans_Mmeans_Faults.append({
-            #     'TRT': RETURT[ReturT],
-            #     'Rmean': Rmean,
-            #     'Mmean': Mmean,
-            #     'Dominant_Fault': max_contrib_trt,
-            #     'PEER_Equivalent_Faults': peer_faults_str
-            # }, ignore_index=True)
             new_row = pd.DataFrame([{
                 'TRT': RETURT[ReturT],
                 'Rmean': Rmean,
@@ -330,12 +321,7 @@ def Code_dissagregation(df, LAT, LON, file_csv_name, folder_path, project_name):
     progress_bar.progress(1.0)
     st.success("All calculations were executed successfully.")
     
-    # # Display a success message with the folder path
-    # st.markdown('##### :sparkles: **Results Ready!**')
-    # st.markdown('* Use this directory to see all the results:')
-    # st.success(folder_path)
-    # st.markdown('**Sample Result:**')
-    # st.markdown('* Mean Values of **Rjb** and **Mw** for Each **IMT**')
+
 
     if st.session_state.executed:
         # Display a success message with the folder path
@@ -394,23 +380,7 @@ def Code_dissagregation(df, LAT, LON, file_csv_name, folder_path, project_name):
             disclaimer_text = "Disclaimer: The data in this file is provided for academic purposes only. The user assumes full responsibility for the use and application of this data./ Powered by SDTE © TorreFuerte"
             worksheet.oddFooter.center.text = disclaimer_text
             worksheet.evenFooter.center.text = disclaimer_text
-    
-    
-        # file_pdf_name2 = "Summary_Results_Rmean_Mmean.pdf"                                            
-        # excel2_to_pdf2_path = os.path.join(folder_path, file_pdf_name2)                     
-    
-        # # Waiting time for excel file to open and transform in PDF file
-        # import time
-        # time.sleep(5)
-        # excel = win32.DispatchEx("Excel.Application")
-        # wb = excel.Workbooks.Open(os.path.abspath(os.path.join(folder_path, file_excel_name2)))
-        # wb.ExportAsFixedFormat(0, excel2_to_pdf2_path)
-        # wb.Close(False)
-        # excel.Quit()
-    
-        
-        
-        
+
         
         ################################################# Save the DataFrame to a new Excel file without creating the workbook first #############################################
         file_excel_name3 = "MetaData.xlsx"
