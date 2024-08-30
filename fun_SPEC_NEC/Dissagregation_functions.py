@@ -330,12 +330,21 @@ def Code_dissagregation(df, LAT, LON, file_csv_name, folder_path, project_name):
     progress_bar.progress(1.0)
     st.success("All calculations were executed successfully.")
     
-    # Display a success message with the folder path
-    st.markdown('##### :sparkles: **Results Ready!**')
-    st.markdown('* Use this directory to see all the results:')
-    st.success(folder_path)
-    st.markdown('**Sample Result:**')
-    st.markdown('* Mean Values of **Rjb** and **Mw** for Each **IMT**')
+    # # Display a success message with the folder path
+    # st.markdown('##### :sparkles: **Results Ready!**')
+    # st.markdown('* Use this directory to see all the results:')
+    # st.success(folder_path)
+    # st.markdown('**Sample Result:**')
+    # st.markdown('* Mean Values of **Rjb** and **Mw** for Each **IMT**')
+
+    if st.session_state.executed:
+        # Display a success message with the folder path
+        st.markdown('##### :sparkles: **Results Ready!**')
+        st.markdown('* Use this directory to see all the results:')
+        st.success(st.session_state.folder_path)
+        st.markdown('**Sample Result:**')
+        st.markdown('* Mean Values of **Rjb** and **Mw** for Each **IMT**')
+        st.stop()
     
        
     # Display Table's of Means of each IMT
