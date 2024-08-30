@@ -390,24 +390,30 @@ if uploaded_file is not None and uploaded_file2 is not None:
     st.success(f"The selected folder path is: {folder_path}")
 
 
-    # Dissagregation function
-    from Dissagregation_functions import Code_dissagregation                                     
-    TRT_Rmeans_Mmeans_IMT= Code_dissagregation(df,LAT, LON, file_csv_name, folder_path, project_name)
+    if not st.session_state.executed:
+        from Dissagregation_functions import Code_dissagregation                                     
+        TRT_Rmeans_Mmeans_IMT = Code_dissagregation(df, LAT, LON, file_csv_name, folder_path, project_name)
+    
+        st.session_state.executed = True  # Marcar como ejecutado
+        st.session_state.folder_path = folder_path  # Guardar la ruta de la carpeta
+    else:
+        st.markdown('##### :sparkles: El cálculo ya se ha ejecutado.')
+        st.markdown('* Puedes encontrar los resultados en el directorio especificado.')
+        st.success(st.session_state.folder_path)
+        st.stop()
 
 
-    st.session_state.executed = True  # Marcar como ejecutado
-    st.session_state.folder_path = folder_path  # Guardar la ruta de la carpeta
 
 
 
 
+    # Solo hacer esto si st.session_state.executed es True
+    if st.session_state.executed:
+        shutil.make_archive(folder_path, 'zip', folder_path)
+    
+        with open(f"{folder_path}.zip", "rb") as zip_file:
+            st.download_button(label="Download Results", data=zip_file, file_name=f"{folder_path.split('/')[-1]}.zip")
 
-
-    # Assuming folder_path is where the files are saved
-    shutil.make_archive(folder_path, 'zip', folder_path)
-
-    with open(f"{folder_path}.zip", "rb") as zip_file:
-        st.download_button(label="Download Results", data=zip_file, file_name=f"{folder_path.split('/')[-1]}.zip")
 
 
     
