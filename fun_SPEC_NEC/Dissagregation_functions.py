@@ -344,120 +344,121 @@ def Code_dissagregation(df, LAT, LON, file_csv_name, folder_path, project_name):
         st.success(st.session_state.folder_path)
         st.markdown('**Sample Result:**')
         st.markdown('* Mean Values of **Rjb** and **Mw** for Each **IMT**')
-        st.stop()
-    
+   
        
-    # Display Table's of Means of each IMT
-    col1, col2, col3 = st.columns([0.08,1,0.08])
-    with col1:
-        st.metric(label= "",value="")
-    with col2:
-        TRT_Rmeans_Mmeans_IMTs = pd.concat(all_means, ignore_index=True)
-        st.write(TRT_Rmeans_Mmeans_IMTs)
-    with col3:
-        st.metric(label= "",value="")
-    
-    
-    
-    ################################################# Save the DataFrame to a new Excel file without creating the workbook first #############################################
-    file_excel_name2 = "Summary_Results_Rmean_Mmean.xlsx"
-    file_excel_path2 = os.path.join(folder_path, file_excel_name2)
-
-    # Save the DataFrame to the created Excel worksheet
-    with pd.ExcelWriter(file_excel_path2, engine='openpyxl') as writer:
-        # Access the workbook and sheet
-        workbook = writer.book
-        worksheet = workbook.create_sheet("Summary_Results_Rmean_Mmean")
-
-        # Add disclaimer in the first row
-        disclaimer_text = "Disclaimer: The data in this file is provided for academic purposes only. The user assumes full responsibility for the use and application of this data./ Powered by SDTE © TorreFuerte"
-        worksheet.merge_cells(start_row=1, start_column=1, end_row=1, end_column=len(TRT_Rmeans_Mmeans_IMTs.columns))
-        worksheet.cell(row=1, column=1).value = disclaimer_text
-
-        # Write DataFrame to Excel, starting from the second row
-        TRT_Rmeans_Mmeans_IMTs.to_excel(writer, sheet_name="Summary_Results_Rmean_Mmean", startrow=1, index=False)
-
-        # Adjust the column width to fit the content, starting from the second row
-        for column_cells in worksheet.iter_cols(min_row=2, max_col=len(TRT_Rmeans_Mmeans_IMTs.columns)):
-            length = max(len(str(cell.value)) for cell in column_cells if cell.value is not None)
-            worksheet.column_dimensions[column_cells[0].column_letter].width = length
-
-        # Customization of the Current Excel Sheet
-        worksheet.page_setup.scale = 84
-        worksheet.page_margins.left = 0.25
-        worksheet.page_margins.right = 0.25
-        worksheet.page_margins.top = 0.26
-        worksheet.page_margins.bottom = 0.42
-        worksheet.page_setup.horizontalCentered = True
-        worksheet.page_setup.verticalCentered = False
-        worksheet.page_setup.orientation = worksheet.ORIENTATION_LANDSCAPE  # Set orientation to landscape
+        # Display Table's of Means of each IMT
+        col1, col2, col3 = st.columns([0.08,1,0.08])
+        with col1:
+            st.metric(label= "",value="")
+        with col2:
+            TRT_Rmeans_Mmeans_IMTs = pd.concat(all_means, ignore_index=True)
+            st.write(TRT_Rmeans_Mmeans_IMTs)
+        with col3:
+            st.metric(label= "",value="")
         
-        disclaimer_text = "Disclaimer: The data in this file is provided for academic purposes only. The user assumes full responsibility for the use and application of this data./ Powered by SDTE © TorreFuerte"
-        worksheet.oddFooter.center.text = disclaimer_text
-        worksheet.evenFooter.center.text = disclaimer_text
-
-
-    # file_pdf_name2 = "Summary_Results_Rmean_Mmean.pdf"                                            
-    # excel2_to_pdf2_path = os.path.join(folder_path, file_pdf_name2)                     
-
-    # # Waiting time for excel file to open and transform in PDF file
-    # import time
-    # time.sleep(5)
-    # excel = win32.DispatchEx("Excel.Application")
-    # wb = excel.Workbooks.Open(os.path.abspath(os.path.join(folder_path, file_excel_name2)))
-    # wb.ExportAsFixedFormat(0, excel2_to_pdf2_path)
-    # wb.Close(False)
-    # excel.Quit()
-
+        
+        
+        ################################################# Save the DataFrame to a new Excel file without creating the workbook first #############################################
+        file_excel_name2 = "Summary_Results_Rmean_Mmean.xlsx"
+        file_excel_path2 = os.path.join(folder_path, file_excel_name2)
+    
+        # Save the DataFrame to the created Excel worksheet
+        with pd.ExcelWriter(file_excel_path2, engine='openpyxl') as writer:
+            # Access the workbook and sheet
+            workbook = writer.book
+            worksheet = workbook.create_sheet("Summary_Results_Rmean_Mmean")
+    
+            # Add disclaimer in the first row
+            disclaimer_text = "Disclaimer: The data in this file is provided for academic purposes only. The user assumes full responsibility for the use and application of this data./ Powered by SDTE © TorreFuerte"
+            worksheet.merge_cells(start_row=1, start_column=1, end_row=1, end_column=len(TRT_Rmeans_Mmeans_IMTs.columns))
+            worksheet.cell(row=1, column=1).value = disclaimer_text
+    
+            # Write DataFrame to Excel, starting from the second row
+            TRT_Rmeans_Mmeans_IMTs.to_excel(writer, sheet_name="Summary_Results_Rmean_Mmean", startrow=1, index=False)
+    
+            # Adjust the column width to fit the content, starting from the second row
+            for column_cells in worksheet.iter_cols(min_row=2, max_col=len(TRT_Rmeans_Mmeans_IMTs.columns)):
+                length = max(len(str(cell.value)) for cell in column_cells if cell.value is not None)
+                worksheet.column_dimensions[column_cells[0].column_letter].width = length
+    
+            # Customization of the Current Excel Sheet
+            worksheet.page_setup.scale = 84
+            worksheet.page_margins.left = 0.25
+            worksheet.page_margins.right = 0.25
+            worksheet.page_margins.top = 0.26
+            worksheet.page_margins.bottom = 0.42
+            worksheet.page_setup.horizontalCentered = True
+            worksheet.page_setup.verticalCentered = False
+            worksheet.page_setup.orientation = worksheet.ORIENTATION_LANDSCAPE  # Set orientation to landscape
+            
+            disclaimer_text = "Disclaimer: The data in this file is provided for academic purposes only. The user assumes full responsibility for the use and application of this data./ Powered by SDTE © TorreFuerte"
+            worksheet.oddFooter.center.text = disclaimer_text
+            worksheet.evenFooter.center.text = disclaimer_text
     
     
+        # file_pdf_name2 = "Summary_Results_Rmean_Mmean.pdf"                                            
+        # excel2_to_pdf2_path = os.path.join(folder_path, file_pdf_name2)                     
     
+        # # Waiting time for excel file to open and transform in PDF file
+        # import time
+        # time.sleep(5)
+        # excel = win32.DispatchEx("Excel.Application")
+        # wb = excel.Workbooks.Open(os.path.abspath(os.path.join(folder_path, file_excel_name2)))
+        # wb.ExportAsFixedFormat(0, excel2_to_pdf2_path)
+        # wb.Close(False)
+        # excel.Quit()
     
-    ################################################# Save the DataFrame to a new Excel file without creating the workbook first #############################################
-    file_excel_name3 = "MetaData.xlsx"
-    file_excel_path3 = os.path.join(folder_path, file_excel_name3)
+        
+        
+        
+        
+        ################################################# Save the DataFrame to a new Excel file without creating the workbook first #############################################
+        file_excel_name3 = "MetaData.xlsx"
+        file_excel_path3 = os.path.join(folder_path, file_excel_name3)
+        
+        # Save the DataFrame to the created Excel worksheet
+        with pd.ExcelWriter(file_excel_path3, engine='openpyxl') as writer:
+            df_grouped_filtered_group.to_excel(writer, sheet_name="MetaData", index=False)
+            # Access the workbook and sheet
+            workbook = writer.book
+            worksheet = writer.sheets["MetaData"]
     
-    # Save the DataFrame to the created Excel worksheet
-    with pd.ExcelWriter(file_excel_path3, engine='openpyxl') as writer:
-        df_grouped_filtered_group.to_excel(writer, sheet_name="MetaData", index=False)
-        # Access the workbook and sheet
-        workbook = writer.book
-        worksheet = writer.sheets["MetaData"]
+            # Adjust the column width to fit the content
+            for column_cells in worksheet.columns:
+                length = max(len(str(cell.value)) for cell in column_cells)
+                worksheet.column_dimensions[column_cells[0].column_letter].width = length
+    
+            # Customization of the Current Excel Sheet
+            worksheet.page_setup.scale = 130
+            worksheet.page_margins.left = 0.25
+            worksheet.page_margins.right = 0.25
+            worksheet.page_margins.top = 0.26
+            worksheet.page_margins.bottom = 0.42
+            worksheet.page_setup.horizontalCentered = True
+            worksheet.page_setup.verticalCentered = False
+            worksheet.page_setup.orientation = worksheet.ORIENTATION_LANDSCAPE                            # Set orientation to landscape
+    
+        # file_pdf_name3 = "MetaData.pdf"                                            
+        # excel3_to_pdf3_path = os.path.join(folder_path, file_pdf_name3)                     
+    
+        # # Waiting time for excel file to open and transform in PDF file
+        # import time
+        # time.sleep(5)
+        # excel = win32.DispatchEx("Excel.Application")
+        # wb = excel.Workbooks.Open(os.path.abspath(os.path.join(folder_path, file_excel_name3)))
+        # wb.ExportAsFixedFormat(0, excel3_to_pdf3_path)
+        # wb.Close(False)
+        # excel.Quit()
+    
+           
+        ############################################# Display one of the saved images #############################################
+        if images:
+            st.markdown('**Sample Result:**')
+            st.image(images["image0"], caption='Sample Disaggregation Plot')
+            st.image(images["image4"], caption='Sample Disaggregation Plot')
+            st.image(images["image5"], caption='Sample Disaggregation Plot')
 
-        # Adjust the column width to fit the content
-        for column_cells in worksheet.columns:
-            length = max(len(str(cell.value)) for cell in column_cells)
-            worksheet.column_dimensions[column_cells[0].column_letter].width = length
-
-        # Customization of the Current Excel Sheet
-        worksheet.page_setup.scale = 130
-        worksheet.page_margins.left = 0.25
-        worksheet.page_margins.right = 0.25
-        worksheet.page_margins.top = 0.26
-        worksheet.page_margins.bottom = 0.42
-        worksheet.page_setup.horizontalCentered = True
-        worksheet.page_setup.verticalCentered = False
-        worksheet.page_setup.orientation = worksheet.ORIENTATION_LANDSCAPE                            # Set orientation to landscape
-
-    # file_pdf_name3 = "MetaData.pdf"                                            
-    # excel3_to_pdf3_path = os.path.join(folder_path, file_pdf_name3)                     
-
-    # # Waiting time for excel file to open and transform in PDF file
-    # import time
-    # time.sleep(5)
-    # excel = win32.DispatchEx("Excel.Application")
-    # wb = excel.Workbooks.Open(os.path.abspath(os.path.join(folder_path, file_excel_name3)))
-    # wb.ExportAsFixedFormat(0, excel3_to_pdf3_path)
-    # wb.Close(False)
-    # excel.Quit()
-
-       
-    ############################################# Display one of the saved images #############################################
-    if images:
-        st.markdown('**Sample Result:**')
-        st.image(images["image0"], caption='Sample Disaggregation Plot')
-        st.image(images["image4"], caption='Sample Disaggregation Plot')
-        st.image(images["image5"], caption='Sample Disaggregation Plot')
+        st.stop()
 
     return TRT_Rmeans_Mmeans_IMT
 
