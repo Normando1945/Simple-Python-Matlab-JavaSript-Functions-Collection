@@ -411,6 +411,24 @@ if uploaded_file is not None and uploaded_file2 is not None:
         st.success(st.session_state.folder_path)
         st.stop()
 
+        # Display a success message with the folder path
+        st.markdown('##### :sparkles: **Results Ready!**')
+        st.markdown('* Use this directory to see all the results:')
+        st.success(folder_path)
+        st.markdown('**Sample Result:**')
+        st.markdown('* Mean Values of **Rjb** and **Mw** for Each **IMT**')
+        
+           
+        # Display Table's of Means of each IMT
+        col1, col2, col3 = st.columns([0.08,1,0.08])
+        with col1:
+            st.metric(label= "",value="")
+        with col2:
+            TRT_Rmeans_Mmeans_IMTs = pd.concat(all_means, ignore_index=True)
+            st.write(TRT_Rmeans_Mmeans_IMTs)
+        with col3:
+            st.metric(label= "",value="")
+
 
 
 
