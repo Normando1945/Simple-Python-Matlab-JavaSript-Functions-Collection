@@ -483,7 +483,7 @@ def display_footer():
         <div class="separator"></div>
         <div>
             <p>Developed by TORREFUERTE | <a href="https://www.http://torrefuerte.ec" target="_blank">TORREFUERTE</a> | </p>
-            <p>© Version 1.0.1 - August, 2024</p>
+            <p>© Version 1.0.2 (BETA) - August, 2024</p>
         </div>
     </div>
     """
