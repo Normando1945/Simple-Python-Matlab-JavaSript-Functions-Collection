@@ -375,31 +375,28 @@ if uploaded_file is not None and uploaded_file2 is not None:
     #     if not os.path.exists(folder_path):
     #         os.makedirs(folder_path)
     #     else:
-    #         print(f"The folder '{folder_path}' already exists!")       
+    #         print(f"The folder '{folder_path}' already exists!")
 
-    # Ask the user to specify the folder path for saving images
-    # Initialize the folder path
-    if "folder_path" not in st.session_state:
-        st.session_state.folder_path = ''
-        st.button("Start the analysis")
-        st.session_state.folder_path = os.getcwd()
-        folder_path = st.session_state.folder_path
-        
-        # Funtion for create a random 5 letter name
-        def random_string(length=5):
-            letters = string.ascii_lowercase
-            return ''.join(random.choice(letters) for i in range(length))
 
-        folder_name = f"{'Results_TF_'+ random_string()}"                                   # Create a new Folder
 
-        directory = os.path.join(folder_path, folder_name)
-        folder_path = directory
-        # Folder Creation
-        if not os.path.exists(folder_path):
-            os.makedirs(folder_path)
-        else:
-            print(f"The folder '{folder_path}' already exists!")  
 
+    if st.button("Start the analysis"):
+    # Establecer el directorio de trabajo actual como el directorio de resultados
+    st.session_state.folder_path = os.getcwd()
+    
+    # Función para crear un nombre de carpeta aleatorio de 5 letras
+    def random_string(length=5):
+        letters = string.ascii_lowercase
+        return ''.join(random.choice(letters) for i in range(length))
+    
+    folder_name = f"{'Results_TF_'+ random_string()}"  # Crear una nueva carpeta
+    folder_path = os.path.join(st.session_state.folder_path, folder_name)
+
+    # Crear la carpeta si no existe
+    if not os.path.exists(folder_path):
+        os.makedirs(folder_path)
+    else:
+        print(f"The folder '{folder_path}' already exists!")
 
 
     if not st.session_state.executed:
