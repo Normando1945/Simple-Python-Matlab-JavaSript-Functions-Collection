@@ -214,28 +214,6 @@ st.markdown('##### :ledger: **Proposal for 2024 Seismic Hazard Model and Seismic
 
 image_path = 'https://www.dropbox.com/scl/fi/6s7gnzoj2l2ybineetsu5/psha2.png?rlkey=qjyh1fx97c1i11g8tgcujgpmr&st=8ol1f98e&dl&raw=1'
 
-# st.markdown(
-#             """
-#             <style>
-#             @keyframes blinkingText {
-#                 0% { color: #007BFF; }
-#                 50% { color: #00BFFF; }
-#                 100% { color: #007BFF; }
-#             }
-
-#             .blinking {
-#                 animation: blinkingText 1.5s infinite;
-#                 font-weight: bold;
-#                 font-size: 18px;
-#             }
-#             </style>
-
-#             <div style="text-align: center;">
-#             <a href="https://ppalacios92.github.io/HazardMapTest03/HazardMapTest03.html" class="blinking">Interactive Map</a>
-#             </div>
-#             """, 
-#             unsafe_allow_html=True
-#         )
 st.markdown(
     """
     <style>
