@@ -349,16 +349,38 @@ if uploaded_file is not None and uploaded_file2 is not None:
 
     from World_MAP_LAT_LON import World_Map_LAT_LON                                     # World Map Function imported
     map, latitudes, longitudes, Locations, Date = World_Map_LAT_LON(LaT, LoN, Dia_mes_ano)  # Using of World_Map Function
-########################################### Code Dissagregation ###########################################################
+    ########################################### Code Dissagregation ###########################################################
     st.markdown('##### :earth_americas: **Results for Seismic Disaggregation Analysis**')
     st.markdown('Please follow the instructions')
-    # Ask the user to specify the folder path for saving images
-    # Initialize the folder path
-    if "folder_path" not in st.session_state:
-        st.session_state.folder_path = ''
-    folder_path = st.text_input("Enter the folder path where you want to save all the results:", value=st.session_state.folder_path)
+    # # Ask the user to specify the folder path for saving images
+    # # Initialize the folder path
+    # if "folder_path" not in st.session_state:
+    #     st.session_state.folder_path = ''
+    # folder_path = st.text_input("Enter the folder path where you want to save all the results:", value=st.session_state.folder_path)
+    # # Add a button to use the current working directory
+    # if st.button("Use current working directory"):
+    #     st.session_state.folder_path = os.getcwd()
+    #     folder_path = st.session_state.folder_path
+        
+    #     # Funtion for create a random 5 letter name
+    #     def random_string(length=5):
+    #         letters = string.ascii_lowercase
+    #         return ''.join(random.choice(letters) for i in range(length))
+
+    #     folder_name = f"{'Results_TF_'+ random_string()}"                                   # Create a new Folder
+
+    #     directory = os.path.join(folder_path, folder_name)
+    #     folder_path = directory
+    #     # Folder Creation
+    #     if not os.path.exists(folder_path):
+    #         os.makedirs(folder_path)
+    #     else:
+    #         print(f"The folder '{folder_path}' already exists!")                             
+        
+        
+        
     # Add a button to use the current working directory
-    if st.button("Use current working directory"):
+    if st.button("Start the analysis"):
         st.session_state.folder_path = os.getcwd()
         folder_path = st.session_state.folder_path
         
@@ -379,15 +401,8 @@ if uploaded_file is not None and uploaded_file2 is not None:
         
         
         
-    # Ensure the folder path is valid
-    if not folder_path:
-        st.error("Please enter a valid folder path or use the current working directory.")
-        st.stop()
-    if not os.path.exists(folder_path):
-        st.error("The specified folder does not exist. Please enter a valid folder path.")
-        st.stop()
     # Display the selected folder path
-    st.success(f"The selected folder path is: {folder_path}")
+    st.success(f"The server being used is: {folder_path}")
 
 
     if not st.session_state.executed:
