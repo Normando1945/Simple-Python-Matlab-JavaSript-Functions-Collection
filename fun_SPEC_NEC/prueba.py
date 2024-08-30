@@ -396,6 +396,15 @@ if uploaded_file is not None and uploaded_file2 is not None:
     
         st.session_state.executed = True  # Marcar como ejecutado
         st.session_state.folder_path = folder_path  # Guardar la ruta de la carpeta
+
+        # Solo hacer esto si st.session_state.executed es True
+        if st.session_state.executed:
+            shutil.make_archive(folder_path, 'zip', folder_path)
+        
+            with open(f"{folder_path}.zip", "rb") as zip_file:
+                st.download_button(label="Download Results", data=zip_file, file_name=f"{folder_path.split('/')[-1]}.zip")
+
+        
     else:
         st.markdown('##### :sparkles: El cálculo ya se ha ejecutado.')
         st.markdown('* Puedes encontrar los resultados en el directorio especificado.')
@@ -407,13 +416,7 @@ if uploaded_file is not None and uploaded_file2 is not None:
 
 
 
-    # Solo hacer esto si st.session_state.executed es True
-    if st.session_state.executed:
-        shutil.make_archive(folder_path, 'zip', folder_path)
     
-        with open(f"{folder_path}.zip", "rb") as zip_file:
-            st.download_button(label="Download Results", data=zip_file, file_name=f"{folder_path.split('/')[-1]}.zip")
-
 
 
     
