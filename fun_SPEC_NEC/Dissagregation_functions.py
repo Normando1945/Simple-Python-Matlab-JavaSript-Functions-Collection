@@ -70,7 +70,7 @@ def Code_dissagregation(df, LAT, LON, file_csv_name, folder_path, project_name):
 
     
     # num_imts = len(Accel)                                                           # number of selected IMT's [nomalie use the all  IMT's contained in "Accel"]
-    num_imts = 2                                                                      # number of selected IMT's [nomalie use the all  IMT's contained in "Accel"]
+    num_imts = 1                                                                      # number of selected IMT's [nomalie use the all  IMT's contained in "Accel"]
 
     images = {}                                                                         # Initialize a dictionary to store images
 
@@ -427,8 +427,6 @@ def Code_dissagregation(df, LAT, LON, file_csv_name, folder_path, project_name):
             st.image(images["image0"], caption='Sample Disaggregation Plot')
             st.image(images["image4"], caption='Sample Disaggregation Plot')
             st.image(images["image5"], caption='Sample Disaggregation Plot')
-
-        st.stop()
 
     return TRT_Rmeans_Mmeans_IMT
 
