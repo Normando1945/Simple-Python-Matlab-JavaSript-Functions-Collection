@@ -134,13 +134,22 @@ def Code_dissagregation(df, LAT, LON, file_csv_name, folder_path, project_name):
             peer_faults_str = ', '.join(peer_faults)
 
             # Add a new row to the DataFrame with the dominant fault information and its PEER equivalence
-            TRT_Rmeans_Mmeans_Faults = TRT_Rmeans_Mmeans_Faults.append({
+            # TRT_Rmeans_Mmeans_Faults = TRT_Rmeans_Mmeans_Faults.append({
+            #     'TRT': RETURT[ReturT],
+            #     'Rmean': Rmean,
+            #     'Mmean': Mmean,
+            #     'Dominant_Fault': max_contrib_trt,
+            #     'PEER_Equivalent_Faults': peer_faults_str
+            # }, ignore_index=True)
+            new_row = pd.DataFrame([{
                 'TRT': RETURT[ReturT],
                 'Rmean': Rmean,
                 'Mmean': Mmean,
                 'Dominant_Fault': max_contrib_trt,
                 'PEER_Equivalent_Faults': peer_faults_str
-            }, ignore_index=True)
+            }])
+            TRT_Rmeans_Mmeans_Faults = pd.concat([TRT_Rmeans_Mmeans_Faults, new_row], ignore_index=True)
+
             
             
             # Plot the disaggregation data        
