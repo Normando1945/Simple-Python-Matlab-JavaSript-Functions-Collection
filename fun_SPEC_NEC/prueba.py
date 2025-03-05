@@ -68,7 +68,8 @@ with st.sidebar.expander("**Click to read more**"):
         """
     )
     
-    st.image("https://www.dropbox.com/scl/fi/fo6wg23mlp0zaykwmhpnt/patricio.jpg?rlkey=vywivzcnki46nyoyy7goyfdtc&st=ck0xll4b&dl&raw=1", use_column_width=True)
+    # st.image("https://www.dropbox.com/scl/fi/fo6wg23mlp0zaykwmhpnt/patricio.jpg?rlkey=vywivzcnki46nyoyy7goyfdtc&st=ck0xll4b&dl&raw=1", use_column_width=True)
+    st.image("https://www.dropbox.com/scl/fi/fo6wg23mlp0zaykwmhpnt/patricio.jpg?rlkey=vywivzcnki46nyoyy7goyfdtc&st=ck0xll4b&dl&raw=1", use_container_width=True)
        
     st.markdown(
         """
@@ -82,6 +83,7 @@ with st.sidebar.expander("**Click to read more**"):
     )
     
     st.image("https://www.dropbox.com/scl/fi/pqapzmhsdva93urk48gca/jose.jpg?rlkey=w3epr4l9rizrv60f8v3apfem9&st=08d76yga&dl&raw=1", use_column_width=True)
+    st.image("https://www.dropbox.com/scl/fi/pqapzmhsdva93urk48gca/jose.jpg?rlkey=w3epr4l9rizrv60f8v3apfem9&st=08d76yga&dl&raw=1", use_container_width=True)
        
     st.markdown(
         """
@@ -98,7 +100,8 @@ with st.sidebar.expander("**Click to read more**"):
     ### TORREFUERTE ###
     st.sidebar.markdown('#### 🏢 **About the TORREFUERTE**')
     with st.sidebar.expander("**Click to read more**"):
-        st.image("https://www.dropbox.com/scl/fi/h0j8ka62z0vkrxu6lvlei/torrefuerte.png?rlkey=074h6ei1wuti5vsjllj2ep5mc&st=nyb7mr7i&dl&raw=1", use_column_width=True)
+        # st.image("https://www.dropbox.com/scl/fi/h0j8ka62z0vkrxu6lvlei/torrefuerte.png?rlkey=074h6ei1wuti5vsjllj2ep5mc&st=nyb7mr7i&dl&raw=1", use_column_width=True)
+        st.image("https://www.dropbox.com/scl/fi/h0j8ka62z0vkrxu6lvlei/torrefuerte.png?rlkey=074h6ei1wuti5vsjllj2ep5mc&st=nyb7mr7i&dl&raw=1", use_container_width=True)
         st.markdown(
             """
             Expert structural engineering company with highly skilled professionals dedicated to overcoming design and structural challenges. 
@@ -114,7 +117,8 @@ with st.sidebar.expander("**Click to read more**"):
 
     st.sidebar.markdown('#### 🌎 **About Ecuador**')
     with st.sidebar.expander("**Click to read more**"):
-        st.image("https://www.dropbox.com/scl/fi/6eogj3i8n39lvwq8zmj81/PortadaProyecto-10_PatricioPalacios.png?rlkey=j65628ycr0ncgsy50gsiy4wxu&st=kfhgkoop&dl&raw=1", use_column_width=True)
+        # st.image("https://www.dropbox.com/scl/fi/6eogj3i8n39lvwq8zmj81/PortadaProyecto-10_PatricioPalacios.png?rlkey=j65628ycr0ncgsy50gsiy4wxu&st=kfhgkoop&dl&raw=1", use_column_width=True)
+        st.image("https://www.dropbox.com/scl/fi/6eogj3i8n39lvwq8zmj81/PortadaProyecto-10_PatricioPalacios.png?rlkey=j65628ycr0ncgsy50gsiy4wxu&st=kfhgkoop&dl&raw=1", use_container_width=True)
         st.markdown(
             """
             Ecuador, located on the west coast of South America, is renowned for its stunning natural beauty, megadiversity, and vibrant culture. From the lush Amazon rainforest to the breathtaking Andes mountains and the beautiful beaches of the Pacific coast, Ecuador offers a diverse range of landscapes and ecosystems.
@@ -195,7 +199,8 @@ with col2:
 j1, j2 = st.columns([1,2])
 with j1:
     image_path = 'https://www.dropbox.com/scl/fi/94qin1gz0946us9zd2hxm/SDTE2024.2.jpg?rlkey=16w1vvnp6i52wewz4z881rrxi&st=f7es9y33&dl&raw=1'
-    st.image(image_path, use_column_width=True)
+    # st.image(image_path, use_column_width=True)
+    st.image(image_path, use_container_width=True)
 
 with j2:
     st.markdown(
