@@ -417,7 +417,8 @@ st.markdown('##### 📊 **Response Spectra [Elastic and Inelastic]**')
 
 col1, col2 = st.columns([1, 3])
 with col1:
-    st.image(random_gif, use_column_width=True)
+    # st.image(random_gif, use_column_width=True)
+    st.image(random_gif, use_container_width=True)
 with col2:
     with st.chat_message("assistant"):
         st.write(random_message)
