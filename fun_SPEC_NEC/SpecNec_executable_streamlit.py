@@ -47,7 +47,8 @@ st.sidebar.markdown(f"**Current Date and Time in Quito, Ecuador:**\n\n{formatted
 ## Author ##
 st.sidebar.markdown('#### 😎 **About the Author**')
 with st.sidebar.expander("**Click to read more**"):
-    st.image("https://www.dropbox.com/scl/fi/24umxisfp4tedeqzndj3n/foto.jpg?rlkey=4yrliifi3xjuhbmjbhh1zrjv8&st=widakesu&raw=1",  use_column_width=True)
+    # st.image("https://www.dropbox.com/scl/fi/24umxisfp4tedeqzndj3n/foto.jpg?rlkey=4yrliifi3xjuhbmjbhh1zrjv8&st=widakesu&raw=1",  use_column_width=True)
+    st.image("https://www.dropbox.com/scl/fi/24umxisfp4tedeqzndj3n/foto.jpg?rlkey=4yrliifi3xjuhbmjbhh1zrjv8&st=widakesu&raw=1",  use_container_width=True)
        
     st.markdown(
         """
