@@ -82,7 +82,7 @@ with st.sidebar.expander("**Click to read more**"):
         """
     )
     
-    st.image("https://www.dropbox.com/scl/fi/pqapzmhsdva93urk48gca/jose.jpg?rlkey=w3epr4l9rizrv60f8v3apfem9&st=08d76yga&dl&raw=1", use_column_width=True)
+    # st.image("https://www.dropbox.com/scl/fi/pqapzmhsdva93urk48gca/jose.jpg?rlkey=w3epr4l9rizrv60f8v3apfem9&st=08d76yga&dl&raw=1", use_column_width=True)
     st.image("https://www.dropbox.com/scl/fi/pqapzmhsdva93urk48gca/jose.jpg?rlkey=w3epr4l9rizrv60f8v3apfem9&st=08d76yga&dl&raw=1", use_container_width=True)
        
     st.markdown(
