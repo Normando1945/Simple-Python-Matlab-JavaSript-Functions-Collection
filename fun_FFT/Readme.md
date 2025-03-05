@@ -1,79 +1,57 @@
 <div align="center">
-    <img src="https://github.com/Normando1945/Normando1945.github.io/assets/62081230/1ac0bf1d-67cd-43f6-87b0-141417a606db">
+    <img src="https://github.com/Normando1945/Normando1945.github.io/assets/62081230/1ac0bf1d-67cd-43f6-87b0-141417a606db" alt="FFT Analysis">
 </div>
 
->##### Author:                 [Msc. Ing. Carlos Andrés Celi Sánchez](https://www.researchgate.net/profile/Carlos-Celi). & [Phd(c). MSc. Ing. José Poveda](https://www.torrefuerte.com)
+>##### Author: [Msc. Ing. Carlos Andrés Celi Sánchez](https://www.researchgate.net/profile/Carlos-Celi). & [Phd(c). MSc. Ing. José Poveda](https://www.torrefuerte.com)
 
->##### Course:                 Structural Dynamics
+>##### Course: Structural Dynamics / Signal Processing
 
 
 ### **You can find me on**
-[![Web Page](https://img.shields.io/badge/Web%20Page-caceli.net-blue)](http:caceli.net)
+[![Web Page](https://img.shields.io/badge/Web%20Page-caceli.net-blue)](http://caceli.net)
 [![GitHub Carlos Celi](https://img.shields.io/github/followers/Normando1945?label=follow&style=social)](https://github.com/Normando1945)
 [![ResearchGate](https://img.shields.io/badge/-ResearchGate-00CCBB?style=social&logo=researchgate)](https://www.researchgate.net/profile/Carlos-Celi)
 [![Google Scholar](https://img.shields.io/badge/-Google%20Scholar-4285F4?style=social&logo=google)](https://scholar.google.com.ec/citations?hl=es&user=yR4Gz7kAAAAJ)
-<a href="Carlos Celi:normando1945@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-normando1945@gmail.com-blue?style=flat&logo=gmail"></a>
+<a href="mailto:normando1945@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-normando1945@gmail.com-blue?style=flat&logo=gmail"></a>
 
-### Function: fun_Spec_B_Newmark_2023(To, Tf, dT, zi, xo, xvo, TG, SG, record)
+### Function: fun_FFT_2024(at2_files, select_record, record)
 
-This Python function calculates the spectral response including acceleration, velocity, and displacement of a structure subjected to ground motion using a modified Newmark method.
+This Python function processes AT2 seismic record files to extract the acceleration signal, compute the Fast Fourier Transform (FFT) to identify the dominant frequency and peak ground acceleration (PGA), and generate visualizations in both the time and frequency domains. The computed results, along with the plots, are saved in a dedicated folder.
 
 <p align="center">
-    <img src="https://github.com/Normando1945/Simple-Python-Functions-Collection/assets/62081230/a5d747fd-45e4-447e-ab21-71fa71f71224" alt="fun_Spec_B_Newmark_2023" width="50%">
+    <img src="https://github.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/assets/62081230/fft_visualization_example.png" alt="fun_FFT_2024" width="50%">
 </p>
 
 #### Parameters:
-- `To` (float): Initial period of the structure.
-- `Tf` (float): Final period of the structure.
-- `dT` (float): Step size for the period.
-- `zi` (float): Damping ratio of the structure.
-- `xo` (float): Initial displacement response.
-- `xvo` (float): Initial velocity response.
-- `TG` (list): Time vector of the motion history.
-- `SG` (list of lists): Acceleration time history of the ground motion.
-- `record` (string): Name or identifier for the seismic record.
+- `at2_files` (list of str): List of file paths for the AT2 seismic record files.
+- `select_record` (int): Number of files to process from the provided list.
+- `record` (str): Identifier for the seismic record used for labeling plots and saving the results.
 
 #### Returns:
-- `Period` (list): List of structural periods.
-- `Sa` (list): Max response acceleration.
-- `Sd` (list): Max response displacement.
-- `Sv` (list): Max response velocity.
-- `fig1` (matplotlib.figure.Figure): Figure object for seismic record plot.
-- `fig2` (matplotlib.figure.Figure): Figure object for acceleration response spectra plot.
-- `ax1` (matplotlib.axes.Axes): Axes object for seismic record plot.
-- `ax2` (matplotlib.axes.Axes): Axes object for acceleration response spectra plot.
-- `line` (matplotlib.lines.Line2D): Line2D object for spectra plot.
-- `linepos` (matplotlib.lines.Line2D): Line2D object for draggable line.
-- `textbox` (matplotlib.text.Text): Text object for displaying values.
-- `point` (matplotlib.lines.Line2D): Line2D object for marker point.
-- `folder_path` (str): Path to the created results folder, named as `Results_XXXX` where `XXXX` is the record value.
-- `file_path1` (str): Path to the saved `.AT2` file containing the seismic record data within the results folder.
-- `file_path2` (str): Path to the saved `.AT2` file containing the acceleration response spectra within the results folder.
-- `fig_path1` (fig): Path to the saved `.PNG` file containing the figure of the seismic record data within the results folder.
-- `fig_path2` (fig): Path to the saved `.PNG` file containing the figure of acceleration response spectra within the results folder.
-
+- `REC` (DataFrame): DataFrame containing two columns, 'Time' and 'Acceleration', extracted from the seismic record.
+- `time` (numpy array): Array of time values corresponding to the seismic record.
+- `accel` (list): List of acceleration values extracted from the AT2 file.
+- `RESULT` (DataFrame): DataFrame containing the frequency spectrum, with columns for frequencies and their corresponding FFT amplitudes.
 
 #### Functionality:
-1. **Initialization**: Sets up parameters, initializes arrays for response calculation, and calculates stiffness.
-2. **Spectral Calculation Loop**: Iterates over a range of periods, updating response values using the modified Newmark method.
-3. **Conversion and Plotting**: Converts arrays to lists and uses Matplotlib to plot the seismic record and acceleration response spectra. Includes interactive features for better visualization.
+1. **Data Extraction and Preprocessing**:  
+   - Reads the provided AT2 files and extracts the acceleration data along with the time increment (DT) from the file header.
+   - Constructs the time vector based on the DT value and combines it with the acceleration data into a structured DataFrame.
+2. **FFT Computation**:  
+   - Computes the Fast Fourier Transform (FFT) of the acceleration signal.
+   - Sorts the frequency components, isolates the positive frequencies, and identifies the dominant frequency (i.e., the frequency with the maximum amplitude).
+3. **Visualization and Annotation**:
+   - **Time Domain Plot**: Plots the seismic record, highlighting the peak ground acceleration (PGA) with an annotated marker and a dashed vertical line at the occurrence time.
+   - **Frequency Domain Plot**: Displays a semilog plot of the FFT amplitude spectrum with a marker indicating the dominant frequency.
+4. **Results Saving**:
+   - Creates a results folder (named as `Results_FFT_<record>.file`) if it does not exist.
+   - Saves the generated time-domain and frequency-domain plots as PNG images within this folder.
 
 #### Visualization:
-- **Figure 1 - Seismic Record**: Plots the seismic record over time with highlights on the peak ground acceleration (PGA).
-- **Figure 2 - Acceleration Response Spectra**: Displays the acceleration response spectra over a range of periods with interactive draggable line and marker.
+- **Figure 1 - Time Domain**:  
+  Illustrates the seismic record over time, marking the point of maximum acceleration (PGA) with annotations for clarity.
+- **Figure 2 - Frequency Domain**:  
+  Shows the FFT amplitude spectrum on a semilog scale, emphasizing the dominant frequency component with a distinct marker and label.
 
 #### Usage:
-This function is useful for engineers, researchers, and students involved in the study of seismic effects on structures. It's particularly beneficial for spectral analysis and understanding the dynamic response over a range of structural periods. Recommended parameters for a typical use case might include:
-- `To` = Initial period, e.g., 0.1.
-- `Tf` = Final period, e.g., 3.0.
-- `dT` = Period step size, e.g., 0.05.
-- `zi` = Damping ratio, e.g., 0.05 for 5% damping.
-- `xo` = Initial displacement, typically 0.
-- `xvo` = Initial velocity, typically 0.
-- `TG` = Time vector from seismic record.
-- `SG` = Acceleration data from seismic record.
-- `record` = Identifier for the seismic record, e.g., "ChiChi_Long Earthquake".
-
-**Note**: The function includes interactive features for enhanced visualization. Users can explore the response spectra by moving the cursor along the curve. The seismic record and spectral plots provide valuable insights into the structural response under seismic loading. Attached in this same repository is a file (.AT2) that contains a seismic record organized in 2 columns. The first column has the time of the record and the second column has the corresponding acceleration in a fraction of gravity.
-
-
+This function is particularly useful for researchers, engineers, and students in seismic engineering and signal processing. By combining both time-domain and frequency-domain analyses, it provides a comprehensive overview of the seismic data, facilitating the identification of key signal characteristics such as the dominant frequency and peak acceleration.
