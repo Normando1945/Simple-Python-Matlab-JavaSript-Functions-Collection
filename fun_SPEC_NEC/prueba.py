@@ -51,7 +51,8 @@ st.sidebar.title("**Welcome to: Seismic Disaggregation Tool for Ecuador 2024 (SD
 ## About the Authors ##
 st.sidebar.markdown('#### 😎 **About the Authors**')
 with st.sidebar.expander("**Click to read more**"):
-    st.image("https://www.dropbox.com/scl/fi/24umxisfp4tedeqzndj3n/foto.jpg?rlkey=4yrliifi3xjuhbmjbhh1zrjv8&st=widakesu&raw=1",  use_column_width=True)
+    # st.image("https://www.dropbox.com/scl/fi/24umxisfp4tedeqzndj3n/foto.jpg?rlkey=4yrliifi3xjuhbmjbhh1zrjv8&st=widakesu&raw=1",  use_column_width=True)
+    st.image("https://www.dropbox.com/scl/fi/24umxisfp4tedeqzndj3n/foto.jpg?rlkey=4yrliifi3xjuhbmjbhh1zrjv8&st=widakesu&raw=1",  use_container_width=True)
        
     st.markdown(
         """
