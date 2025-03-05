@@ -19,7 +19,7 @@
 This Python function processes AT2 seismic record files to extract the acceleration signal, compute the Fast Fourier Transform (FFT) to identify the dominant frequency and peak ground acceleration (PGA), and generate visualizations in both the time and frequency domains. The computed results, along with the plots, are saved in a dedicated folder.
 
 <p align="center">
-    <img src="https://github.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/assets/62081230/fft_visualization_example.png" alt="fun_FFT_2024" width="50%">
+    <img src="https://github.com/user-attachments/assets/8f902243-e344-4163-b002-d0d68993e6dd" alt="Figure 5" width="50%">
 </p>
 
 #### Parameters:
