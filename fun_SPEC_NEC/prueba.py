@@ -262,7 +262,9 @@ st.markdown(
 )
 
 
-st.image(image_path, use_column_width=True)
+# st.image(image_path, use_column_width=True)
+st.image(image_path, use_container_width=True)
+
 with st.expander("**Click to read more**"):
     st.markdown(
         '''
