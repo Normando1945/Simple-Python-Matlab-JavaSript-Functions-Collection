@@ -365,7 +365,7 @@ else:
         col1,col2,col3 = st.columns([1,2,1])
         with col2:
             # st.image(np.random.choice(error_gifs), use_column_width=False, width=350)
-            st.image(np.random.choice(error_gifs), use_containers_width=False, width=350)
+            st.image(np.random.choice(error_gifs), use_container_width=False, width=350)
     else:        
 
         ################################################ Parameters #################################################
