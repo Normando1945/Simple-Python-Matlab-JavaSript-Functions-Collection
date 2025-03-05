@@ -200,7 +200,8 @@ with st.expander("**Click to read more**"):
     with j1:
         # image_path = 'https://raw.githubusercontent.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/main/fun_SPEC_NEC/Chapter1_portada.gif'
         image_path = 'https://www.dropbox.com/scl/fi/f1ha8s6021wyf432j0f2f/Chapter1_portada.gif?rlkey=m0iozpmg7rz5p59t6z8jggnfa&st=ice80to1&raw=1'
-        st.image(image_path, use_column_width=True)
+        # st.image(image_path, use_column_width=True)
+        st.image(image_path, use_container_width=True)
         
         st.markdown(
             """
@@ -442,7 +443,8 @@ else:
         st.markdown('##### 📊 **Results**')
         col1, col2 = st.columns([1, 3])
         with col1:
-            st.image(random_gif, use_column_width=True)
+            # st.image(random_gif, use_column_width=True)
+            st.image(random_gif, use_container_width=True)
         with col2:
             with st.chat_message("assistant"):
                 st.write(random_message)
