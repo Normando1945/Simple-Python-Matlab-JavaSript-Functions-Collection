@@ -44,7 +44,8 @@ st.sidebar.markdown(f"**Current Date and Time in Quito, Ecuador:**\n\n{formatted
 ## Author ##
 st.sidebar.markdown('#### 😎 **About the Author**')
 with st.sidebar.expander("**Click to read more**"):
-    st.image("https://www.dropbox.com/scl/fi/24umxisfp4tedeqzndj3n/foto.jpg?rlkey=4yrliifi3xjuhbmjbhh1zrjv8&st=widakesu&raw=1",  use_column_width=True)
+    # st.image("https://www.dropbox.com/scl/fi/24umxisfp4tedeqzndj3n/foto.jpg?rlkey=4yrliifi3xjuhbmjbhh1zrjv8&st=widakesu&raw=1",  use_column_width=True)
+    st.image("https://www.dropbox.com/scl/fi/24umxisfp4tedeqzndj3n/foto.jpg?rlkey=4yrliifi3xjuhbmjbhh1zrjv8&st=widakesu&raw=1",  use_container_width=True)
        
     st.markdown(
         """
@@ -61,7 +62,8 @@ with st.sidebar.expander("**Click to read more**"):
     )
 
     st.markdown('📘 **More Information about my New Book**')
-    st.image("https://www.dropbox.com/scl/fi/o9os3igy46ynjzw2stt1a/Structural-Engineering2.png?rlkey=so80xqe0zuj3ilsdlwm4awkmz&st=9v750dgq&raw=1", use_column_width=True)
+    # st.image("https://www.dropbox.com/scl/fi/o9os3igy46ynjzw2stt1a/Structural-Engineering2.png?rlkey=so80xqe0zuj3ilsdlwm4awkmz&st=9v750dgq&raw=1", use_column_width=True)
+    st.image("https://www.dropbox.com/scl/fi/o9os3igy46ynjzw2stt1a/Structural-Engineering2.png?rlkey=so80xqe0zuj3ilsdlwm4awkmz&st=9v750dgq&raw=1", use_container_width=True)
     st.markdown(
         """
         <div style="text-align: center;">
@@ -85,7 +87,8 @@ with st.sidebar.expander("**Click to read more**"):
     ### University ###
     st.sidebar.markdown('#### 🎓 **About the PUCE University**')
     with st.sidebar.expander("**Click to read more**"):
-        st.image("https://conexion.puce.edu.ec/wp-content/uploads/2021/11/M7A4696-1024x683.jpg", use_column_width=True)
+        # st.image("https://conexion.puce.edu.ec/wp-content/uploads/2021/11/M7A4696-1024x683.jpg", use_column_width=True)
+        st.image("https://conexion.puce.edu.ec/wp-content/uploads/2021/11/M7A4696-1024x683.jpg", use_container_width=True)
         st.markdown(
             """
             The Pontifical Catholic University of Ecuador (PUCE), founded in 1946, is one of the most prestigious universities in Ecuador. It offers a wide range of undergraduate and postgraduate programs across various disciplines, fostering a rich environment for research and academic excellence. The university is dedicated to the holistic development of its students, emphasizing both academic rigor and ethical values.
@@ -106,7 +109,8 @@ with st.sidebar.expander("**Click to read more**"):
 
     st.sidebar.markdown('#### 🌎 **About Ecuador**')
     with st.sidebar.expander("**Click to read more**"):
-        st.image("https://d3rhcahk56mofm.cloudfront.net/eyJrZXkiOiJtZWRpYS9iYzMyODNlYS0yYjI1LTRmYWEtYTA2Yy0xM2VlODhmMjhiMjEuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjozMDcuNSwiaGVpZ2h0IjozNzAuNX0sIndlYnAiOnsibG9zc2xlc3MiOmZhbHNlLCJxdWFsaXR5Ijo4MCwibmVhckxvc3NsZXNzIjpmYWxzZSwic21hcnRTdWJzYW1wbGUiOmZhbHNlfX19", use_column_width=True)
+        # st.image("https://d3rhcahk56mofm.cloudfront.net/eyJrZXkiOiJtZWRpYS9iYzMyODNlYS0yYjI1LTRmYWEtYTA2Yy0xM2VlODhmMjhiMjEuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjozMDcuNSwiaGVpZ2h0IjozNzAuNX0sIndlYnAiOnsibG9zc2xlc3MiOmZhbHNlLCJxdWFsaXR5Ijo4MCwibmVhckxvc3NsZXNzIjpmYWxzZSwic21hcnRTdWJzYW1wbGUiOmZhbHNlfX19", use_column_width=True)
+        st.image("https://d3rhcahk56mofm.cloudfront.net/eyJrZXkiOiJtZWRpYS9iYzMyODNlYS0yYjI1LTRmYWEtYTA2Yy0xM2VlODhmMjhiMjEuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjozMDcuNSwiaGVpZ2h0IjozNzAuNX0sIndlYnAiOnsibG9zc2xlc3MiOmZhbHNlLCJxdWFsaXR5Ijo4MCwibmVhckxvc3NsZXNzIjpmYWxzZSwic21hcnRTdWJzYW1wbGUiOmZhbHNlfX19", use_container_width=True)
         st.markdown(
             """
             Ecuador, located on the west coast of South America, is renowned for its stunning natural beauty, megadiversity, and vibrant culture. From the lush Amazon rainforest to the breathtaking Andes mountains and the beautiful beaches of the Pacific coast, Ecuador offers a diverse range of landscapes and ecosystems.
