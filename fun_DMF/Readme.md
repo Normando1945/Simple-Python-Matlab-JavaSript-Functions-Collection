@@ -17,8 +17,10 @@
 
 This Python function performs a comprehensive analysis of a seismic record by applying a Butterworth bandpass filter, computing its Fast Fourier Transform (FFT), and conducting a dynamic magnification study. It generates multiple visualizations that help in understanding the signal's frequency content, energy distribution, and the dynamic response characteristics relevant for seismic and structural analysis.
 
+
+
 <p align="center">
-    <img src="https://github.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/assets/62081230/dmf_visualization_example.png" alt="DMF Function" width="50%">
+    <img src="https://github.com/user-attachments/assets/132dd272-a4cc-4b5f-9a98-c45c800ebe0b" alt="DMF Function" width="50%">
 </p>
 
 #### Parameters:
