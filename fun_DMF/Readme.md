@@ -20,7 +20,7 @@ This Python function performs a comprehensive analysis of a seismic record by ap
 
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/132dd272-a4cc-4b5f-9a98-c45c800ebe0b" alt="DMF Function" width="50%">
+    <img src="https://github.com/user-attachments/assets/132dd272-a4cc-4b5f-9a98-c45c800ebe0b" alt="DMF Function" width="100%">
 </p>
 
 #### Parameters:
