@@ -61,7 +61,7 @@ with st.sidebar.expander("**Click to read more**"):
         
         For more information, visit the:
         
-        [![Web Page](https://img.shields.io/badge/Web%20Page-caceli.net-blue)](https://fragrant-knight-4af.notion.site/Main-Page-5c5f007b3f3f4c76a604960d9dbffca7?pvs=4)
+        [![Web Page](https://img.shields.io/badge/Web%20Page-caceli.net-blue)](https://normando1945.wixsite.com/cceli)
         
         [![GitHub Carlos Celi](https://img.shields.io/github/followers/Normando1945?label=follow&style=social)](https://github.com/Normando1945)
         
