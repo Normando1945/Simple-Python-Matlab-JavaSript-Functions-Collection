@@ -110,7 +110,7 @@ with st.sidebar.expander("**Click to read more**"):
             
             For more information, visit the:
             
-            [![Web Page](https://img.shields.io/badge/Web%20Page-Torrefuerte.ec-blue)](https://juant27.sg-host.com/)
+            [![Web Page](https://img.shields.io/badge/Web%20Page-Torrefuerte.ec-blue)](https://torrefuerte.ec/)
       
             """
         )
@@ -160,7 +160,7 @@ col1, col2  = st.columns([1,1])
 with col1:
     st.markdown(
         """
-        [![Web Page](https://img.shields.io/badge/Web%20Page-Torrefuerte.ec-blue)](https://juant27.sg-host.com/)
+        [![Web Page](https://img.shields.io/badge/Web%20Page-Torrefuerte.ec-blue)](https://torrefuerte.ec/)
         
         * **Authors:**
         
