@@ -244,7 +244,8 @@ with st.expander("**Click to read more**"):
     with j1:
         image_path = 'https://www.dropbox.com/scl/fi/f1ha8s6021wyf432j0f2f/Chapter1_portada.gif?rlkey=m0iozpmg7rz5p59t6z8jggnfa&st=ice80to1&raw=1'
         # image_path = 'https://raw.githubusercontent.com/Normando1945/Simple-Python-Matlab-JavaSript-Functions-Collection/main/fun_SPEC_NEC/Chapter1_portada.gif'
-        st.image(image_path, use_column_width=True)
+        # st.image(image_path, use_column_width=True)
+        st.image(image_path, use_container_width=True)
         
         st.markdown(
             """
