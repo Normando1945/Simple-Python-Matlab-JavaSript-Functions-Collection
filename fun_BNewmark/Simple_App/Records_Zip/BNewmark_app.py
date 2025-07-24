@@ -280,7 +280,8 @@ with col1:
             b, a = butter(order, [low, high], btype='band')
             filtered_signal = lfilter(b, a, accel)
             time = np.arange(0, len(filtered_signal)*float(DT_value), float(DT_value))
-            rec1 = np.column_stack((time, filtered_signal))
+            # rec1 = np.column_stack((time, filtered_signal))
+            rec1  = np.column_stack((time, accel))
             last_time_value = time[-1]
             rec1 = list(rec1)
             data = rec1
