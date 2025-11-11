@@ -255,7 +255,8 @@ st.markdown(
     </style>
 
     <div style="text-align: center;">
-        <span class="wave-hand">👉</span> <a href="https://ppalacios92.github.io/HazardMapTest03/HazardMapTest03.html" class="blinking">Interactive Map</a>
+        # <span class="wave-hand">👉</span> <a href="https://ppalacios92.github.io/HazardMapTest03/HazardMapTest03.html" class="blinking">Interactive Map</a>
+        <span class="wave-hand">👉</span> <a href="https://pxpalacios.com/psha/">Interactive Map</a>
     </div>
     """,
     unsafe_allow_html=True
@@ -517,3 +518,4 @@ def display_footer():
     st.markdown(footer, unsafe_allow_html=True)
 
 display_footer()
+
